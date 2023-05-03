@@ -23,7 +23,20 @@ export const services = [
     image: "/pvr.svg",
     buttonText: "Learn More",
   },
+  {
+    id: 4,
+    title: "Build Reliable Video Testimonials",
+    description:
+      "Create accountable visual content to illustrate your customer’s understanding and squeeze out their dilemma with clearer demonstration. Hire the best full-service production company for digital video production",
+    image: "/brvt.svg",
+    buttonText: "Learn More",
+  },
 ];
+
+export const serviceHeading = {
+  title: "Video Production Services In India",
+  subtitle: "Being the top video production agency in India for long/short format videos, brand videos & content creator produced videos; our core competencies are social commerce videos"
+}
 
 export const MenuItems = [
   {

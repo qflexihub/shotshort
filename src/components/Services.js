@@ -1,10 +1,12 @@
-import { services } from "@/data/services";
+import { services, serviceHeading } from "@/data/services";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
+import ContentHeading from "./shared/contentHeading";
 
 const Services = () => {
   return (
     <CardContainer>
+      <ContentHeading data={serviceHeading} />
       {services?.map((item, index) => {
         return (
           <InfoCard
