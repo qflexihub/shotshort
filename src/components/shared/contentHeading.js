@@ -17,10 +17,11 @@ const HeadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;
 
 const ContentTitle = styled.p`
+  padding: 0 100px;
   font-weight: 700;
   font-size: 54px;
   line-height: 62px;
@@ -31,8 +32,7 @@ const ContentTitle = styled.p`
 
 
 const ContentSubTitle = styled.p`
-  padding: 20px;
-  width: 70%;
+  padding: 0 175px;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -40,4 +40,5 @@ const ContentSubTitle = styled.p`
   display: flex;
   align-items: center;
   text-align: center;
+  margin-top: 20px;
 `;

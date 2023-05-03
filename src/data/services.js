@@ -32,27 +32,3 @@ export const services = [
     buttonText: "Learn More",
   },
 ];
-
-export const serviceHeading = {
-  title: "Video Production Services In India",
-  subtitle: "Being the top video production agency in India for long/short format videos, brand videos & content creator produced videos; our core competencies are social commerce videos"
-}
-
-export const MenuItems = [
-  {
-    title: "Services",
-    link: "/services",
-  },
-  {
-    title: "Blogs",
-    link: "/blogs",
-  },
-  {
-    title: "About Us",
-    link: "/about-us",
-  },
-  {
-    title: "Case Studies",
-    link: "/case-studies",
-  },
-];
