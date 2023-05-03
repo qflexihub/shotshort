@@ -42,6 +42,7 @@ const ButtonContainer = styled.button`
   display: inline-block;
   justify-content: center;
   align-items: center;
+  border: 2px solid #8218EA;
   width: ${(props) => props.width || "257px"};
   height: ${(props) => props.height || "50px"};
   background-color: ${(props) => props.backgroundColor || "#8218ea"};

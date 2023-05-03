@@ -32,6 +32,7 @@ const InfoCardContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: ${(props) => (props.imageRight ? "row" : "row-reverse")};
+  margin-top: 75px;
   margin-bottom: 100px;
 `;
 
