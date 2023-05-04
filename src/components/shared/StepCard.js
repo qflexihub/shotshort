@@ -19,29 +19,6 @@ const StepCard = ({ data }) => {
         (el) => (el.style.height = maxHeight / 2 + 20 + "px")
     );
   }, []);
-// useEffect(() => {
-//     // Get the height of the tallest MainCardContainer element
-//     const tallestHeight = Math.max(
-//       ...Array.from(mainRef.current.querySelectorAll(".main-card")).map(
-//         (el) => el.offsetHeight
-//       )
-//     );
-
-//     // Set the height of all BackgroundCardContainer elements to half of the tallest height
-//     const backgroundCardContainers = Array.from(
-//       mainRef.current.querySelectorAll(".background-card")
-//     );
-//     backgroundCardContainers.forEach(
-//       (el) => (el.style.height = tallestHeight / 2 + "px")
-//     );
-//     const mainCardContainers = Array.from(
-//         mainRef.current.querySelectorAll(".main")
-//     );
-//     mainCardContainers.forEach(
-//         (el) => (el.style.height = tallestHeight + "px")
-//     );
-
-//   }, []);
 
   return (
     <StepCardContainer>
@@ -61,29 +38,6 @@ const StepCard = ({ data }) => {
       </BackgroundCardContainer>
     </StepCardContainer>
   );
-//   return (
-//     <StepCardContainer>
-//       <BackgroundCardContainer ref={mainRef} className="main">
-//         {/* {data.map((step, index) => (
-          
-//         ))} */}
-//         <div className="background-card" key={data?.id}>
-//             <MainCardContainer className="main-card">
-//               <StepText>{data?.stepText}</StepText>
-//               <CircularImageView>
-//                 <Image
-//                   width={30}
-//                   height={30}
-//                   src={data?.image}
-//                   alt={data?.title}
-//                 />
-//               </CircularImageView>
-//               <TitleText>{data?.title}</TitleText>
-//             </MainCardContainer>
-//           </div>
-//       </BackgroundCardContainer>
-//     </StepCardContainer>
-//   );
 };
 
 export default StepCard;
