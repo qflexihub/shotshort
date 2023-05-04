@@ -1,26 +1,22 @@
 import styled from "styled-components";
-import { processHeading } from "@/data/contentHeading";
 import Button from "./shared/Button";
-import ContentHeading from "./shared/ContentHeading";
 import { StepsType1 } from "@/data/steps";
 import StepCard from "./shared/StepCard";
+import ContentHeading from "./shared/contentHeading";
 
 const ContentProcess = ({ data }) => {
   return (
     <CardContainer>
       <ContentHeading data={data?.processHeading} />
-      <Button width="375px" value="Schedule a Call with Video's Expert" rightArrow={true} />
-      <MainHeading>
-        {data?.processTitle}
-      </MainHeading>
+      <Button
+        width="375px"
+        value="Schedule a Call with Video's Expert"
+        rightArrow={true}
+      />
+      <MainHeading>{data?.processTitle}</MainHeading>
       <StepComponent>
         {StepsType1?.process?.map((item, index) => {
-            return (
-            <StepCard
-                key={index}
-                data={item}
-            />
-            );
+          return <StepCard key={index} data={item} />;
         })}
       </StepComponent>
     </CardContainer>
@@ -43,7 +39,7 @@ const MainHeading = styled.p`
   line-height: 27px;
   display: flex;
   align-items: center;
-  color: #8218EA;
+  color: #8218ea;
   padding-top: 50px;
 `;
 
@@ -56,5 +52,5 @@ const StepComponent = styled.div`
   & > * {
     flex: 1;
     margin: 0 10px;
-  };
+  }
 `;

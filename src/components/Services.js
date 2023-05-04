@@ -1,8 +1,8 @@
 import { services } from "@/data/services";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
-import { serviceHeading } from "@/data/contentHeading";
-import ContentHeading from "./shared/ContentHeading";
+import { serviceHeading } from "@/data/contentHeadingData";
+import ContentHeading from "./shared/contentHeading";
 
 const Services = () => {
   return (
