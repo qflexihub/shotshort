@@ -1,8 +1,8 @@
-import { MenuItems } from "@/data/services";
 import Image from "next/image";
 import * as React from "react";
 import styled from "styled-components";
 import Button from "./shared/Button";
+import { MenuItems } from "@/data/MenuItems";
 
 const Navbar = () => {
   return (
