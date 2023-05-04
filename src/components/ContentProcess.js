@@ -15,7 +15,7 @@ const ContentProcess = ({ data }) => {
       />
       <MainHeading>{data?.processTitle}</MainHeading>
       <StepComponent>
-        {StepsType1?.process?.map((item, index) => {
+        {data?.process?.map((item, index) => {
           return <StepCard key={index} data={item} />;
         })}
       </StepComponent>
