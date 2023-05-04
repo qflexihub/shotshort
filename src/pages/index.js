@@ -3,8 +3,10 @@ import ContentProcess from "@/components/ContentProcess";
 import GetInTouchForm from "@/components/GetInTouchForm";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
+import MarketBuzz from "@/components/MarketBuzz";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { StepsType1 } from "@/data/steps";
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
         <GetInTouchForm />
         <WhyChooseUs />
         <ContentProcess data={StepsType1} />
+        <MarketBuzz data={MarketBuzzProcess} />
       </Layout>
     </>
   );
