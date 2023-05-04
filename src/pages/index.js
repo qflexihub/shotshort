@@ -1,4 +1,5 @@
 import BrandVideos from "@/components/BrandVideos";
+import BusinessCard from "@/components/BusinessCard";
 import ContentProcess from "@/components/ContentProcess";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
@@ -13,6 +14,7 @@ export default function Home() {
         {/* <BrandVideos /> */}
         <Services />
         <ContentProcess data={StepsType1} />
+        <BusinessCard />
       </Layout>
     </>
   );
