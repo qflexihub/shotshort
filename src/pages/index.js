@@ -1,4 +1,5 @@
 import BrandVideos from "@/components/BrandVideos";
+import BusinessCard from "@/components/BusinessCard";
 import ContentProcess from "@/components/ContentProcess";
 import GetInTouchForm from "@/components/GetInTouchForm";
 import Header from "@/components/Header";
@@ -19,6 +20,7 @@ export default function Home() {
         <GetInTouchForm />
         <WhyChooseUs />
         <ContentProcess data={StepsType1} />
+        <BusinessCard />
         <MarketBuzz data={MarketBuzzProcess} />
       </Layout>
     </>
