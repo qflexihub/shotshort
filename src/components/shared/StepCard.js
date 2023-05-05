@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import Text from "./Text";
 
 const StepCard = ({ data }) => {
   const mainCardRef = useRef(null);
@@ -9,31 +10,35 @@ const StepCard = ({ data }) => {
     const cards = document.querySelectorAll(".main-card-container");
     let maxHeight = 0;
     cards.forEach((card) => {
-        maxHeight = Math.max(maxHeight, card.offsetHeight);
+      maxHeight = Math.max(maxHeight, card.offsetHeight);
     });
     cards.forEach((card) => {
-        card.style.height = `${maxHeight}px`;
+      card.style.height = `${maxHeight}px`;
     });
-    const backgroundCards = document.querySelectorAll(".background-card-container");
+    const backgroundCards = document.querySelectorAll(
+      ".background-card-container"
+    );
     backgroundCards.forEach(
-        (el) => (el.style.height = maxHeight / 2 + 20 + "px")
+      (el) => (el.style.height = maxHeight / 2 + 20 + "px")
     );
   }, []);
 
   return (
     <StepCardContainer>
-      <BackgroundCardContainer ref={mainCardRef} className="background-card-container">
+      <BackgroundCardContainer
+        ref={mainCardRef}
+        className="background-card-container"
+      >
         <MainCardContainer ref={mainCardRef} className="main-card-container">
-          <StepText>{data?.stepText}</StepText>
+          <Text lineHeight={21} fontWeight={700} color="#898989" uppercase>
+            {data?.stepText}
+          </Text>
           <CircularImageView>
-            <Image
-              width={30}
-              height={30}
-              src={data?.image}
-              alt={data?.title}
-            />
+            <Image width={30} height={30} src={data?.image} alt={data?.title} />
           </CircularImageView>
-          <TitleText>{data?.title}</TitleText>
+          <Text fontSize={22} fontWeight={700} textAlign="center">
+            {data?.title}
+          </Text>
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>
@@ -66,14 +71,6 @@ const MainCardContainer = styled.div`
   gap: 20px;
 `;
 
-const StepText = styled.p`
-  text-transform: uppercase;
-  color: #898989;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-`;
-
 const CircularImageView = styled.div`
   background: linear-gradient(180deg, #8c51a2 0%, #592789 100%);
   width: 65px;
@@ -82,11 +79,4 @@ const CircularImageView = styled.div`
   margin: 0 auto;
   display: grid;
   place-items: center;
-`;
-
-const TitleText = styled.p`
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  text-align: center;
 `;

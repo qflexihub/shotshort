@@ -2,16 +2,17 @@ import styled from "styled-components";
 import Button from "./shared/Button";
 import IconDescriptionCard from "./shared/IconDescriptionCard";
 import { WhyChooseUsData } from "@/data/commonData";
+import Heading from "./shared/Heading";
 
 const WhyChooseUs = () => {
   return (
     <>
       <WhyChooseContainer>
         <Block1>
-          <MainHeading>
+          <Heading marginBottom={30}>
             Creative And Professional Video Production Company In India ( Why
             Choose Us)
-          </MainHeading>
+          </Heading>
           <Button
             value="Schedule a Call with Video's Expert"
             width="371px"
@@ -35,17 +36,9 @@ const WhyChooseUs = () => {
 export default WhyChooseUs;
 
 const WhyChooseContainer = styled.div`
-  width: 100%;
+  max-width: 100%;
   background-color: #fffdf7;
   padding: 100px 110px;
-`;
-
-const MainHeading = styled.h2`
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 62px;
-  text-align: center;
-  margin-bottom: 30px;
 `;
 
 const Block1 = styled.div`
@@ -58,5 +51,6 @@ const Block2 = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  grid-gap: 20px;
   justify-content: center;
 `;

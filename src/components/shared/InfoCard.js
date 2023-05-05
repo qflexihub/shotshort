@@ -1,13 +1,19 @@
 import Image from "next/image";
 import styled from "styled-components";
 import Button from "./Button";
+import Heading from "./Heading";
+import Text from "./Text";
 
 const InfoCard = ({ data, imageRight = true }) => {
   return (
     <InfoCardContainer imageRight={imageRight}>
       <InfoBlock imageRight={imageRight}>
-        <InfoHeading>{data?.title}</InfoHeading>
-        <InfoPara>{data?.description}</InfoPara>
+        <Heading fontSize={64} marginBottom={12}>
+          {data?.title}
+        </Heading>
+        <Text fontSize={24} lineHeight={24} color="#555555" marginTop={12}>
+          {data?.description}
+        </Text>
         <Button
           value={data?.buttonText}
           backgroundColor="rgba(130, 24, 234, 0.2)"
@@ -45,19 +51,4 @@ const InfoBlock = styled.div`
 const ImageBlock = styled.div`
   max-width: 460px;
   width: 100%;
-`;
-
-const InfoHeading = styled.p`
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 73px;
-  margin-bottom: 12px;
-`;
-
-const InfoPara = styled.p`
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  margin-top: 12px;
-  color: #555555;
 `;
