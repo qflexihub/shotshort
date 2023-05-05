@@ -1,13 +1,41 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Heading from "./Heading";
+import Text from "./Text";
 
-const BusinessCardView = ({ data }) => {
+const BusinessCardView = ({ data, isClient = false }) => {
   return (
     <CardVieW>
-      <Logo>
-        <Image width={34} height={34} src={data?.logo} alt={data?.heading} />
-      </Logo>
-      <Heading>{data?.heading}</Heading>
+      <div className="flex items-center gap-2">
+        {!isClient ? (
+          <Logo>
+            <Image
+              width={34}
+              height={34}
+              src={data?.logo}
+              alt={data?.heading}
+            />
+          </Logo>
+        ) : (
+          <Image
+            width={100}
+            height={100}
+            src={"/testi1.svg"}
+            alt={data?.heading}
+          />
+        )}
+        {isClient && (
+          <div>
+            <Heading fontSize={25} lineHeight={29}>
+              Edwin zohir
+            </Heading>
+            <Text>Businessman</Text>
+          </div>
+        )}
+      </div>
+      <Heading fontSize={24} marginTop={30} marginBottom={10}>
+        {data?.heading}
+      </Heading>
       <Description>{data?.description}</Description>
     </CardVieW>
   );
@@ -36,14 +64,6 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const Heading = styled.h5`
-  font-size: 24px;
-  font-weight: 700;
-  color: #000000;
-  padding-top: 30px;
-  padding-bottom: 10px;
 `;
 
 const Description = styled.p`
