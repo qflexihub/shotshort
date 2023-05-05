@@ -3,6 +3,7 @@ import Button from "./shared/Button";
 import { StepsType1 } from "@/data/steps";
 import StepCard from "./shared/StepCard";
 import ContentHeading from "./shared/contentHeading";
+import Heading from "./shared/Heading";
 
 const ContentProcess = ({ data }) => {
   return (
@@ -13,9 +14,11 @@ const ContentProcess = ({ data }) => {
         value="Schedule a Call with Video's Expert"
         rightArrow={true}
       />
-      <MainHeading>{data?.processTitle}</MainHeading>
+      <Heading fontSize={24} lineHeight={27} marginTop={50} color="#8218ea">
+        {data?.processTitle}
+      </Heading>
       <StepComponent>
-        {StepsType1?.process?.map((item, index) => {
+        {data?.process?.map((item, index) => {
           return <StepCard key={index} data={item} />;
         })}
       </StepComponent>
@@ -31,16 +34,6 @@ const CardContainer = styled.div`
   align-items: center;
   display: flex;
   margin-bottom: 250px;
-`;
-
-const MainHeading = styled.p`
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 27px;
-  display: flex;
-  align-items: center;
-  color: #8218ea;
-  padding-top: 50px;
 `;
 
 const StepComponent = styled.div`

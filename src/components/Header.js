@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Heading from "./shared/Heading";
+import Text from "./shared/Text";
 
 const Header = () => {
   return (
@@ -19,18 +21,24 @@ const Header = () => {
         alt=""
       />
       <TextBlock>
-        <MainHeading>
+        <Heading fontSize={72} lineHeight={82}>
           Top <span style={{ color: "#8218EA" }}>Video</span> Production Company
           In India
-        </MainHeading>
-        <SubHeading>
+        </Heading>
+        <Text
+          fontWeight={700}
+          fontSize={24}
+          marginTop={24}
+          lineHeight={24}
+          uppercase
+        >
           The top video production company that leverages the power
-        </SubHeading>
-        <Description>
+        </Text>
+        <Text fontSize={18} color="#555555" marginTop={15}>
           The top video production company that leverages the power of 50k+
           content creators/influencers to produce compelling long as well short
           form videos to grow your business!
-        </Description>
+        </Text>
       </TextBlock>
       <VideoBlock>
         <Image
@@ -57,28 +65,6 @@ const TextBlock = styled.div`
   width: 100%;
   margin: auto;
   text-align: center;
-`;
-
-const MainHeading = styled.h1`
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 82px;
-`;
-
-const SubHeading = styled.h2`
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-  margin-top: 24px;
-`;
-
-const Description = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #555555;
-  margin-top: 15px;
 `;
 
 const VideoBlock = styled.div`
