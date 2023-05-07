@@ -17,13 +17,9 @@ export default function Home() {
       <Header />
       <BrandVideos />
       <Services />
-      <ContentProcess data={StepsType1} />
+      <ContentProcess />
       <GetInTouchForm />
       <WhyChooseUs />
-<<<<<<< Updated upstream
-      <ContentProcess />
-=======
->>>>>>> Stashed changes
       <BusinessCard />
       <MarketBuzz />
     </>

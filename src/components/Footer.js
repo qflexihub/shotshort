@@ -6,18 +6,13 @@ const Footer = () => {
   return (
     <FooterContainer>
       <BrandInfo>
-        <Image
-          width={100}
-          height={75}
-          src="/logo.png"
-          alt="logo"
-        />
+        <Image width={100} height={75} src="/logo.png" alt="logo" />
         <FindUs>Finds us online</FindUs>
         <SocialMediaIcons>
           {SocialMediaHandles?.map((item, index) => {
             return (
               <Image
-                style={{  }}
+                style={{}}
                 key={item.id}
                 width={20}
                 height={20}
@@ -30,7 +25,10 @@ const Footer = () => {
       </BrandInfo>
       <ContactInfo>
         <HeadingTitle>Contact Info</HeadingTitle>
-        <AddressData>F-12/1, DLF Phase - 1, Sector 27, Golf Course Rd, Gurugram, Haryana 122002</AddressData>
+        <AddressData>
+          F-12/1, DLF Phase - 1, Sector 27, Golf Course Rd, Gurugram, Haryana
+          122002
+        </AddressData>
         <EmailData>contact@videoly.in</EmailData>
         <ContactData>
           <MobileData>+91 1234567890</MobileData>
@@ -96,7 +94,7 @@ const HeadingTitle = styled.p`
   font-size: 20px;
   line-height: 23px;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-bottom: 10px;
 `;
 
@@ -118,7 +116,7 @@ const EmailData = styled.p`
   padding: 10px 0;
 `;
 
-const ContactData = styled.p`
+const ContactData = styled.div`
   display: flex;
   flex-direction: row;
   padding: 10px 0;
