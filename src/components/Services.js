@@ -1,7 +1,7 @@
-import { services } from "@/data/services";
+import { services } from "@/data/Services";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
-import { serviceHeading } from "@/data/contentHeadingData";
+import { serviceHeading } from "@/data/ContentHeadingData";
 import ContentHeading from "./shared/contentHeading";
 
 const Services = () => {

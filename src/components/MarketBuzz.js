@@ -2,13 +2,14 @@ import styled from "styled-components";
 import Button from "./shared/Button";
 import ContentHeading from "./shared/contentHeading";
 import ProgressCard from "./shared/ProgressCard";
+import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 
-const MarketBuzz = ({ data }) => {
+const MarketBuzz = () => {
   return (
     <CardContainer>
-      <ContentHeading data={data?.processHeading} />
+      <ContentHeading data={MarketBuzzProcess?.processHeading} />
       <MainComponent>
-        {data?.content?.map((item, index) => {
+        {MarketBuzzProcess?.content?.map((item, index) => {
           return <ProgressCard key={index} data={item} />;
         })}
       </MainComponent>

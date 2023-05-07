@@ -2,8 +2,8 @@ import ContentProcess from "@/components/ContentProcess";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import InfoCard from "@/components/shared/InfoCard";
-import { services } from "@/data/services";
-import { StepsType1 } from "@/data/steps";
+import { services } from "@/data/Services";
+import { StepsType1 } from "@/data/Steps";
 
 const InfluencerMarketing = () => {
   return (

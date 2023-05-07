@@ -9,7 +9,7 @@ import MarketBuzz from "@/components/MarketBuzz";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
-import { StepsType1 } from "@/data/steps";
+import { StepsType1 } from "@/data/Steps";
 
 export default function Home() {
   return (
@@ -19,9 +19,9 @@ export default function Home() {
       <Services />
       <GetInTouchForm />
       <WhyChooseUs />
-      <ContentProcess data={StepsType1} />
+      <ContentProcess />
       <BusinessCard />
-      <MarketBuzz data={MarketBuzzProcess} />
+      <MarketBuzz />
     </>
   );
 }

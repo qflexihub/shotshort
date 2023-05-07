@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Button from "./shared/Button";
 import IconDescriptionCard from "./shared/IconDescriptionCard";
-import { WhyChooseUsData } from "@/data/commonData";
 import Heading from "./shared/Heading";
 import { Fragment } from "react";
+import { WhyChooseUsData } from "@/data/CommonData";
 
 const WhyChooseUs = () => {
   return (
