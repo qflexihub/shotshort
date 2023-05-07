@@ -11,6 +11,7 @@ const Heading = styled.h2`
   margin-left: ${(props) => (props.marginLeft || 0) + "px"};
   margin-top: ${(props) => (props.marginTop || 0) + "px"};
   font-family: ${(props) => props.fontFamily || "GT Walsheim Pro"};
+  text-transform: ${(props) => props.textTransform || "normal"};
   line-height: ${(props) =>
     (props.lineHeight || (props.fontSize || 54) + 8) + "px"};
   @media (max-width: 500px) {

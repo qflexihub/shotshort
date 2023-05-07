@@ -15,7 +15,7 @@ export const SocialMediaHandles = [
     id: 3,
     title: "Youtube",
     url: "www.youtube.com/user",
-    icon: "/icons/youtube-play.svg",
+    icon: "/icons/facebook.svg",
   },
   {
     id: 4,
@@ -25,3 +25,21 @@ export const SocialMediaHandles = [
   },
 ];
 
+export const services = [
+  {
+    title: "Social Media Organic Videos",
+    path: "/social-media-video",
+  },
+  {
+    title: "Product Video Production Company",
+    path: "/product-video",
+  },
+  {
+    title: "Video Ads Agency",
+    path: "/video-ads",
+  },
+  {
+    title: "Facebook Ads",
+    path: "/facebook-ads",
+  },
+];

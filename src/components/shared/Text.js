@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Text = styled.p`
+  display: ${(props) => props.display || "block"};
   font-size: ${(props) => (props.fontSize || 18) + "px"};
   padding: ${(props) => props.padding};
   margin: ${(props) => (props.margin || 0) + "px"};
@@ -12,7 +13,7 @@ const Text = styled.p`
   cursor: ${(props) => (props.cursor ? "pointer" : "default")};
   font-weight: ${(props) => props.fontWeight || "400"};
   text-decoration: ${(props) => props.textDecoration || "none"};
-  text-transform: ${(props) => (props.uppercase ? "uppercase" : "normal")};
+  text-transform: ${(props) => props.textTransform || "normal"};
   text-align: ${(props) => props.textAlign};
   font-family: ${(props) => props.fontFamily || "GT Walsheim Pro"};
   line-height: ${(props) =>

@@ -30,7 +30,12 @@ const StepCard = ({ data }) => {
         className="background-card-container"
       >
         <MainCardContainer ref={mainCardRef} className="main-card-container">
-          <Text lineHeight={21} fontWeight={700} color="#898989" uppercase>
+          <Text
+            lineHeight={21}
+            fontWeight={700}
+            color="#898989"
+            textTransform="uppercase"
+          >
             {data?.stepText}
           </Text>
           <CircularImageView>

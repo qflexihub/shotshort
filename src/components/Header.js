@@ -30,7 +30,7 @@ const Header = () => {
           fontSize={24}
           marginTop={24}
           lineHeight={24}
-          uppercase
+          textTransform="uppercase"
         >
           The top video production company that leverages the power
         </Text>
