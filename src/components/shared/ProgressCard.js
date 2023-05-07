@@ -20,7 +20,7 @@ const ProgressCard = ({ data }) => {
     <CardContainer>
       <CircularView>
         <BackgroundRingView>
-          <RingView>
+          <RingView percentage={data.percentage}>
             <PercentageView>
               <NumberData>{data.percentage}%</NumberData>
             </PercentageView>
@@ -79,16 +79,26 @@ const BackgroundRingView = styled.div`
 `;
 
 const RingView = styled.div`
-  width: 85px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
+  z-index: 999;
+  background-image: conic-gradient(
+    #723c96 0%,
+    #723c96 ${props => props.percentage}%,
+    rgba(140, 81, 162, 0.1) ${props => props.percentage}%
+  );
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const PercentageView = styled.div`
   width: 85px;
   height: 85px;
-  background: #f7f0fc;
   border-radius: 100px;
   display: flex;
+  background: #f7f0fc;
   justify-content: center;
   align-items: center;
 `;
