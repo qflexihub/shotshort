@@ -4,12 +4,13 @@ import Button from "./shared/Button";
 import { MenuItems, dropdownItems } from "@/data/MenuItems";
 import Text from "./shared/Text";
 import { useRouter } from "next/router";
-import { Fragment, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
-import { useOutsideClick } from "@/utils/general";
+import { useIsMobile, useOutsideClick } from "@/utils/general";
 
 const Navbar = () => {
   const router = useRouter();
+  const isMobile = useIsMobile();
   const [isDropdown, setDropdown] = useState(false);
 
   const wrapperRef = useRef(null);
@@ -19,15 +20,54 @@ const Navbar = () => {
 
   return (
     <NavContainer>
+      <MobileMenuIcon>
+        <Image
+          width={24}
+          height={19}
+          src="/mobile-menu.svg"
+          alt="Mobile-menu"
+        />
+      </MobileMenuIcon>
       <LogoBlock>
         <Link href="/">
-          <Image width={132} height={100} src="/logo.png" alt="logo" />
+          <Image
+            width={isMobile ? 83 : 132}
+            height={isMobile ? 62 : 100}
+            src="/logo.png"
+            alt="logo"
+          />
         </Link>
       </LogoBlock>
       <MenuBlock ref={wrapperRef} className="prevent-select">
-        {MenuItems?.map((item, index) => {
+        <div
+          className="mr-[24px] flex gap-1 cursor-pointer"
+          onClick={() => {
+            setDropdown(!isDropdown);
+          }}
+        >
+          <Text
+            fontWeight={700}
+            fontSize={16}
+            lineHeight={18}
+            cursor="pointer"
+            color="#000"
+            // style={{ transition: "transform 0.2s ease-in-out" }}
+            // className="hover:scale-110"
+          >
+            Services
+          </Text>
+          <Image
+            style={{ objectFit: "contain" }}
+            width={8}
+            height={8}
+            src="/down-arrow.png"
+            alt="down-arrow"
+          />
+        </div>
+        {MenuItems?.map((item) => {
           return (
             <div
+              key={item?.id}
               className="mr-[24px] flex gap-1 cursor-pointer"
               onClick={() => {
                 if (item?.title === "Services") {
@@ -35,7 +75,19 @@ const Navbar = () => {
                 }
               }}
             >
-              <MenuItem key={index}>{item?.title}</MenuItem>
+              <Link href={item?.link}>
+                <Text
+                  fontWeight={700}
+                  fontSize={16}
+                  lineHeight={18}
+                  cursor="pointer"
+                  color={router?.pathname === item?.link ? "#8218EA" : "#000"}
+                  style={{ transition: "transform 0.2s ease-in-out" }}
+                  className="hover:scale-110"
+                >
+                  {item?.title}
+                </Text>
+              </Link>
               {item?.title === "Services" && (
                 <Image
                   style={{ objectFit: "contain" }}
@@ -51,9 +103,9 @@ const Navbar = () => {
         <Button value="Contact Us" width="146px" height="50px" />
         {isDropdown && (
           <Dropdown>
-            {dropdownItems?.map((item, index) => {
+            {dropdownItems?.map((item) => {
               return (
-                <Link href={item?.link} key={index}>
+                <Link href={item?.link} key={item?.id}>
                   <Text
                     className="hover:text-[#8218EA]"
                     fontSize={16}
@@ -81,19 +133,26 @@ const NavContainer = styled.div`
   align-items: center;
   padding: 18px 120px 18px 120px;
   background: linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%);
+
+  @media (max-width: 768px) {
+    padding: 10px 20px 10px 20px;
+  }
 `;
-const LogoBlock = styled.div``;
+const LogoBlock = styled.div`
+  @media (max-width: 768px) {
+    margin: auto;
+  }
+`;
 const MenuBlock = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const MenuItem = styled.div`
-  /* margin-right: 24px; */
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
@@ -101,6 +160,7 @@ const MenuItem = styled.div`
 `;
 
 const Dropdown = styled.div`
+  width: 232px;
   padding: 25px;
   background-color: #fff;
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
@@ -110,4 +170,12 @@ const Dropdown = styled.div`
   gap: 14px;
   top: 48px;
   z-index: 999;
+`;
+
+const MobileMenuIcon = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;

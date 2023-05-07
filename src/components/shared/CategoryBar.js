@@ -11,7 +11,7 @@ const CategoryBar = () => {
     <CategoryContainer>
       <Swiper
         slidesPerView={9}
-        slidesSkip={1}
+        // slidesSkip={1}
         spaceBetween={2}
         // navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
         // navigation={{
@@ -30,27 +30,29 @@ const CategoryBar = () => {
         }}
         className="mySwiper"
       >
-        {categories?.map((item, index) => {
+        {categories?.map((item) => {
           return (
-            <SwiperSlide key={index}>
-              <Category key={index}>
-                <Image
-                  style={{ objectFit: "cover", margin: "auto" }}
-                  width={64}
-                  height={64}
-                  src={item?.url}
-                  alt="category"
-                />
-                <Text
-                  fontSize={16}
-                  color="#555555"
-                  lineHeight={18}
-                  marginTop={11}
-                >
-                  {item?.name}
-                </Text>
-              </Category>
-            </SwiperSlide>
+            <Fragment key={item?.id}>
+              <SwiperSlide>
+                <Category>
+                  <Image
+                    style={{ objectFit: "cover", margin: "auto" }}
+                    width={64}
+                    height={64}
+                    src={item?.url}
+                    alt="category"
+                  />
+                  <Text
+                    fontSize={16}
+                    color="#555555"
+                    lineHeight={18}
+                    marginTop={11}
+                  >
+                    {item?.name}
+                  </Text>
+                </Category>
+              </SwiperSlide>
+            </Fragment>
           );
         })}
       </Swiper>

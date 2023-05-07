@@ -2,6 +2,7 @@ import { MarketingCardData } from "@/data/MarketingCardData";
 import InfluencerMarketingView from "./shared/InfluencerMarketing";
 import styled from "styled-components";
 import Heading from "./shared/Heading";
+import { Fragment } from "react";
 
 export const InfluencerMarketingCardView = () => {
   return (
@@ -10,8 +11,12 @@ export const InfluencerMarketingCardView = () => {
         Influencer Marketing Service
       </Heading>
       <MarketingSection>
-        {MarketingCardData?.map((item, index) => {
-          return <InfluencerMarketingView key={index} data={item} />;
+        {MarketingCardData?.map((item) => {
+          return (
+            <Fragment key={item?.id}>
+              <InfluencerMarketingView key={index} data={item} />
+            </Fragment>
+          );
         })}
       </MarketingSection>
     </InfluencerMarketing>

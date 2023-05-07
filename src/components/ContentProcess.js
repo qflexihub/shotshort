@@ -3,7 +3,8 @@ import Button from "./shared/Button";
 import StepCard from "./shared/StepCard";
 import ContentHeading from "./shared/contentHeading";
 import Heading from "./shared/Heading";
-import { StepsType1 } from "@/data/Steps";
+import { Fragment } from "react";
+import { StepsType1 } from "@/data/steps";
 
 const ContentProcess = () => {
   return (
@@ -18,8 +19,12 @@ const ContentProcess = () => {
         {StepsType1?.processTitle}
       </Heading>
       <StepComponent>
-        {StepsType1?.process?.map((item, index) => {
-          return <StepCard key={index} data={item} />;
+        {StepsType1?.process?.map((item) => {
+          return (
+            <Fragment key={item?.id}>
+              <StepCard data={item} />
+            </Fragment>
+          );
         })}
       </StepComponent>
     </CardContainer>

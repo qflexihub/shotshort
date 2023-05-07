@@ -1,17 +1,19 @@
 import styled from "styled-components";
-import { caseStudyData } from './../data/CaseStudyData';
+import { caseStudyData } from "./../data/CaseStudyData";
 import VideoInfoCard from "./shared/VideoInfoCard";
+import { Fragment } from "react";
 
 const CaseStudyBlock = () => {
   return (
     <CardContainer>
       {caseStudyData?.map((item, index) => {
         return (
-          <VideoInfoCard
-            key={index}
-            data={item}
-            imageRight={index % 2 === 0 ? true : false}
-          />
+          <Fragment key={item?.id}>
+            <VideoInfoCard
+              data={item}
+              imageRight={index % 2 === 0 ? true : false}
+            />
+          </Fragment>
         );
       })}
     </CardContainer>

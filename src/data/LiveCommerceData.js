@@ -1,5 +1,6 @@
 export const LiveCommerceData = [
   {
+    id: 1,
     logo: "/bsearch.svg",
     heading: "Objective – To Inspire And Improving The Buyer’s Decision",
     description:
@@ -8,6 +9,7 @@ export const LiveCommerceData = [
   },
 
   // {
+  //   id: 2,
   //   logo: "/bsearch.svg",
   //   heading: "Objective – To Inspire And Improving The Buyer’s Decision",
   //   description:
@@ -15,6 +17,7 @@ export const LiveCommerceData = [
   //   hastag: "#Live_Commerce #Content_Creation",
   // },
   // {
+  //   id: 3,
   //   logo: "/bsearch.svg",
   //   heading: "Objective – To Inspire And Improving The Buyer’s Decision",
   //   description:

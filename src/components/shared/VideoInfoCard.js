@@ -4,13 +4,19 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
 import VideoCard from "./videoCard";
+import { Fragment } from "react";
 
 const VideoInfoCard = ({ data, imageRight = true }) => {
   return (
     <MainContainer>
       <InfoCardContainer imageRight={imageRight}>
         <InfoBlock imageRight={imageRight}>
-          <Image width={169} height={57} src={data?.brandLogo} alt={data?.title} />
+          <Image
+            width={169}
+            height={57}
+            src={data?.brandLogo}
+            alt={data?.title}
+          />
           <Heading fontSize={44} marginBottom={20} marginTop={20}>
             {data?.title}
           </Heading>
@@ -18,33 +24,50 @@ const VideoInfoCard = ({ data, imageRight = true }) => {
             {data?.description}
           </Text>
           <HashtagContainer>
-          {data?.hashtag?.map((item, index) => {
-            return (<Text fontSize={24} lineHeight={24} color="#8218EA" fontWeight={"700"} marginRight={12}>
-              {item}
-            </Text>);
-          })}
+            {data?.hashtag?.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  <Text
+                    fontSize={24}
+                    lineHeight={24}
+                    color="#8218EA"
+                    fontWeight={"700"}
+                    marginRight={12}
+                  >
+                    {item}
+                  </Text>
+                </Fragment>
+              );
+            })}
           </HashtagContainer>
-          <Button
-            value={"Contact Us"}
-            marginTop="20px"
-            rightArrow={true}
-          />
+          <Button value={"Contact Us"} marginTop="20px" rightArrow={true} />
         </InfoBlock>
         <VideoBlock>
           <VideoCard data={data?.videoData} />
         </VideoBlock>
       </InfoCardContainer>
       <CardView>
-        {data?.infoData?.map((item, index) => {
+        {data?.infoData?.map((item) => {
           return (
-          <DataView>
-            <Text fontSize={35} lineHeight={24} color="#8218EA" fontWeight={"700"}>
-             {item.count}
-            </Text>
-            <Text fontSize={24} lineHeight={24} color="#555555" fontWeight={"400"} marginTop={8}>
-             {item.title}
-            </Text>
-          </DataView>
+            <DataView key={item?.id}>
+              <Text
+                fontSize={35}
+                lineHeight={24}
+                color="#8218EA"
+                fontWeight={"700"}
+              >
+                {item.count}
+              </Text>
+              <Text
+                fontSize={24}
+                lineHeight={24}
+                color="#555555"
+                fontWeight={"400"}
+                marginTop={8}
+              >
+                {item.title}
+              </Text>
+            </DataView>
           );
         })}
       </CardView>
@@ -95,8 +118,8 @@ const CardView = styled.div`
 `;
 
 const DataView = styled.div`
-  background: #FFFFFF;
-  border: 1px solid #CFCFCF;
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   max-width: 360px;

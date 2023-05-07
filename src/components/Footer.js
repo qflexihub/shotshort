@@ -23,16 +23,17 @@ const Footer = () => {
             Finds us online
           </Text>
           <SocialMediaIcons>
-            {SocialMediaHandles?.map((item, index) => {
+            {SocialMediaHandles?.map((item) => {
               return (
-                <Image
-                  style={{ marginRight: 20 }}
-                  key={item.id}
-                  width={20}
-                  height={20}
-                  src={item.icon}
-                  alt={item.title}
-                />
+                <Fragment key={item.id}>
+                  <Image
+                    style={{ marginRight: 20 }}
+                    width={20}
+                    height={20}
+                    src={item.icon}
+                    alt={item.title}
+                  />
+                </Fragment>
               );
             })}
           </SocialMediaIcons>
@@ -95,9 +96,9 @@ const Footer = () => {
             Services
           </Heading>
 
-          {services?.map((item, index) => {
+          {services?.map((item) => {
             return (
-              <Fragment key={index}>
+              <Fragment key={item?.id}>
                 <Link href={item?.link} style={{ marginBottom: 20 }}>
                   <Text
                     fontSize={18}

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function useOutsideClick(ref, actionToPerform, params = []) {
   return useEffect(() => {
@@ -20,3 +20,24 @@ export function useOutsideClick(ref, actionToPerform, params = []) {
     };
   }, [ref, params]);
 }
+
+export const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+
+    mediaQuery.addListener(handleResize);
+
+    return () => {
+      mediaQuery.removeListener(handleResize);
+    };
+  }, []);
+
+  return isMobile;
+};

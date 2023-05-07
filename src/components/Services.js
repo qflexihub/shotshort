@@ -1,8 +1,9 @@
-import { services } from "@/data/Services";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
-import { serviceHeading } from "@/data/ContentHeadingData";
 import ContentHeading from "./shared/contentHeading";
+import { Fragment } from "react";
+import { services } from "@/data/ServicesData";
+import { serviceHeading } from "@/data/contentHeadingData";
 
 const Services = () => {
   return (
@@ -10,11 +11,9 @@ const Services = () => {
       <ContentHeading data={serviceHeading} />
       {services?.map((item, index) => {
         return (
-          <InfoCard
-            key={index}
-            data={item}
-            imageRight={index % 2 === 0 ? true : false}
-          />
+          <Fragment key={item?.id}>
+            <InfoCard data={item} imageRight={index % 2 === 0 ? true : false} />
+          </Fragment>
         );
       })}
     </CardContainer>

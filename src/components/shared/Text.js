@@ -18,8 +18,10 @@ const Text = styled.p`
   font-family: ${(props) => props.fontFamily || "GT Walsheim Pro"};
   line-height: ${(props) =>
     (props.lineHeight || (props.fontSize || 18) + 8) + "px"};
+
   @media (max-width: 500px) {
-    font-size: ${(props) => (props.fontSize || 14) + "px"};
+    font-size: ${(props) => (props.mobileFontSize || 14) + "px"};
+    line-height: ${(props) => (props.mobileLineHeight || 16) + "px"};
     margin-bottom: ${(props) =>
       (props.mobileMarginBottom || props.marginBottom || 0) + "px"};
   }

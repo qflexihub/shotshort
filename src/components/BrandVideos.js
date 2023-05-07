@@ -42,7 +42,7 @@ const BrandVideos = () => {
         <VideoContainer>
           <Swiper
             slidesPerView={4}
-            slidesSkip={1}
+            // slidesSkip={1}
             // spaceBetween={10}
             navigation={{
               prevEl: ".swiper-button-prev",
@@ -60,13 +60,13 @@ const BrandVideos = () => {
             className="mySwiper"
           >
             <>
-              {Videos?.map((item, index) => {
+              {Videos?.map((item) => {
                 return (
-                  <>
-                    <SwiperSlide key={index}>
+                  <Fragment key={item?.id}>
+                    <SwiperSlide>
                       <VideoCard data={item} />
                     </SwiperSlide>
-                  </>
+                  </Fragment>
                 );
               })}
             </>
@@ -97,6 +97,10 @@ export default BrandVideos;
 const BrandVideoContainer = styled.div`
   max-width: 100%;
   padding: 80px 120px;
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `;
 
 const Block1 = styled.div`
@@ -126,6 +130,10 @@ const NextArrow = styled.div`
   transform: translate(-50%, -50%);
   cursor: pointer;
   border: 3px solid #fff;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const PrevArrow = styled.div`
@@ -143,4 +151,8 @@ const PrevArrow = styled.div`
   transform: translate(-50%, -50%);
   cursor: pointer;
   border: 3px solid #fff;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

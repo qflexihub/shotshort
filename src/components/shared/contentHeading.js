@@ -22,7 +22,6 @@ const HeadingContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   margin-bottom: 20px;
   padding: 0px 64px;
 `;

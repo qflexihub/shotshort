@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import InfoCard from "@/components/shared/InfoCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
-import { services } from "@/data/Services";
+import { services } from "@/data/ServicesData";
 import { StepsType1 } from "@/data/Steps";
 
 const SocialMedia = () => {

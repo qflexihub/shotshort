@@ -1,6 +1,7 @@
 import { BusinesdCardData } from "@/data/BusinessCardData";
 import BusinessCardView from "./shared/BusinessCard";
 import styled from "styled-components";
+import { Fragment } from "react";
 
 const BusinessCard = () => {
   return (
@@ -9,8 +10,12 @@ const BusinessCard = () => {
         How Our Short Video Ads Company Can Help Your Business?
       </BusinessCardHeading>
       <BusinessCardSection>
-        {BusinesdCardData?.map((item, index) => {
-          return <BusinessCardView key={index} data={item} />;
+        {BusinesdCardData?.map((item) => {
+          return (
+            <Fragment key={item?.id}>
+              <BusinessCardView data={item} />
+            </Fragment>
+          );
         })}
       </BusinessCardSection>
     </BusinessCardContainer>

@@ -2,11 +2,13 @@ import Image from "next/image";
 import styled from "styled-components";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
+import HappyClients from "./shared/HappyClients";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <Image
+        className="hidden lg:block"
         style={{ position: "absolute", left: 0 }}
         width={403}
         height={426}
@@ -14,6 +16,7 @@ const Header = () => {
         alt=""
       />
       <Image
+        className="hidden lg:block"
         style={{ position: "absolute", right: 0 }}
         width={314}
         height={484}
@@ -21,13 +24,19 @@ const Header = () => {
         alt=""
       />
       <TextBlock>
-        <Heading fontSize={72} lineHeight={82}>
+        <Heading
+          fontSize={72}
+          lineHeight={82}
+          mobileFontSize={28}
+          mobileLineHeight={32}
+        >
           Top <span style={{ color: "#8218EA" }}>Video</span> Production Company
           In India
         </Heading>
         <Text
           fontWeight={700}
           fontSize={24}
+          mobileFontSize={16}
           marginTop={24}
           lineHeight={24}
           textTransform="uppercase"
@@ -49,6 +58,7 @@ const Header = () => {
           alt="Video"
         />
       </VideoBlock>
+      <HappyClients />
     </HeaderContainer>
   );
 };
@@ -58,6 +68,10 @@ const HeaderContainer = styled.div`
   position: relative;
   text-align: center;
   padding-top: 40px;
+
+  @media (max-width: 768px) {
+    padding: 24px 20px;
+  }
 `;
 
 const TextBlock = styled.div`
