@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div style={{ padding: "18px 120px 18px 120px" }}>
       <Navbar />
       {children}
       <Footer />
