@@ -1,4 +1,5 @@
 import ContentProcess from "@/components/ContentProcess";
+import InfluencerMarketingContainer from "@/components/InfluencerMarketing";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import InfoCard from "@/components/shared/InfoCard";
@@ -13,6 +14,7 @@ const InfluencerMarketing = () => {
       <ContentProcess data={StepsType1} />
       <WhyChooseUs />
       <WhyChooseUs />
+      <InfluencerMarketingContainer />
     </>
   );
 };
