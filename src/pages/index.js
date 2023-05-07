@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Layout>
         <Header />
-        {/* <BrandVideos /> */}
+        <BrandVideos />
         <Services />
         <GetInTouchForm />
         <WhyChooseUs />

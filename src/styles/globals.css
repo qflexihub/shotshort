@@ -46,13 +46,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-video::-webkit-media-controls {
-  display: none !important;
-}
-
-video::-webkit-media-controls-enclosure {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* other styles */
+video {
+  object-fit: cover;
 }

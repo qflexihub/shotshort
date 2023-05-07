@@ -3,6 +3,7 @@ import Button from "./shared/Button";
 import IconDescriptionCard from "./shared/IconDescriptionCard";
 import { WhyChooseUsData } from "@/data/commonData";
 import Heading from "./shared/Heading";
+import { Fragment } from "react";
 
 const WhyChooseUs = () => {
   return (
@@ -23,9 +24,9 @@ const WhyChooseUs = () => {
         <Block2>
           {WhyChooseUsData?.map((item, index) => {
             return (
-              <>
-                <IconDescriptionCard key={index} data={item} />
-              </>
+              <Fragment key={index}>
+                <IconDescriptionCard data={item} />
+              </Fragment>
             );
           })}
         </Block2>
