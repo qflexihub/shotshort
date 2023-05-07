@@ -23,5 +23,5 @@ const Services = () => {
 export default Services;
 
 const CardContainer = styled.div`
-  padding: 0 185px;
+  padding: 0 120px;
 `;

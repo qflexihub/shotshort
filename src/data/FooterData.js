@@ -15,7 +15,7 @@ export const SocialMediaHandles = [
     id: 3,
     title: "Youtube",
     url: "www.youtube.com/user",
-    icon: "/icons/youtube.svg",
+    icon: "/icons/youtube-play.svg",
   },
   {
     id: 4,

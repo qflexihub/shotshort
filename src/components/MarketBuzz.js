@@ -32,7 +32,7 @@ const CardContainer = styled.div`
 `;
 
 const MainComponent = styled.div`
-  padding: 30px 100px;
+  padding: 30px 120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;

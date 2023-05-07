@@ -25,7 +25,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 18px 120px 18px 120px; */
+  padding: 18px 120px 18px 120px;
   background: linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%);
 `;
 const LogoBlock = styled.div``;

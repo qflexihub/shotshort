@@ -43,18 +43,20 @@ const BrandVideos = () => {
           <Swiper
             slidesPerView={4}
             slidesSkip={1}
-            spaceBetween={10}
-            // navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+            // spaceBetween={10}
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
-            // breakpoints={{
-            //   769: {
-            //     slidesPerView: 2,
-            //     slidesPerGroup: 2,
-            //   },
-            // }}
+            breakpoints={{
+              769: {
+                slidesPerView: 4,
+              },
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: 5,
+              },
+            }}
             className="mySwiper"
           >
             <>
@@ -94,7 +96,7 @@ export default BrandVideos;
 
 const BrandVideoContainer = styled.div`
   max-width: 100%;
-  padding: 80px 92px;
+  padding: 80px 120px;
 `;
 
 const Block1 = styled.div`
@@ -119,7 +121,7 @@ const NextArrow = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 999;
-  right: -20px;
+  right: -30px;
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;

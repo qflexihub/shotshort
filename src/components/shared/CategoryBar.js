@@ -9,7 +9,7 @@ import "swiper/css";
 const CategoryBar = () => {
   return (
     <CategoryContainer>
-      {/* <Swiper
+      <Swiper
         slidesPerView={9}
         slidesSkip={1}
         spaceBetween={2}
@@ -29,26 +29,31 @@ const CategoryBar = () => {
           },
         }}
         className="mySwiper"
-      > */}
-      {categories?.map((item, index) => {
-        return (
-          // <SwiperSlide key={index}>
-          <Category key={index}>
-            <Image
-              style={{ objectFit: "cover", margin: "auto" }}
-              width={64}
-              height={64}
-              src={item?.url}
-              alt="category"
-            />
-            <Text fontSize={16} color="#555555" lineHeight={18} marginTop={11}>
-              {item?.name}
-            </Text>
-          </Category>
-          // </SwiperSlide>
-        );
-      })}
-      {/* </Swiper> */}
+      >
+        {categories?.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <Category key={index}>
+                <Image
+                  style={{ objectFit: "cover", margin: "auto" }}
+                  width={64}
+                  height={64}
+                  src={item?.url}
+                  alt="category"
+                />
+                <Text
+                  fontSize={16}
+                  color="#555555"
+                  lineHeight={18}
+                  marginTop={11}
+                >
+                  {item?.name}
+                </Text>
+              </Category>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </CategoryContainer>
   );
 };
