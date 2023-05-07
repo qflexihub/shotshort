@@ -1,39 +1,29 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { SocialMediaHandles } from './../data/SocialMediaHandles';
+import { SocialMediaHandles } from "./../data/SocialMediaHandles";
 
 const Footer = () => {
   return (
     <FooterContainer>
       <BrandInfo>
-        <Image
-          width={100}
-          height={75}
-          src="/logo.png"
-          alt=""
-        />
+        <Image width={100} height={75} src="/logo.png" alt="" />
         <SocialMediaIcons>
           {SocialMediaHandles?.map((item, index) => {
-            {console.log(index, item.title)}
-            <Image
-              key={item.id}
-              width={25}
-              height={25}
-              src={item.icon}
-              alt={item.title}
-            />
+            return (
+              <Image
+                key={item.id}
+                width={25}
+                height={25}
+                src={item.icon}
+                alt={item.title}
+              />
+            );
           })}
         </SocialMediaIcons>
-        <FindUs>
-          Finds us online
-        </FindUs>
+        <FindUs>Finds us online</FindUs>
       </BrandInfo>
-      <ContactInfo>
-        Contact Info
-      </ContactInfo>
-      <ServicesInfo>
-        Services Info
-      </ServicesInfo>
+      <ContactInfo>Contact Info</ContactInfo>
+      <ServicesInfo>Services Info</ServicesInfo>
     </FooterContainer>
   );
 };
@@ -46,7 +36,7 @@ const FooterContainer = styled.div`
   justify-content: space-evenly;
   max-width: 100%;
   padding: 50px 120px;
-  background: #24093F;
+  background: #24093f;
 `;
 
 const BrandInfo = styled.div`

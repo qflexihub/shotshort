@@ -24,6 +24,7 @@ const VideoCard = ({ data }) => {
           onEnded={() => setPlaying(false)}
           playing={playing}
           url={data?.url}
+          // light="/ellipse4.png"
         />
       )}
       <BrandLogo>

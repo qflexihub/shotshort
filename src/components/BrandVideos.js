@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import SwiperCore, { Navigation } from "swiper/core";
 
 import Image from "next/image";
+import CategoryBar from "./shared/CategoryBar";
 
 SwiperCore.use([Navigation]);
 
@@ -37,6 +38,7 @@ const BrandVideos = () => {
             rightArrow
           />
         </Block1>
+        <CategoryBar />
         <VideoContainer>
           <Swiper
             slidesPerView={4}
