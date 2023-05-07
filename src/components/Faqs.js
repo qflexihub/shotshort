@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Text from "./shared/Text";
 import { faqsData } from "@/data/Faqs";
 import { useState } from "react";
-// TODO:- NEED TO FIX CSS
+import Image from "next/image";
+
 const Faqs = () => {
 
     const [activeIndex, setActiveIndex] = useState(null);
@@ -15,28 +16,30 @@ const Faqs = () => {
       <MainContainer>
         <HeadingContainer>
             <Text fontSize={74} lineHeight={98} color="#8218EA" fontWeight={"700"}>{faqsData?.title}</Text>
-            <Text fontSize={18} lineHeight={20} color="#555555" fontWeight={"400"}>{faqsData?.description}</Text>
+            <Text fontSize={18} lineHeight={20} color="#555555" fontWeight={"400"} marginTop={8}>{faqsData?.description}</Text>
         </HeadingContainer>
         <DetailContainer>
             {faqsData?.faqs?.map((item, index) => {
                 return(
                     <Accordian key={index}>
-                        {/* <AccordianHeading>
-                            <Text fontSize={24} fontWeight={"500"} marginTop={30} marginBottom={30}>{item?.question}</Text>
-                        </AccordianHeading> */}
                         <AccordianHeading onClick={() => handleAccordianClick(index)}>
-                            <Text fontSize={24} fontWeight={"500"} marginTop={30} marginBottom={30}>
+                            <Text fontSize={24} fontWeight={"500"}>
                                 {item?.question}
                             </Text>
+                            <IconImage>
+                                <Image src={activeIndex === index ? "/minus-icon.svg" : "/plus-icon.svg"} alt={activeIndex === index ? "+" : "-"} width={22} height={22} />
+                            </IconImage>
                         </AccordianHeading>
-                        {/* <AccordianContent>
-                            <Text fontSize={18} fontWeight={"400"}>{item?.answer}</Text>
-                        </AccordianContent> */}
-                        <AccordianContent style={{ height: activeIndex === index ? "auto" : 0 }}>
-                            <Text fontSize={18} fontWeight={"400"} >
+                        <AccordianContent style={{ 
+                            visibility: activeIndex === index ? "visible" : "hidden",
+                            height: activeIndex === index ? "auto" : 0,
+                            paddingBottom: activeIndex === index ? "20px" : 0,
+                            }}>
+                            <Text fontSize={18} fontWeight={"400"}>
                                 {item?.answer}
                             </Text>
                         </AccordianContent>
+                        <Spacebar />
                     </Accordian>
                 );
             })}
@@ -67,8 +70,24 @@ const Accordian = styled.div`
   width: 100%;
 `;
 
-const AccordianHeading = styled.div``;
+const AccordianHeading = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+`;
 
 const AccordianContent = styled.div`
-    background: #DBDBDB;
+  padding-right: 30px;
+`;
+
+const Spacebar = styled.div`
+  height: 1px;
+  background: #DBDBDB;
+`;
+
+const IconImage = styled.div`
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
 `;
