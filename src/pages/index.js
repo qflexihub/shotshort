@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <LiveCommerce />
         <Header />
         <BrandVideos />
         <Services />
@@ -24,6 +23,7 @@ export default function Home() {
         <ContentProcess data={StepsType1} />
         <BusinessCard />
         <MarketBuzz data={MarketBuzzProcess} />
+        <LiveCommerce />
       </Layout>
     </>
   );
