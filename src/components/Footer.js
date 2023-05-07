@@ -98,7 +98,7 @@ const Footer = () => {
           {services?.map((item, index) => {
             return (
               <Fragment key={index}>
-                <Link href={item?.path} style={{ marginBottom: 20 }}>
+                <Link href={item?.link} style={{ marginBottom: 20 }}>
                   <Text
                     fontSize={18}
                     lineHeight={23}

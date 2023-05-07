@@ -28,18 +28,18 @@ export const SocialMediaHandles = [
 export const services = [
   {
     title: "Social Media Organic Videos",
-    path: "/social-media-video",
+    link: "/social-media-video",
   },
   {
     title: "Product Video Production Company",
-    path: "/product-video",
+    link: "/product-video",
   },
   {
     title: "Video Ads Agency",
-    path: "/video-ads",
+    link: "/video-ads",
   },
   {
     title: "Facebook Ads",
-    path: "/facebook-ads",
+    link: "/facebook-ads",
   },
 ];
