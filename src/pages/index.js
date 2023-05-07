@@ -2,6 +2,7 @@ import BrandVideos from "@/components/BrandVideos";
 import BusinessCard from "@/components/BusinessCard";
 import CaseStudyBlock from "@/components/CaseStudyBlock";
 import ContentProcess from "@/components/ContentProcess";
+import Faqs from "@/components/Faqs";
 import GetInTouchForm from "@/components/GetInTouchForm";
 import Header from "@/components/Header";
 import MarketBuzz from "@/components/MarketBuzz";
@@ -20,6 +21,7 @@ export default function Home() {
       <BusinessCard />
       <MarketBuzz />
       {/* <CaseStudyBlock /> */}
+      <Faqs />
     </>
   );
 }
