@@ -1,8 +1,8 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import Button from "./shared/Button";
 import IconDescriptionCard from "./shared/IconDescriptionCard";
 import Heading from "./shared/Heading";
-import { Fragment } from "react";
 import { WhyChooseUsData } from "@/data/commonData";
 
 const WhyChooseUs = () => {

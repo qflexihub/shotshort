@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import Text from "./Text";
 import Link from "next/link";
 
-export const InfluencerMarketingView = ({ data }) => {
+const InfluencerMarketingView = ({ data }) => {
   return (
     <>
       <MarketingCard>

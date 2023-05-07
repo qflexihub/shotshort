@@ -6,7 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import InfoCard from "@/components/shared/InfoCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { services } from "@/data/ServicesData";
-import { StepsType1 } from "@/data/Steps";
+import { StepsType1 } from "@/data/steps";
 
 const CaseStudy = () => {
   return (

@@ -1,15 +1,15 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import Button from "./shared/Button";
 import StepCard from "./shared/StepCard";
 import ContentHeading from "./shared/contentHeading";
 import Heading from "./shared/Heading";
-import { Fragment } from "react";
 import { StepsType1 } from "@/data/steps";
 
 const ContentProcess = () => {
   return (
     <CardContainer>
-      <ContentHeading data={StepsType1?.processHeading} />
+      <ContentHeading data={StepsType1?.processHead} />
       <Button
         width="375px"
         value="Schedule a Call with Video's Expert"

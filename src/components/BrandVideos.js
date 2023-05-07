@@ -1,6 +1,6 @@
+import React, { Fragment, useRef } from "react";
 import styled from "styled-components";
 import VideoCard from "./shared/videoCard";
-import { Fragment, useRef } from "react";
 import { Videos } from "@/data/BrandVideosData";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";

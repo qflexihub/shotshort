@@ -1,12 +1,12 @@
+import React, { Fragment } from "react";
 import { MarketingCardData } from "@/data/MarketingCardData";
-import InfluencerMarketingView from "./shared/InfluencerMarketing";
+import InfluencerMarketingView from "./shared/InfluencerMarketingView";
 import styled from "styled-components";
 import Heading from "./shared/Heading";
-import { Fragment } from "react";
 
-export const InfluencerMarketingCardView = () => {
+const InfluencerMarketingCardView = () => {
   return (
-    <InfluencerMarketing>
+    <InfluencerMarketingContainer>
       <Heading fontSize={54} marginTop={80} textAlign={"center"}>
         Influencer Marketing Service
       </Heading>
@@ -14,18 +14,18 @@ export const InfluencerMarketingCardView = () => {
         {MarketingCardData?.map((item) => {
           return (
             <Fragment key={item?.id}>
-              <InfluencerMarketingView key={index} data={item} />
+              <InfluencerMarketingView data={item} />
             </Fragment>
           );
         })}
       </MarketingSection>
-    </InfluencerMarketing>
+    </InfluencerMarketingContainer>
   );
 };
 
 export default InfluencerMarketingCardView;
 
-const InfluencerMarketing = styled.div``;
+const InfluencerMarketingContainer = styled.div``;
 
 const MarketingSection = styled.div`
   display: flex;

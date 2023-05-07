@@ -1,10 +1,10 @@
+import React, { Fragment } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
 import VideoCard from "./videoCard";
-import { Fragment } from "react";
 
 const VideoInfoCard = ({ data, imageRight = true }) => {
   return (

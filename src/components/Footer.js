@@ -1,9 +1,9 @@
+import React, { Fragment } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import { SocialMediaHandles, services } from "../data/FooterData";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
-import { Fragment } from "react";
 import Link from "next/link";
 
 const Footer = () => {

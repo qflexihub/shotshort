@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import InfoCard from "@/components/shared/InfoCard";
 import { services } from "@/data/ServicesData";
-import { StepsType1 } from "@/data/Steps";
+import { StepsType1 } from "@/data/steps";
 
 const FacebookAds = () => {
   return (

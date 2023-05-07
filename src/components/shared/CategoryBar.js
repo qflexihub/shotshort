@@ -1,5 +1,5 @@
+import React, { Fragment } from "react";
 import Image from "next/image";
-import { Fragment } from "react";
 import Text from "./Text";
 import styled from "styled-components";
 import { categories } from "@/data/CategoriesData";

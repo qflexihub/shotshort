@@ -1,7 +1,7 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import LiveCommerceView from "./shared/LiveCommerce";
 import { LiveCommerceData } from "@/data/LiveCommerceData";
-import { Fragment } from "react";
 
 const LiveCommerce = () => {
   return (

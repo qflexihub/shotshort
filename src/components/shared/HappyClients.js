@@ -1,10 +1,9 @@
+import React, { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BrandsLogo } from "@/data/HappyClientData";
 import Image from "next/image";
 import styled from "styled-components";
-import { Fragment } from "react";
 import Heading from "./Heading";
-
 const HappyClients = () => {
   return (
     <HappyClientsContainer>

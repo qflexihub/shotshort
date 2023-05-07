@@ -1,7 +1,7 @@
+import React, { Fragment } from "react";
 import { BusinesdCardData } from "@/data/BusinessCardData";
 import BusinessCardView from "./shared/BusinessCard";
 import styled from "styled-components";
-import { Fragment } from "react";
 
 const BusinessCard = () => {
   return (

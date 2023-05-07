@@ -1,7 +1,7 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
 import ContentHeading from "./shared/contentHeading";
-import { Fragment } from "react";
 import { services } from "@/data/ServicesData";
 import { serviceHeading } from "@/data/contentHeadingData";
 

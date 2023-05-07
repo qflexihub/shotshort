@@ -1,9 +1,9 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import Button from "./shared/Button";
 import ContentHeading from "./shared/contentHeading";
 import ProgressCard from "./shared/ProgressCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
-import { Fragment } from "react";
 
 const MarketBuzz = () => {
   return (

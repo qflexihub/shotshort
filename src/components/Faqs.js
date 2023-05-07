@@ -30,7 +30,7 @@ const Faqs = () => {
       <DetailContainer>
         {faqsData?.faqs?.map((item, index) => {
           return (
-            <Accordian key={index}>
+            <Accordian key={item?.id}>
               <AccordianHeading onClick={() => handleAccordianClick(index)}>
                 <Text cursor="pointer" fontSize={24} fontWeight={"500"}>
                   {item?.question}

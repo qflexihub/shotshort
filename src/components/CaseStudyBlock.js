@@ -1,7 +1,7 @@
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import { caseStudyData } from "./../data/CaseStudyData";
 import VideoInfoCard from "./shared/VideoInfoCard";
-import { Fragment } from "react";
 
 const CaseStudyBlock = () => {
   return (
