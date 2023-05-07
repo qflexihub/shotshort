@@ -4,6 +4,7 @@ import ContentProcess from "@/components/ContentProcess";
 import GetInTouchForm from "@/components/GetInTouchForm";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
+import LiveCommerce from "@/components/LiveCommerce";
 import MarketBuzz from "@/components/MarketBuzz";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Layout>
+        <LiveCommerce />
         <Header />
         {/* <BrandVideos /> */}
         <Services />
