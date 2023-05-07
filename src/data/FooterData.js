@@ -24,3 +24,4 @@ export const SocialMediaHandles = [
     icon: "/icons/twitter.svg",
   },
 ];
+
