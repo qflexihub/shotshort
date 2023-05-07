@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
-import Button from "./Button";
 import Image from "next/image";
 
 const VideoCard = ({ data }) => {
@@ -28,7 +27,7 @@ const VideoCard = ({ data }) => {
         />
       )}
       <BrandLogo>
-        <Image fill src={data?.brandLogo} alt="play button" />
+        {data?.brandLogo && <Image fill src={data?.brandLogo} alt="Brand" />}
       </BrandLogo>
       <PlayIcon playing={playing} />
     </VideoCardContainer>
