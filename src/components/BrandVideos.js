@@ -54,7 +54,7 @@ const BrandVideos = () => {
               },
               320: {
                 slidesPerView: 1.5,
-                spaceBetween: 5,
+                spaceBetween: 12,
               },
             }}
             className="mySwiper"

@@ -40,6 +40,10 @@ const WhyChooseContainer = styled.div`
   max-width: 100%;
   background-color: #fffdf7;
   padding: 100px 110px;
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `;
 
 const Block1 = styled.div`

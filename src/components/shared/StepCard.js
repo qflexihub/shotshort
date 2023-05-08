@@ -2,9 +2,11 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Text from "./Text";
+import { useIsMobile } from "@/utils/general";
 
 const StepCard = ({ data }) => {
   const mainCardRef = useRef(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const cards = document.querySelectorAll(".main-card-container");
@@ -31,6 +33,7 @@ const StepCard = ({ data }) => {
       >
         <MainCardContainer ref={mainCardRef} className="main-card-container">
           <Text
+            mobileFontSize={12}
             lineHeight={21}
             fontWeight={700}
             color="#898989"
@@ -39,7 +42,12 @@ const StepCard = ({ data }) => {
             {data?.stepText}
           </Text>
           <CircularImageView>
-            <Image width={30} height={30} src={data?.image} alt={data?.title} />
+            <Image
+              width={isMobile ? 16 : 30}
+              height={isMobile ? 16 : 30}
+              src={data?.image}
+              alt={data?.title}
+            />
           </CircularImageView>
           <Text fontSize={22} fontWeight={700} textAlign="center">
             {data?.title}
@@ -54,6 +62,10 @@ export default StepCard;
 
 const StepCardContainer = styled.div`
   min-width: 250px;
+
+  @media (max-width: 768px) {
+    min-width: 161px;
+  }
 `;
 
 const BackgroundCardContainer = styled.div`
@@ -84,4 +96,9 @@ const CircularImageView = styled.div`
   margin: 0 auto;
   display: grid;
   place-items: center;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;

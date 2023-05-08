@@ -24,4 +24,8 @@ const HeadingContainer = styled.div`
   align-items: center;
   margin-bottom: 20px;
   padding: 0px 64px;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+  }
 `;

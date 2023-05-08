@@ -44,12 +44,24 @@ const GetInTouchContainer = styled.div`
   background: #24093f;
   padding: 100px 120px 90px 120px;
   display: flex;
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+    display: block;
+    text-align: center;
+  }
 `;
 
 const ContentBlock = styled.div`
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const FormBlock = styled.div`
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;

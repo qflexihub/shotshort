@@ -54,6 +54,12 @@ const CardVieW = styled.div`
   &:not(:last-of-type) {
     margin-right: 10px;
   }
+
+  @media (max-width: 768px) {
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
 `;
 
 const Logo = styled.div`

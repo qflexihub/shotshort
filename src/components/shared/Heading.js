@@ -15,7 +15,7 @@ const Heading = styled.h2`
   line-height: ${(props) =>
     (props.lineHeight || (props.fontSize || 54) + 8) + "px"};
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     font-size: ${(props) => (props.mobileFontSize || 24) + "px"};
     line-height: ${(props) => (props.mobileLineHeight || 28) + "px"};
   }

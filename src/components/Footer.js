@@ -173,6 +173,10 @@ export default Footer;
 const FooterContainer = styled.div`
   padding: 50px 120px 35px 120px;
   background: #24093f;
+
+  @media (max-width: 768px) {
+    padding: 34px 20px 20px 20px;
+  }
 `;
 
 const Block1 = styled.div`
@@ -181,6 +185,10 @@ const Block1 = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   max-width: 100%;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const Block2 = styled.div`
@@ -192,6 +200,10 @@ const Block2 = styled.div`
 const BrandInfo = styled.div`
   height: 250px;
   flex: 3;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const SocialMediaIcons = styled.div`

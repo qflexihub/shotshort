@@ -27,6 +27,11 @@ export default BusinessCard;
 const BusinessCardSection = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-top: 30px;
+  }
 `;
 
 const BusinessCardHeading = styled.h1`
@@ -36,8 +41,18 @@ const BusinessCardHeading = styled.h1`
   font-size: 54px;
   font-weight: 700;
   padding: 0px 181px 50px 181px;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+    font-size: 24px;
+    line-height: 28px;
+  }
 `;
 
 const BusinessCardContainer = styled.div`
   padding: 80px 80px;
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `;

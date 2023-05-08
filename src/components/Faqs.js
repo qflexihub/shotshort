@@ -3,9 +3,11 @@ import Text from "./shared/Text";
 import { faqsData } from "@/data/Faqs";
 import { useState } from "react";
 import Image from "next/image";
+import { useIsMobile } from "@/utils/general";
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const isMobile = useIsMobile();
 
   const handleAccordianClick = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -14,15 +16,23 @@ const Faqs = () => {
   return (
     <MainContainer>
       <HeadingContainer>
-        <Text fontSize={74} lineHeight={98} color="#8218EA" fontWeight={"700"}>
+        <Text
+          fontSize={74}
+          mobileFontSize={34}
+          lineHeight={98}
+          color="#8218EA"
+          fontWeight={"700"}
+          textAlign={isMobile ? "center" : ""}
+        >
           {faqsData?.title}
         </Text>
         <Text
           fontSize={18}
+          mobileFontSize={14}
           lineHeight={20}
           color="#555555"
           fontWeight={"400"}
-          marginTop={8}
+          marginTop={isMobile ? 10 : 8}
         >
           {faqsData?.description}
         </Text>
@@ -75,6 +85,11 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    padding: 34px 20px;
+    display: block;
+  }
 `;
 
 const HeadingContainer = styled.div`
@@ -83,7 +98,7 @@ const HeadingContainer = styled.div`
 `;
 
 const DetailContainer = styled.div`
-  width: 640px;
+  max-width: 640px;
 `;
 
 const Accordian = styled.div`

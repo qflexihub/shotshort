@@ -44,6 +44,10 @@ const VideoCardContainer = styled.div`
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const PlayButton = styled.div`
