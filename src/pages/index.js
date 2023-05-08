@@ -8,11 +8,12 @@ import Header from "@/components/Header";
 import MarketBuzz from "@/components/MarketBuzz";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import PushNotificationLayout from "@/components/PushNotificationLayout";
 import HappyClients from "@/components/shared/HappyClients";
 
 export default function Home() {
   return (
-    <>
+    <PushNotificationLayout>
       <Header />
       <BrandVideos />
       <Services />
@@ -23,6 +24,6 @@ export default function Home() {
       <MarketBuzz />
       {/* <CaseStudyBlock /> */}
       <Faqs />
-    </>
+    </PushNotificationLayout>
   );
 }
