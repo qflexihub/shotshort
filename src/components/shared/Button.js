@@ -42,7 +42,7 @@ const ButtonContainer = styled.button`
   display: inline-block;
   justify-content: center;
   align-items: center;
-  border: 2px solid #8218EA;
+  border: 2px solid #8218ea;
   width: ${(props) => props.width || "257px"};
   height: ${(props) => props.height || "50px"};
   background-color: ${(props) => props.backgroundColor || "#8218ea"};
@@ -55,4 +55,8 @@ const ButtonContainer = styled.button`
   /* &:hover ${BtnText} {
     font-size: 18px;
   } */
+
+  @media (max-width: 768px) {
+    width: ${(props) => props.width || "235px"};
+  }
 `;

@@ -45,7 +45,8 @@ export default BusinessCardView;
 
 const CardVieW = styled.div`
   height: 322px;
-  width: 386px;
+  max-width: 386px;
+  width: 100%;
   padding: 30px;
   background: #ffffff;
   border: 1px solid #cfcfcf;

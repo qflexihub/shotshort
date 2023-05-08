@@ -3,8 +3,10 @@ import { useFormik } from "formik";
 import styled from "styled-components";
 import * as Yup from "yup";
 import Button from "./Button";
+import { useIsMobile } from "@/utils/general";
 
 const Form = () => {
+  const isMobile = useIsMobile();
   const {
     values,
     touched,
@@ -93,7 +95,7 @@ const Form = () => {
             <Button
               value="Get in Touch"
               rightArrow
-              width="362px"
+              width={isMobile ? "335px" : "362px"}
               height="60px"
             />
           </div>

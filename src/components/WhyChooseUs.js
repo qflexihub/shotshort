@@ -4,8 +4,10 @@ import Button from "./shared/Button";
 import IconDescriptionCard from "./shared/IconDescriptionCard";
 import Heading from "./shared/Heading";
 import { WhyChooseUsData } from "@/data/commonData";
+import { useIsMobile } from "@/utils/general";
 
 const WhyChooseUs = () => {
+  const isMobile = useIsMobile();
   return (
     <>
       <WhyChooseContainer>
@@ -16,7 +18,7 @@ const WhyChooseUs = () => {
           </Heading>
           <Button
             value="Schedule a Call with Video's Expert"
-            width="371px"
+            width={isMobile ? "335px" : "375px"}
             height="50px"
             rightArrow
           />

@@ -93,7 +93,7 @@ const MainContainer = styled.div`
 `;
 
 const HeadingContainer = styled.div`
-  width: 380px;
+  max-width: 380px;
   margin-top: 30px;
 `;
 

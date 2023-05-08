@@ -4,8 +4,10 @@ import Button from "./shared/Button";
 import ContentHeading from "./shared/contentHeading";
 import ProgressCard from "./shared/ProgressCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
+import { useIsMobile } from "@/utils/general";
 
 const MarketBuzz = () => {
+  const isMobile = useIsMobile();
   return (
     <CardContainer>
       <ContentHeading data={MarketBuzzProcess?.processHeading} />
@@ -19,7 +21,7 @@ const MarketBuzz = () => {
         })}
       </MainComponent>
       <Button
-        width="375px"
+        width={isMobile ? "335px" : "375px"}
         value="Schedule a Call with Video's Expert"
         rightArrow={true}
       />
