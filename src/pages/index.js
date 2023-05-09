@@ -13,7 +13,6 @@ import HappyClients from "@/components/shared/HappyClients";
 export default function Home() {
   return (
     <>
-      <Header />
       <BrandVideos />
       <Services />
       <ContentProcess />
@@ -21,7 +20,6 @@ export default function Home() {
       <WhyChooseUs />
       <BusinessCard />
       <MarketBuzz />
-      {/* <CaseStudyBlock /> */}
       <Faqs />
     </>
   );

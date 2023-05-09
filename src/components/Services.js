@@ -22,7 +22,7 @@ const Services = () => {
 export default Services;
 
 const CardContainer = styled.div`
-  padding: 0 120px;
+  padding: 90px 120px;
 
   @media (max-width: 768px) {
     padding: 24px 20px 50px 20px;

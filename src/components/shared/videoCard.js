@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 
-const VideoCard = ({ data }) => {
+const VideoCard = ({ width, height, data }) => {
   const [hasWindow, setHasWindow] = useState(false);
   const [playing, setPlaying] = useState(false);
 
@@ -14,7 +14,11 @@ const VideoCard = ({ data }) => {
   }, []);
 
   return (
-    <VideoCardContainer onClick={() => setPlaying(!playing)}>
+    <VideoCardContainer
+      width={width}
+      height={height}
+      onClick={() => setPlaying(!playing)}
+    >
       {hasWindow && (
         <ReactPlayer
           width="100%"
@@ -36,18 +40,21 @@ const VideoCard = ({ data }) => {
 export default VideoCard;
 
 const VideoCardContainer = styled.div`
-  width: 285px;
-  height: 506px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
   position: relative;
+  /* max-width: ${(props) => props?.width || "285px"};
+  height: ${(props) => props?.height || "506px"}; */
+  /* display: flex;
+  justify-content: center;
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
+  margin: auto;
 
   @media (max-width: 768px) {
     width: 100%;
-  }
+  } */
 `;
 
 const PlayButton = styled.div`
@@ -74,6 +81,13 @@ const BrandLogo = styled.div`
   position: absolute;
   left: 20px;
   top: 20px;
+
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+    left: 12px;
+    top: 12px;
+  }
 `;
 
 export const PlayIcon = ({ playing }) => {

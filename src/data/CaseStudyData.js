@@ -116,3 +116,8 @@ export const caseStudyData = [
     ],
   },
 ];
+
+export const CaseStudyHeader = {
+  title: "Read Case Study of our happy clients",
+  image: "/case-study-main.svg",
+};

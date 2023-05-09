@@ -22,5 +22,6 @@ const CaseStudyBlock = () => {
 export default CaseStudyBlock;
 
 const CardContainer = styled.div`
-  padding: 0 185px;
+  padding: 0 120px;
+  box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
 `;

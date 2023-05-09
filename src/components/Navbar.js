@@ -7,6 +7,10 @@ import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { useIsMobile, useOutsideClick } from "@/utils/general";
+import Header from "./Header";
+import InfoCard from "./shared/InfoCard";
+import { services } from "@/data/ServicesData";
+import { CaseStudyHeader } from "@/data/CaseStudyData";
 
 const Navbar = () => {
   const router = useRouter();
@@ -18,125 +22,143 @@ const Navbar = () => {
     setDropdown(false);
   });
 
+  const pagesWithGradiant = ["/", "/case-study"];
+
   return (
-    <NavContainer>
-      <MobileMenuIcon>
-        <Image
-          width={24}
-          height={19}
-          src="/mobile-menu.svg"
-          alt="Mobile-menu"
-        />
-      </MobileMenuIcon>
-      <LogoBlock>
-        <Link href="/">
+    <NavWrapper
+      isGradiant={pagesWithGradiant.includes(router.pathname) ? true : false}
+    >
+      <NavContainer>
+        <MobileMenuIcon>
           <Image
-            width={isMobile ? 83 : 132}
-            height={isMobile ? 62 : 100}
-            src="/logo.png"
-            alt="logo"
+            width={24}
+            height={19}
+            src="/mobile-menu.svg"
+            alt="Mobile-menu"
           />
-        </Link>
-      </LogoBlock>
-      <MenuBlock ref={wrapperRef} className="prevent-select">
-        <div
-          className="mr-[24px] flex gap-1 cursor-pointer"
-          onClick={() => {
-            setDropdown(!isDropdown);
-          }}
-        >
-          <Text
-            fontWeight={700}
-            fontSize={16}
-            lineHeight={18}
-            cursor="pointer"
-            color="#000"
-            // style={{ transition: "transform 0.2s ease-in-out" }}
-            // className="hover:scale-110"
+        </MobileMenuIcon>
+        <LogoBlock>
+          <Link href="/">
+            <Image
+              width={isMobile ? 83 : 132}
+              height={isMobile ? 62 : 100}
+              src="/logo.png"
+              alt="logo"
+            />
+          </Link>
+        </LogoBlock>
+        <MenuBlock ref={wrapperRef} className="prevent-select">
+          <div
+            className="mr-[24px] flex gap-1 cursor-pointer"
+            onClick={() => {
+              setDropdown(!isDropdown);
+            }}
           >
-            Services
-          </Text>
-          <Image
-            style={{ objectFit: "contain" }}
-            width={8}
-            height={8}
-            src="/down-arrow.png"
-            alt="down-arrow"
-          />
-        </div>
-        {MenuItems?.map((item) => {
-          return (
-            <div
-              key={item?.id}
-              className="mr-[24px] flex gap-1 cursor-pointer"
-              onClick={() => {
-                if (item?.title === "Services") {
-                  setDropdown(!isDropdown);
-                }
-              }}
+            <Text
+              fontWeight={700}
+              fontSize={16}
+              lineHeight={18}
+              cursor="pointer"
+              color="#000"
+              // style={{ transition: "transform 0.2s ease-in-out" }}
+              // className="hover:scale-110"
             >
-              <Link href={item?.link}>
-                <Text
-                  fontWeight={700}
-                  fontSize={16}
-                  lineHeight={18}
-                  cursor="pointer"
-                  color={router?.pathname === item?.link ? "#8218EA" : "#000"}
-                  style={{ transition: "transform 0.2s ease-in-out" }}
-                  className="hover:scale-110"
-                >
-                  {item?.title}
-                </Text>
-              </Link>
-              {item?.title === "Services" && (
-                <Image
-                  style={{ objectFit: "contain" }}
-                  width={8}
-                  height={8}
-                  src="/down-arrow.png"
-                  alt="down-arrow"
-                />
-              )}
-            </div>
-          );
-        })}
-        <Button value="Contact Us" width="146px" height="50px" />
-        {isDropdown && (
-          <Dropdown>
-            {dropdownItems?.map((item) => {
-              return (
-                <Link href={item?.link} key={item?.id}>
+              Services
+            </Text>
+            <Image
+              style={{ objectFit: "contain" }}
+              width={8}
+              height={8}
+              src="/down-arrow.png"
+              alt="down-arrow"
+            />
+          </div>
+          {MenuItems?.map((item) => {
+            return (
+              <div
+                key={item?.id}
+                className="mr-[24px] flex gap-1 cursor-pointer"
+                onClick={() => {
+                  if (item?.title === "Services") {
+                    setDropdown(!isDropdown);
+                  }
+                }}
+              >
+                <Link href={item?.link}>
                   <Text
-                    className="hover:text-[#8218EA]"
+                    fontWeight={700}
                     fontSize={16}
                     lineHeight={18}
-                    fontWeight={500}
                     cursor="pointer"
                     color={router?.pathname === item?.link ? "#8218EA" : "#000"}
+                    style={{ transition: "transform 0.2s ease-in-out" }}
+                    className="hover:scale-110"
                   >
                     {item?.title}
                   </Text>
                 </Link>
-              );
-            })}
-          </Dropdown>
-        )}
-      </MenuBlock>
-    </NavContainer>
+                {item?.title === "Services" && (
+                  <Image
+                    style={{ objectFit: "contain" }}
+                    width={8}
+                    height={8}
+                    src="/down-arrow.png"
+                    alt="down-arrow"
+                  />
+                )}
+              </div>
+            );
+          })}
+          <Button value="Contact Us" width="146px" height="50px" />
+          {isDropdown && (
+            <Dropdown>
+              {dropdownItems?.map((item) => {
+                return (
+                  <Link href={item?.link} key={item?.id}>
+                    <Text
+                      className="hover:text-[#8218EA]"
+                      fontSize={16}
+                      lineHeight={18}
+                      fontWeight={500}
+                      cursor="pointer"
+                      color={
+                        router?.pathname === item?.link ? "#8218EA" : "#000"
+                      }
+                    >
+                      {item?.title}
+                    </Text>
+                  </Link>
+                );
+              })}
+            </Dropdown>
+          )}
+        </MenuBlock>
+      </NavContainer>
+      {router.pathname === "/" && <Header />}
+      {router.pathname === "/case-study" && (
+        <InfoCard data={CaseStudyHeader} imageRight={true} />
+      )}
+    </NavWrapper>
   );
 };
 export default Navbar;
+
+const NavWrapper = styled.div`
+  background: ${(props) =>
+    props?.isGradiant
+      ? "linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%)"
+      : "#fff"};
+  padding: 18px 120px 18px 120px;
+
+  @media (max-width: 768px) {
+    padding: 10px 20px 10px 20px;
+  }
+`;
 
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 120px 18px 120px;
-  background: linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%);
-
-  @media (max-width: 768px) {
-    padding: 10px 20px 10px 20px;
-  }
 `;
 const LogoBlock = styled.div`
   @media (max-width: 768px) {

@@ -48,12 +48,13 @@ const GetInTouchContainer = styled.div`
   @media (max-width: 768px) {
     padding: 50px 20px;
     display: block;
-    text-align: center;
+    /* text-align: center; */
   }
 `;
 
 const ContentBlock = styled.div`
   width: 50%;
+  text-align: center;
   @media (max-width: 768px) {
     width: 100%;
   }

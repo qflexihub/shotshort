@@ -10,23 +10,28 @@ const InfoCard = ({ data, imageRight = true }) => {
   return (
     <InfoCardContainer imageRight={imageRight}>
       <ImageBlock>
-        <Image width={460} height={443} src={data?.image} alt={data?.title} />
+        {/* <Image width={827} height={451} src={data?.image} alt={data?.title} /> */}
+        <img width="100%" height="100%" src={data?.image} />
       </ImageBlock>
       <InfoBlock imageRight={imageRight}>
         <Heading fontSize={64} marginBottom={isMobile ? 10 : 24}>
           {data?.title}
         </Heading>
-        <Text fontSize={24} lineHeight={24} color="#555555">
-          {data?.description}
-        </Text>
-        <Button
-          value={data?.buttonText}
-          backgroundColor="rgba(130, 24, 234, 0.2)"
-          color="#8218EA"
-          width="207px"
-          height="48px"
-          marginTop={isMobile ? "20px" : "60px"}
-        />
+        {data?.description && (
+          <Text fontSize={24} lineHeight={24} color="#555555">
+            {data?.description}
+          </Text>
+        )}
+        {data?.buttonText && (
+          <Button
+            value={data?.buttonText}
+            backgroundColor="rgba(130, 24, 234, 0.2)"
+            color="#8218EA"
+            width="207px"
+            height="48px"
+            marginTop={isMobile ? "20px" : "60px"}
+          />
+        )}
       </InfoBlock>
     </InfoCardContainer>
   );
@@ -62,6 +67,6 @@ const InfoBlock = styled.div`
 `;
 
 const ImageBlock = styled.div`
-  max-width: 460px;
-  width: 100%;
+  /* max-width: 827px;
+  height: 451px; */
 `;

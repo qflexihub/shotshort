@@ -39,7 +39,7 @@ const Form = () => {
     <>
       <FormContainer>
         <form name="getInTouch" onSubmit={handleSubmit}>
-          <div className="mb-9">
+          <div className="mb-5 md:mb-9">
             <Input
               name="fullName"
               type="text"

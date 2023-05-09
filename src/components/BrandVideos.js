@@ -8,7 +8,6 @@ import Button from "./shared/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-// import { Navigation } from "swiper";
 import SwiperCore, { Navigation } from "swiper/core";
 
 import Image from "next/image";
@@ -42,8 +41,6 @@ const BrandVideos = () => {
         <VideoContainer>
           <Swiper
             slidesPerView={4}
-            // slidesSkip={1}
-            // spaceBetween={10}
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
@@ -53,8 +50,10 @@ const BrandVideos = () => {
                 slidesPerView: 4,
               },
               320: {
-                slidesPerView: 1.5,
-                spaceBetween: 12,
+                width: 193,
+                height: 344,
+                slidesPerView: 1,
+                spaceBetween: 8,
               },
             }}
             className="mySwiper"
@@ -64,7 +63,9 @@ const BrandVideos = () => {
                 return (
                   <Fragment key={item?.id}>
                     <SwiperSlide>
-                      <VideoCard data={item} />
+                      <VideoBlock>
+                        <VideoCard data={item} />
+                      </VideoBlock>
                     </SwiperSlide>
                   </Fragment>
                 );
@@ -97,14 +98,18 @@ export default BrandVideos;
 const BrandVideoContainer = styled.div`
   max-width: 100%;
   padding: 80px 120px;
+  box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 768px) {
-    padding: 50px 20px;
+    padding: 50px 0px 50px 20px;
   }
 `;
 
 const Block1 = styled.div`
   text-align: center;
+  @media (max-width: 768px) {
+    padding-right: 20px;
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -154,5 +159,22 @@ const PrevArrow = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+`;
+
+const VideoBlock = styled.div`
+  width: 100%;
+  max-width: 285px;
+  height: 506px;
+  /* display: flex;
+  justify-content: center;
+  position: relative; */
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 344px;
   }
 `;

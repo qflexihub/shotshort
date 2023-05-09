@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
 import HappyClients from "./shared/HappyClients";
+import VideoCard from "./shared/videoCard";
 
 const Header = () => {
   return (
@@ -50,12 +51,12 @@ const Header = () => {
         </Text>
       </TextBlock>
       <VideoBlock>
-        <Image
-          style={{ margin: "auto" }}
-          width={1050}
-          height={539}
-          src="/headerVideo.svg"
-          alt="Video"
+        <VideoCard
+          width="1050px"
+          height="539px"
+          data={{
+            url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/0bb5bb9a-577f-46a5-a7bc-ed3eef650e72/MP4/FabAlley.mp4",
+          }}
         />
       </VideoBlock>
       <HappyClients />
@@ -82,5 +83,21 @@ const TextBlock = styled.div`
 `;
 
 const VideoBlock = styled.div`
+  width: 100%;
+  max-width: 1050px;
+  height: 539px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
   margin-top: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 335px;
+    height: 171px;
+  }
 `;

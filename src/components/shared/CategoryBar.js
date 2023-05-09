@@ -11,20 +11,14 @@ const CategoryBar = () => {
     <CategoryContainer>
       <Swiper
         slidesPerView={9}
-        // slidesSkip={1}
         spaceBetween={2}
-        // navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-        // navigation={{
-        //   prevEl: ".swiper-button-prev",
-        //   nextEl: ".swiper-button-next",
-        // }}
         breakpoints={{
           769: {
             slidesPerView: 9,
             spaceBetween: 2,
           },
-          375: {
-            slidesPerView: 5,
+          320: {
+            slidesPerView: 4.5,
             spaceBetween: 15,
           },
         }}
@@ -70,7 +64,8 @@ const CategoryContainer = styled.div`
 const Category = styled.div`
   overflow: hidden;
   text-align: center;
-  width: 64px;
+  max-width: 64px;
+  width: 100%;
   margin: auto;
   /* border-radius: 50%; */
 `;

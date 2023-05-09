@@ -1,3 +1,4 @@
+import { useIsMobile } from "@/utils/general";
 import React from "react";
 import styled from "styled-components";
 
@@ -14,13 +15,18 @@ const Input = ({
   labelMarginBottom,
   ...rest
 }) => {
+  const isMobile = useIsMobile();
   return (
     <>
       {label && (
         <Label marginBottom={labelMarginBottom}>
           {" "}
           {label}&nbsp;
-          {required && <span style={{ color: "red", fontSize: 18 }}>*</span>}
+          {required && (
+            <span style={{ color: "red", fontSize: isMobile ? 14 : 18 }}>
+              *
+            </span>
+          )}
         </Label>
       )}
       <InputStyle
@@ -60,6 +66,10 @@ const InputStyle = styled.input.attrs((props) => ({
     color: #ffffff;
     opacity: 0.5;
   }
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
 const Label = styled.label`
@@ -69,6 +79,11 @@ const Label = styled.label`
   font-size: ${(props) => props.fontSize || "25px"};
   color: #fff;
   display: ${(props) => props.display || "inline-block"};
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 `;
 
 const ErrorStyle = styled.span`

@@ -79,8 +79,6 @@ export default VideoInfoCard;
 const MainContainer = styled.div`
   padding: 10px;
   width: 100%;
-  margin-top: 75px;
-  margin-bottom: 100px;
 `;
 
 const InfoCardContainer = styled.div`
@@ -89,6 +87,8 @@ const InfoCardContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: ${(props) => (props.imageRight ? "row" : "row-reverse")};
+  gap: 100px;
+  align-items: self-end;
 `;
 
 const InfoBlock = styled.div`
@@ -103,14 +103,29 @@ const HashtagContainer = styled.div`
 `;
 
 const VideoBlock = styled.div`
-  max-width: 285px;
   width: 100%;
+  max-width: 285px;
+  height: 506px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 193px;
+    height: 344px;
+  }
 `;
 
 const CardView = styled.div`
   max-width: 100%;
   padding-top: 50px;
-  padding-bottom: 12px;
+  padding-bottom: 80px;
   justify-content: center;
   display: flex;
   align-items: center;
