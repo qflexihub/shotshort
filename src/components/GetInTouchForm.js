@@ -54,8 +54,8 @@ const GetInTouchContainer = styled.div`
 
 const ContentBlock = styled.div`
   width: 50%;
-  text-align: center;
   @media (max-width: 768px) {
+    text-align: center;
     width: 100%;
   }
 `;
