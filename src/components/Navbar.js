@@ -11,11 +11,13 @@ import Header from "./Header";
 import InfoCard from "./shared/InfoCard";
 import { services } from "@/data/ServicesData";
 import { CaseStudyHeader } from "@/data/CaseStudyData";
+import MobileNavbar from "./shared/MobileNavbar";
 
 const Navbar = () => {
   const router = useRouter();
   const isMobile = useIsMobile();
   const [isDropdown, setDropdown] = useState(false);
+  const [isMobileNavbar, setIsMobileNavbar] = useState(false);
 
   const wrapperRef = useRef(null);
   useOutsideClick(wrapperRef, () => {
@@ -25,120 +27,135 @@ const Navbar = () => {
   const pagesWithGradiant = ["/", "/case-study"];
 
   return (
-    <NavWrapper
-      isGradiant={pagesWithGradiant.includes(router.pathname) ? true : false}
-    >
-      <NavContainer>
-        <MobileMenuIcon>
-          <Image
-            width={24}
-            height={19}
-            src="/mobile-menu.svg"
-            alt="Mobile-menu"
-          />
-        </MobileMenuIcon>
-        <LogoBlock>
-          <Link href="/">
-            <Image
-              width={isMobile ? 83 : 132}
-              height={isMobile ? 62 : 100}
-              src="/logo.png"
-              alt="logo"
-            />
-          </Link>
-        </LogoBlock>
-        <MenuBlock ref={wrapperRef} className="prevent-select">
-          <div
-            className="mr-[24px] flex gap-1 cursor-pointer"
-            onClick={() => {
-              setDropdown(!isDropdown);
-            }}
-          >
-            <Text
-              fontWeight={700}
-              fontSize={16}
-              lineHeight={18}
-              cursor="pointer"
-              color="#000"
-              // style={{ transition: "transform 0.2s ease-in-out" }}
-              // className="hover:scale-110"
+    <>
+      {!isMobileNavbar && (
+        <NavWrapper
+          isGradiant={
+            pagesWithGradiant.includes(router.pathname) ? true : false
+          }
+        >
+          <NavContainer>
+            <MobileMenuIcon
+              onClick={() => {
+                setIsMobileNavbar(true);
+              }}
             >
-              Services
-            </Text>
-            <Image
-              style={{ objectFit: "contain" }}
-              width={8}
-              height={8}
-              src="/down-arrow.png"
-              alt="down-arrow"
-            />
-          </div>
-          {MenuItems?.map((item) => {
-            return (
+              <Image
+                width={24}
+                height={19}
+                src="/mobile-menu.svg"
+                alt="Mobile-menu"
+              />
+            </MobileMenuIcon>
+            <LogoBlock>
+              <Link href="/">
+                <Image
+                  width={isMobile ? 83 : 132}
+                  height={isMobile ? 62 : 100}
+                  src="/logo.png"
+                  alt="logo"
+                />
+              </Link>
+            </LogoBlock>
+            <MenuBlock ref={wrapperRef} className="prevent-select">
               <div
-                key={item?.id}
                 className="mr-[24px] flex gap-1 cursor-pointer"
                 onClick={() => {
-                  if (item?.title === "Services") {
-                    setDropdown(!isDropdown);
-                  }
+                  setDropdown(!isDropdown);
                 }}
               >
-                <Link href={item?.link}>
-                  <Text
-                    fontWeight={700}
-                    fontSize={16}
-                    lineHeight={18}
-                    cursor="pointer"
-                    color={router?.pathname === item?.link ? "#8218EA" : "#000"}
-                    style={{ transition: "transform 0.2s ease-in-out" }}
-                    className="hover:scale-110"
-                  >
-                    {item?.title}
-                  </Text>
-                </Link>
-                {item?.title === "Services" && (
-                  <Image
-                    style={{ objectFit: "contain" }}
-                    width={8}
-                    height={8}
-                    src="/down-arrow.png"
-                    alt="down-arrow"
-                  />
-                )}
+                <Text
+                  fontWeight={700}
+                  fontSize={16}
+                  lineHeight={18}
+                  cursor="pointer"
+                  color="#000"
+                  // style={{ transition: "transform 0.2s ease-in-out" }}
+                  // className="hover:scale-110"
+                >
+                  Services
+                </Text>
+                <Image
+                  style={{ objectFit: "contain" }}
+                  width={8}
+                  height={8}
+                  src="/down-arrow.png"
+                  alt="down-arrow"
+                />
               </div>
-            );
-          })}
-          <Button value="Contact Us" width="146px" height="50px" />
-          {isDropdown && (
-            <Dropdown>
-              {dropdownItems?.map((item) => {
+              {MenuItems?.map((item) => {
                 return (
-                  <Link href={item?.link} key={item?.id}>
-                    <Text
-                      className="hover:text-[#8218EA]"
-                      fontSize={16}
-                      lineHeight={18}
-                      fontWeight={500}
-                      cursor="pointer"
-                      color={
-                        router?.pathname === item?.link ? "#8218EA" : "#000"
+                  <div
+                    key={item?.id}
+                    className="mr-[24px] flex gap-1 cursor-pointer"
+                    onClick={() => {
+                      if (item?.title === "Services") {
+                        setDropdown(!isDropdown);
                       }
-                    >
-                      {item?.title}
-                    </Text>
-                  </Link>
+                    }}
+                  >
+                    <Link href={item?.link}>
+                      <Text
+                        fontWeight={700}
+                        fontSize={16}
+                        lineHeight={18}
+                        cursor="pointer"
+                        color={
+                          router?.pathname === item?.link ? "#8218EA" : "#000"
+                        }
+                        style={{ transition: "transform 0.2s ease-in-out" }}
+                        className="hover:scale-110"
+                      >
+                        {item?.title}
+                      </Text>
+                    </Link>
+                    {item?.title === "Services" && (
+                      <Image
+                        style={{ objectFit: "contain" }}
+                        width={8}
+                        height={8}
+                        src="/down-arrow.png"
+                        alt="down-arrow"
+                      />
+                    )}
+                  </div>
                 );
               })}
-            </Dropdown>
+              <Button value="Contact Us" width="146px" height="50px" />
+              {isDropdown && (
+                <Dropdown>
+                  {dropdownItems?.map((item) => {
+                    return (
+                      <Link href={item?.link} key={item?.id}>
+                        <Text
+                          className="hover:text-[#8218EA]"
+                          fontSize={16}
+                          lineHeight={18}
+                          fontWeight={500}
+                          cursor="pointer"
+                          color={
+                            router?.pathname === item?.link ? "#8218EA" : "#000"
+                          }
+                        >
+                          {item?.title}
+                        </Text>
+                      </Link>
+                    );
+                  })}
+                </Dropdown>
+              )}
+            </MenuBlock>
+          </NavContainer>
+          {router.pathname === "/" && <Header />}
+          {router.pathname === "/case-study" && (
+            <InfoCard data={CaseStudyHeader} imageRight={true} />
           )}
-        </MenuBlock>
-      </NavContainer>
-      {router.pathname === "/" && <Header />}
-      {router.pathname === "/case-study" && (
-        <InfoCard data={CaseStudyHeader} imageRight={true} />
+        </NavWrapper>
       )}
-    </NavWrapper>
+      {isMobileNavbar && (
+        <MobileNavbar onClose={() => setIsMobileNavbar(false)} />
+      )}
+    </>
   );
 };
 export default Navbar;

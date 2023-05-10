@@ -4,8 +4,10 @@ import Form from "./shared/Form";
 import Image from "next/image";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
+import { useIsMobile } from "@/utils/general";
 
 const GetInTouchForm = () => {
+  const isMobile = useIsMobile();
   return (
     <>
       <GetInTouchContainer>
@@ -15,7 +17,7 @@ const GetInTouchForm = () => {
           </Heading>
           <Text
             fontSize={25}
-            marginBottom={86}
+            marginBottom={isMobile ? 28 : 86}
             color="#fff"
             marginRight="140px"
           >
@@ -23,12 +25,14 @@ const GetInTouchForm = () => {
             definitely help your brand achieve great awareness, leads and sales
             through our video content. Let's connect!
           </Text>
-          <Image
-            width={387}
-            height={232}
-            src="/contactMail.svg"
-            alt="Email Image"
-          />
+          {!isMobile && (
+            <Image
+              width={387}
+              height={232}
+              src="/contactMail.svg"
+              alt="Email Image"
+            />
+          )}
         </ContentBlock>
         <FormBlock>
           <Form />

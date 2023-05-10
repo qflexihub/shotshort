@@ -120,7 +120,7 @@ const VideoContainer = styled.div`
   position: relative;
 `;
 
-const NextArrow = styled.div`
+export const NextArrow = styled.div`
   width: 50px;
   height: 50px;
   position: absolute;
@@ -138,10 +138,12 @@ const NextArrow = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+    width: 30px;
+    height: 30px;
   }
 `;
 
-const PrevArrow = styled.div`
+export const PrevArrow = styled.div`
   width: 50px;
   height: 50px;
   position: absolute;
@@ -159,6 +161,8 @@ const PrevArrow = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+    width: 30px;
+    height: 30px;
   }
 `;
 

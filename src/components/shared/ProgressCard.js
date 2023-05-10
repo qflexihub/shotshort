@@ -46,10 +46,15 @@ const ProgressCard = ({ data }) => {
 export default ProgressCard;
 
 const CardContainer = styled.div`
-  min-width: 350px;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    max-width: 161px;
+  }
 `;
 
 const CircularView = styled.div`
@@ -61,6 +66,11 @@ const CircularView = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 78px;
+    height: 78px;
+  }
 `;
 
 const BackgroundRingView = styled.div`
@@ -76,6 +86,11 @@ const BackgroundRingView = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 78px;
+    height: 78px;
+  }
 `;
 
 const RingView = styled.div`
@@ -84,13 +99,18 @@ const RingView = styled.div`
   z-index: 999;
   background-image: conic-gradient(
     #723c96 0%,
-    #723c96 ${props => props.percentage}%,
-    rgba(140, 81, 162, 0.1) ${props => props.percentage}%
+    #723c96 ${(props) => props.percentage}%,
+    rgba(140, 81, 162, 0.1) ${(props) => props.percentage}%
   );
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 78px;
+    height: 78px;
+  }
 `;
 
 const PercentageView = styled.div`
@@ -101,6 +121,11 @@ const PercentageView = styled.div`
   background: #f7f0fc;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 63px;
+    height: 63px;
+  }
 `;
 
 const NumberData = styled.p`

@@ -5,16 +5,31 @@ import Heading from "./Heading";
 import Text from "./Text";
 import { useIsMobile } from "@/utils/general";
 
-const InfoCard = ({ data, imageRight = true }) => {
+const InfoCard = ({
+  data,
+  imageRight = true,
+  imageWidth,
+  imageHeight,
+  imageStyles,
+}) => {
   const isMobile = useIsMobile();
   return (
     <InfoCardContainer imageRight={imageRight}>
       <ImageBlock>
         {/* <Image width={827} height={451} src={data?.image} alt={data?.title} /> */}
-        <img width="100%" height="100%" src={data?.image} />
+        <img
+          width={imageWidth || "100%"}
+          height={imageHeight || "100%"}
+          src={data?.image}
+          style={imageStyles}
+        />
       </ImageBlock>
       <InfoBlock imageRight={imageRight}>
-        <Heading fontSize={64} marginBottom={isMobile ? 10 : 24}>
+        <Heading
+          fontSize={64}
+          marginBottom={isMobile ? 10 : 24}
+          marginTop={isMobile && 21}
+        >
           {data?.title}
         </Heading>
         {data?.description && (

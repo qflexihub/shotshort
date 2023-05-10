@@ -52,7 +52,7 @@ const Form = () => {
               errorMsg={errors.fullName}
             />
           </div>
-          <div className="mb-9">
+          <div className="mb-5 md:mb-9">
             <Input
               name="email"
               type="email"
@@ -65,7 +65,7 @@ const Form = () => {
               errorMsg={errors.email}
             />
           </div>
-          <div className="mb-9">
+          <div className="mb-5 md:mb-9">
             <Input
               name="companyName"
               type="text"
@@ -78,7 +78,7 @@ const Form = () => {
               errorMsg={errors.companyName}
             />
           </div>
-          <div className="mb-9">
+          <div className="mb-5 md:mb-9">
             <Input
               name="contactNumber"
               type="text"

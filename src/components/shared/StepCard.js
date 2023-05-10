@@ -61,10 +61,11 @@ const StepCard = ({ data }) => {
 export default StepCard;
 
 const StepCardContainer = styled.div`
-  min-width: 250px;
+  width: 100%;
+  max-width: 250px;
 
   @media (max-width: 768px) {
-    min-width: 161px;
+    max-width: 161px;
   }
 `;
 

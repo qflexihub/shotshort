@@ -37,6 +37,10 @@ const CardContainer = styled.div`
   display: flex;
   padding: 80px 120px;
   background: linear-gradient(180deg, #f8efff 0%, #ffffff 100%);
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `;
 
 const MainComponent = styled.div`
@@ -51,6 +55,6 @@ const MainComponent = styled.div`
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

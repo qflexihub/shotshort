@@ -21,7 +21,7 @@ const Button = ({
       rightArrow={rightArrow}
       {...rest}
     >
-      <span className="flex justify-center">
+      <span className="flex justify-center items-center">
         {value}
         {rightArrow && (
           <Image
@@ -57,6 +57,12 @@ const ButtonContainer = styled.button`
   } */
 
   @media (max-width: 768px) {
-    width: ${(props) => props.width || "235px"};
+    max-width: ${(props) => props.width || "235px"};
+    width: 100%;
+    height: 50px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 12px;
   }
 `;

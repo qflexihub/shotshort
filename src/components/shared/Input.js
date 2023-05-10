@@ -69,6 +69,9 @@ const InputStyle = styled.input.attrs((props) => ({
 
   @media (max-width: 768px) {
     height: 40px;
+    padding: 12px;
+    font-size: 14px;
+    margin: 0;
   }
 `;
 
