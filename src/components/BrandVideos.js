@@ -129,7 +129,7 @@ export const NextArrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 4;
   right: -30px;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -152,7 +152,7 @@ export const PrevArrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 4;
   left: 0;
   top: 50%;
   transform: translate(-50%, -50%);

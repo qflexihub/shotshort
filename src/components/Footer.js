@@ -5,6 +5,7 @@ import { SocialMediaHandles, services } from "../data/FooterData";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
 import Link from "next/link";
+import SocialMediaIcons from "./shared/SocialMediaIcons";
 
 const Footer = () => {
   return (
@@ -12,31 +13,7 @@ const Footer = () => {
       <Block1>
         <BrandInfo>
           <Image width={100} height={75} src="/logo.png" alt="logo" />
-          <Text
-            fontSize={18}
-            lineHeight={23}
-            color="rgba(255, 255, 255, 0.7);"
-            textTransform="capitalize"
-            marginTop={25}
-            marginBottom={25}
-          >
-            Finds us online
-          </Text>
-          <SocialMediaIcons>
-            {SocialMediaHandles?.map((item) => {
-              return (
-                <Fragment key={item.id}>
-                  <Image
-                    style={{ marginRight: 20 }}
-                    width={20}
-                    height={20}
-                    src={item.icon}
-                    alt={item.title}
-                  />
-                </Fragment>
-              );
-            })}
-          </SocialMediaIcons>
+          <SocialMediaIcons />
         </BrandInfo>
         <ContactInfo>
           <Heading fontSize={20} lineHeight={23} marginBottom={25} color="#fff">
@@ -204,12 +181,6 @@ const BrandInfo = styled.div`
   @media (max-width: 768px) {
     text-align: center;
   }
-`;
-
-const SocialMediaIcons = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 20px;
 `;
 const ContactInfo = styled.div`
   height: 250px;
