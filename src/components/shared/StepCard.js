@@ -62,7 +62,7 @@ export default StepCard;
 
 const StepCardContainer = styled.div`
   width: 100%;
-  max-width: 250px;
+  max-width: 285px;
 
   @media (max-width: 768px) {
     max-width: 161px;
@@ -87,6 +87,14 @@ const MainCardContainer = styled.div`
   grid-template-rows: auto 1fr auto;
   text-align: center;
   gap: 20px;
+  max-width: 249px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 140px;
+    padding: 12px;
+    display: block;
+  }
 `;
 
 const CircularImageView = styled.div`

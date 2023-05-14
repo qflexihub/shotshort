@@ -16,11 +16,11 @@ export default function Home() {
     <>
       <BrandVideos />
       <Services />
-      <ContentProcess />
+      {/* <ContentProcess /> */}
       <GetInTouchForm />
       <Testimonial />
       <WhyChooseUs />
-      <BusinessCard />
+      {/* <BusinessCard /> */}
       <MarketBuzz />
       <Faqs />
     </>

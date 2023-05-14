@@ -2,12 +2,12 @@ export const MenuItems = [
   {
     id: 1,
     title: "Blogs",
-    link: "/blogs",
+    link: "/social-media-video",
   },
   {
     id: 2,
     title: "About Us",
-    link: "/about-us",
+    link: "/video-ads",
   },
   {
     id: 3,

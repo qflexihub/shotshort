@@ -40,7 +40,8 @@ const BusinessCardHeading = styled.h1`
   color: #000000;
   font-size: 54px;
   font-weight: 700;
-  padding: 0px 181px 50px 181px;
+  margin-bottom: 50px;
+  /* padding: 0px 181px 50px 181px; */
 
   @media (max-width: 768px) {
     padding: 0px;

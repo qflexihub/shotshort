@@ -7,11 +7,15 @@ import InfoCard from "@/components/shared/InfoCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { services } from "@/data/ServicesData";
 import { StepsType1 } from "@/data/steps";
+import HappyClients from "@/components/shared/HappyClients";
 
 const SocialMedia = () => {
   return (
     <>
       <InfoCard data={services[0]} imageRight={true} />
+      <div className="text-center">
+        <HappyClients />
+      </div>
       <BrandVideos />
       <Services />
       <ContentProcess data={StepsType1} />

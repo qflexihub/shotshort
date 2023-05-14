@@ -103,10 +103,10 @@ const Services = () => {
 export default Services;
 
 const CardContainer = styled.div`
-  padding: 90px 120px;
+  padding: 80px 0px;
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 24px 20px 0px 20px;
+    /* padding: 24px 20px 0px 20px; */
   }
 `;

@@ -8,16 +8,20 @@ import InfoCard from "@/components/shared/InfoCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { services } from "@/data/ServicesData";
 import { StepsType1 } from "@/data/steps";
+import HappyClients from "@/components/shared/HappyClients";
 
 const videoAds = () => {
   return (
     <>
       <InfoCard data={services[0]} imageRight={false} />
+      <div className="text-center">
+        <HappyClients />
+      </div>
       <BrandVideos />
       <ContentProcess data={StepsType1} />
       <BusinessCard />
       <WhyChooseUs />
-      <Services />
+      <InfoCard data={services[2]} imageRight={true} />
       <MarketBuzz data={MarketBuzzProcess} />
     </>
   );

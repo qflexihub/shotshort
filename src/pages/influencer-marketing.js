@@ -1,7 +1,9 @@
 import ContentProcess from "@/components/ContentProcess";
+import Faqs from "@/components/Faqs";
 import InfluencerMarketingCardView from "@/components/InfluencerMarketingCardView";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import HappyClients from "@/components/shared/HappyClients";
 import InfoCard from "@/components/shared/InfoCard";
 import { StepsType1 } from "@/data/steps";
 
@@ -18,11 +20,15 @@ const InfluencerMarketing = () => {
   return (
     <>
       <InfoCard data={InfoData} imageRight={true} />
+      <div className="text-center">
+        <HappyClients />
+      </div>
       <Services />
       <ContentProcess data={StepsType1} />
       <WhyChooseUs />
       {/* <WhyChooseUs /> */}
       <InfluencerMarketingCardView />
+      <Faqs />
     </>
   );
 };

@@ -47,7 +47,7 @@ export default ProgressCard;
 
 const CardContainer = styled.div`
   width: 100%;
-  max-width: 350px;
+  max-width: 387px;
   display: flex;
   align-items: center;
   flex-direction: column;
