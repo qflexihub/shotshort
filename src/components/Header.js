@@ -4,6 +4,7 @@ import Heading from "./shared/Heading";
 import Text from "./shared/Text";
 import HappyClients from "./shared/HappyClients";
 import VideoCard from "./shared/videoCard";
+import { useIsMobile } from "@/utils/general";
 
 const Header = () => {
   return (
@@ -73,7 +74,7 @@ const HeaderContainer = styled.div`
   padding-top: 40px;
 
   @media (max-width: 768px) {
-    padding: 24px 20px;
+    /* padding: 24px 20px; */
   }
 `;
 

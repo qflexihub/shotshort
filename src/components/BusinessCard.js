@@ -26,7 +26,7 @@ export default BusinessCard;
 
 const BusinessCardSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: 768px) {
     display: block;

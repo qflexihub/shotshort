@@ -108,7 +108,7 @@ const MobileNavbar = ({ isMobileNavbar, setIsMobileNavbar }) => {
         })}
       </Menu>
       <div style={{ padding: "20px 18px" }}>
-        <SocialMediaIcons />
+        <SocialMediaIcons isSidebar />
       </div>
       <ContactUs>
         <Text fontSize={16} fontWeight={700} marginBottom={14} color="#F8EFFF">

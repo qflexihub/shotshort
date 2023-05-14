@@ -163,17 +163,16 @@ const NavWrapper = styled.div`
     props?.isGradiant
       ? "linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%)"
       : "#fff"};
-  padding: 18px 120px 18px 120px;
-
-  @media (max-width: 768px) {
-    padding: 10px 20px 10px 20px;
-  }
 `;
 
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18px 120px 18px 120px;
+  @media (max-width: 768px) {
+    padding: 10px 20px 10px 20px;
+  }
 `;
 const LogoBlock = styled.div`
   @media (max-width: 768px) {

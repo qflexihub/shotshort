@@ -4,13 +4,15 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { SocialMediaHandles } from "@/data/FooterData";
 
-const SocialMediaIcons = () => {
+const SocialMediaIcons = ({ isSidebar = false }) => {
   return (
     <SocialMediaContainer>
       <Text
         fontSize={18}
+        mobileFontSize={18}
+        fontWeight={isSidebar ? 700 : 400}
         lineHeight={23}
-        color="rgba(255, 255, 255, 0.7);"
+        color={isSidebar ? "#fff" : "rgba(255, 255, 255, 0.7);"}
         textTransform="capitalize"
         marginTop={20}
         marginBottom={15}

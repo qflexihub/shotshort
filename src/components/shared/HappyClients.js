@@ -14,13 +14,14 @@ const HappyClients = () => {
     <HappyClientsContainer>
       <Heading
         fontSize={35}
+        mobileFontSize={18}
         lineHeight={40}
         textAlign="cemter"
-        marginBottom={30}
+        marginBottom={isMobile ? 12 : 42}
       >
         Our Happy Clients
       </Heading>
-      <BrandsContainer>
+      <BrandsContainer style={{ marginBottom: 12 }}>
         <Swiper
           loop={true}
           slidesPerView={6}
@@ -46,6 +47,7 @@ const HappyClients = () => {
                     style={{
                       maxWidth: isMobile ? "64px" : "171px",
                       width: "100%",
+                      height: isMobile ? "33px" : "90px",
                       objectFit: "scale-down",
                       margin: "auto",
                     }}
@@ -87,6 +89,7 @@ const HappyClients = () => {
                     style={{
                       maxWidth: isMobile ? "64px" : "171px",
                       width: "100%",
+                      height: isMobile ? "33px" : "",
                       objectFit: "scale-down",
                       margin: "auto",
                     }}
@@ -104,6 +107,12 @@ export default HappyClients;
 
 const HappyClientsContainer = styled.div`
   padding-top: 82px;
+  padding-bottom: 124px;
+
+  @media (max-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 `;
 
 const BrandsContainer = styled.div`

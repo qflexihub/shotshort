@@ -6,8 +6,10 @@ import Heading from "./shared/Heading";
 import Text from "./shared/Text";
 import Link from "next/link";
 import SocialMediaIcons from "./shared/SocialMediaIcons";
+import { useIsMobile } from "@/utils/general";
 
 const Footer = () => {
+  const isMobile = useIsMobile();
   return (
     <FooterContainer>
       <Block1>
@@ -19,91 +21,108 @@ const Footer = () => {
           <Heading fontSize={20} lineHeight={23} marginBottom={25} color="#fff">
             Contact Us
           </Heading>
-          <Text
-            fontSize={18}
-            lineHeight={23}
-            marginBottom={32}
-            color="rgba(255, 255, 255, 0.7);"
-          >
-            F-12/1, DLF Phase - 1, Sector 27, Golf Course Rd, Gurugram, Haryana
-            122002
-          </Text>
-          <Link href="mailto:contact@videoly.in" style={{ marginBottom: 25 }}>
+          <div className="md:block flex">
             <Text
               fontSize={18}
               lineHeight={23}
-              marginBottom={25}
+              mobileLineHeight={23}
+              marginBottom={32}
               color="rgba(255, 255, 255, 0.7);"
-              textTransform="capitalize"
-              cursor="pointer"
-              display="inline-block"
             >
-              contact@videoly.in
+              F-12/1, DLF Phase - 1, Sector 27, Golf Course Rd, Gurugram,
+              Haryana 122002
             </Text>
-          </Link>
-          <div className="flex">
-            <Link href="tel:+91 1234567890" style={{ marginBottom: 25 }}>
-              <Text
-                fontSize={18}
-                lineHeight={23}
-                marginBottom={25}
-                color="rgba(255, 255, 255, 0.7);"
-                textTransform="capitalize"
-                cursor="pointer"
+            <div>
+              <Link
+                href="mailto:contact@videoly.in"
+                style={{ marginBottom: 25 }}
               >
-                +91 1234567890,&nbsp;
-              </Text>
-            </Link>
-            <Link href="tel:+91 14334567890" style={{ marginBottom: 25 }}>
-              <Text
-                fontSize={18}
-                lineHeight={23}
-                marginBottom={25}
-                color="rgba(255, 255, 255, 0.7);"
-                textTransform="capitalize"
-                cursor="pointer"
-              >
-                +91 14334567890
-              </Text>
-            </Link>
-          </div>
-        </ContactInfo>
-        <ServicesInfo>
-          <Heading fontSize={20} lineHeight={23} marginBottom={25} color="#fff">
-            Services
-          </Heading>
-
-          {services?.map((item) => {
-            return (
-              <Fragment key={item?.id}>
-                <Link href={item?.link} style={{ marginBottom: 20 }}>
+                <Text
+                  fontSize={18}
+                  lineHeight={23}
+                  marginBottom={25}
+                  color="rgba(255, 255, 255, 0.7);"
+                  textTransform="capitalize"
+                  cursor="pointer"
+                  display="inline-block"
+                >
+                  contact@videoly.in
+                </Text>
+              </Link>
+              <div className="md:flex">
+                <Link href="tel:+91 1234567890" style={{ marginBottom: 25 }}>
                   <Text
                     fontSize={18}
                     lineHeight={23}
+                    marginBottom={25}
                     color="rgba(255, 255, 255, 0.7);"
                     textTransform="capitalize"
                     cursor="pointer"
                   >
-                    {item?.title}
+                    +91 1234567890,&nbsp;
                   </Text>
                 </Link>
-              </Fragment>
-            );
-          })}
-        </ServicesInfo>
+                <Link href="tel:+91 14334567890" style={{ marginBottom: 25 }}>
+                  <Text
+                    fontSize={18}
+                    lineHeight={23}
+                    marginBottom={25}
+                    color="rgba(255, 255, 255, 0.7);"
+                    textTransform="capitalize"
+                    cursor="pointer"
+                  >
+                    +91 14334567890
+                  </Text>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </ContactInfo>
+        {!isMobile && (
+          <ServicesInfo>
+            <Heading
+              fontSize={20}
+              lineHeight={23}
+              marginBottom={25}
+              color="#fff"
+            >
+              Services
+            </Heading>
+
+            {services?.map((item) => {
+              return (
+                <Fragment key={item?.id}>
+                  <Link href={item?.link} style={{ marginBottom: 20 }}>
+                    <Text
+                      fontSize={18}
+                      lineHeight={23}
+                      color="rgba(255, 255, 255, 0.7);"
+                      textTransform="capitalize"
+                      cursor="pointer"
+                    >
+                      {item?.title}
+                    </Text>
+                  </Link>
+                </Fragment>
+              );
+            })}
+          </ServicesInfo>
+        )}
       </Block1>
       <Block2>
-        <Text
-          fontSize={18}
-          lineHeight={23}
-          fontWeight={500}
-          color="rgba(255, 255, 255, 0.7);"
-          textTransform="capitalize"
-          cursor="pointer"
-        >
-          © Videoly 2022 All Rights Reserved
-        </Text>
-        <div className="flex gap-8">
+        {!isMobile && (
+          <Text
+            fontSize={18}
+            lineHeight={23}
+            fontWeight={500}
+            color="rgba(255, 255, 255, 0.7);"
+            textTransform="capitalize"
+            cursor="pointer"
+          >
+            © Videoly 2022 All Rights Reserved
+          </Text>
+        )}
+        <div className="flex md:gap-8 gap-4">
           <Link href="/">
             <Text
               fontSize={18}
@@ -179,7 +198,12 @@ const BrandInfo = styled.div`
   flex: 3;
 
   @media (max-width: 768px) {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-bottom: 24px;
+    /* text-align: center; */
   }
 `;
 const ContactInfo = styled.div`
