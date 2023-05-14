@@ -54,8 +54,10 @@ const Header = () => {
         <VideoCard
           width="1050px"
           height="539px"
+          headerVideo={true}
           data={{
-            url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/0bb5bb9a-577f-46a5-a7bc-ed3eef650e72/MP4/FabAlley.mp4",
+            url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+            poster: "/headerVideo.svg",
           }}
         />
       </VideoBlock>

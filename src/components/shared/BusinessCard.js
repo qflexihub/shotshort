@@ -2,10 +2,18 @@ import Image from "next/image";
 import styled from "styled-components";
 import Heading from "./Heading";
 import Text from "./Text";
+import { useIsMobile } from "@/utils/general";
 
-const BusinessCardView = ({ data, isClient = false }) => {
+const BusinessCardView = ({
+  data,
+  isClient = false,
+  height,
+  width,
+  descriptionFontSize,
+}) => {
+  const isMobile = useIsMobile();
   return (
-    <CardVieW>
+    <CardVieW height={height} width={width}>
       <div className="flex items-center gap-2">
         {!isClient ? (
           <Logo>
@@ -18,9 +26,9 @@ const BusinessCardView = ({ data, isClient = false }) => {
           </Logo>
         ) : (
           <Image
-            width={100}
-            height={100}
-            src={"/testi1.svg"}
+            width={isMobile ? 56 : 100}
+            height={isMobile ? 56 : 100}
+            src={data?.image}
             alt={data?.heading}
           />
         )}
@@ -33,10 +41,23 @@ const BusinessCardView = ({ data, isClient = false }) => {
           </div>
         )}
       </div>
-      <Heading fontSize={24} marginTop={30} marginBottom={10}>
+      <Heading
+        fontSize={24}
+        mobileFontSize={14}
+        mobileLineHeight={16}
+        marginTop={30}
+        marginBottom={isMobile ? 12 : 21}
+      >
         {data?.heading}
       </Heading>
-      <Description>{data?.description}</Description>
+      <Text
+        fontSize={descriptionFontSize}
+        color="#555555"
+        textAlign="left"
+        lineHeight={24}
+      >
+        {data?.description}
+      </Text>
     </CardVieW>
   );
 };
@@ -44,8 +65,8 @@ const BusinessCardView = ({ data, isClient = false }) => {
 export default BusinessCardView;
 
 const CardVieW = styled.div`
-  height: 322px;
-  max-width: 386px;
+  height: ${(props) => props.height || "322px"};
+  max-width: ${(props) => props.width || "386px"};
   width: 100%;
   padding: 30px;
   background: #ffffff;
@@ -57,6 +78,8 @@ const CardVieW = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding: 20px;
+    height: auto;
     &:not(:last-of-type) {
       margin-bottom: 10px;
     }

@@ -66,6 +66,23 @@ video {
   display: none;
 }
 
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px !important;
+  position: relative !important;
+}
+.swiper-bullet {
+  width: 30px !important;
+  height: 6px !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  background-color: #8218ea !important;
+}
+.swiper-pagination-bullet-active {
+  width: 50px !important;
+}
+
 .prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */

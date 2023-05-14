@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import VideoCard from "./shared/videoCard";
 import { Videos } from "@/data/BrandVideosData";
@@ -12,12 +12,31 @@ import SwiperCore, { Navigation } from "swiper/core";
 
 import Image from "next/image";
 import CategoryBar from "./shared/CategoryBar";
+import { categories } from "@/data/CategoriesData";
 
 SwiperCore.use([Navigation]);
 
 const BrandVideos = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const playerRefs = useRef([]);
+  const [selectedCategory, setSelectedCategory] = useState("Fitness");
+  const [selectedVideoObj, setSelectedVideoObj] = useState();
+
+  useEffect(() => {
+    const res = categories.find((item) => item.title === selectedCategory);
+    setSelectedVideoObj(res);
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    playerRefs.current = playerRefs?.current?.slice(0, Videos.length);
+  }, [Videos]);
+
+  const stopAllVideos = () => {
+    playerRefs?.current?.forEach((player) =>
+      player?.getInternalPlayer()?.pause()
+    );
+  };
 
   return (
     <>
@@ -37,7 +56,10 @@ const BrandVideos = () => {
             rightArrow
           />
         </Block1>
-        <CategoryBar />
+        <CategoryBar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <VideoContainer>
           <Swiper
             slidesPerView={4}
@@ -59,12 +81,17 @@ const BrandVideos = () => {
             className="mySwiper"
           >
             <>
-              {Videos?.map((item) => {
+              {selectedVideoObj?.videos?.map((item, index) => {
                 return (
                   <Fragment key={item?.id}>
                     <SwiperSlide>
                       <VideoBlock>
-                        <VideoCard data={item} />
+                        <VideoCard
+                          data={item}
+                          playerRefs={playerRefs}
+                          index={index}
+                          stopAllVideos={stopAllVideos}
+                        />
                       </VideoBlock>
                     </SwiperSlide>
                   </Fragment>

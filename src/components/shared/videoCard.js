@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 
-const VideoCard = ({ width, height, data }) => {
+const VideoCard = ({
+  width,
+  height,
+  data,
+  playerRefs,
+  headerVideo = false,
+  index = 0,
+  stopAllVideos = () => {},
+}) => {
   const [hasWindow, setHasWindow] = useState(false);
   const [playing, setPlaying] = useState(false);
 
@@ -14,27 +22,46 @@ const VideoCard = ({ width, height, data }) => {
   }, []);
 
   return (
-    <VideoCardContainer
-      width={width}
-      height={height}
-      onClick={() => setPlaying(!playing)}
-    >
-      {hasWindow && (
-        <ReactPlayer
-          width="100%"
-          height="100%"
-          className="react-player"
-          onEnded={() => setPlaying(false)}
-          playing={playing}
-          url={data?.url}
-          // light="/ellipse4.png"
-        />
-      )}
-      <BrandLogo>
-        {data?.brandLogo && <Image fill src={data?.brandLogo} alt="Brand" />}
-      </BrandLogo>
-      <PlayIcon playing={playing} />
-    </VideoCardContainer>
+    <>
+      <VideoCardContainer
+        width={width}
+        height={height}
+        onClick={() => {
+          stopAllVideos();
+          setPlaying(!playing);
+        }}
+      >
+        <>
+          {!headerVideo && hasWindow && playerRefs?.current && (
+            <ReactPlayer
+              width="100%"
+              height="100%"
+              ref={(el) => (playerRefs.current[index] = el)}
+              className="react-player"
+              onEnded={() => setPlaying(false)}
+              playing={playing}
+              url={data?.url}
+              light={data?.poster}
+            />
+          )}
+          {headerVideo && hasWindow && (
+            <ReactPlayer
+              width="100%"
+              height="100%"
+              className="react-player"
+              onEnded={() => setPlaying(false)}
+              playing={playing}
+              url={data?.url}
+              light={data?.poster}
+            />
+          )}
+        </>
+        <BrandLogo>
+          {data?.brandLogo && <Image fill src={data?.brandLogo} alt="Brand" />}
+        </BrandLogo>
+        <PlayIcon playing={playing} />
+      </VideoCardContainer>
+    </>
   );
 };
 export default VideoCard;

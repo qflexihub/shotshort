@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 import Text from "./Text";
 import styled from "styled-components";
@@ -6,7 +6,10 @@ import { categories } from "@/data/CategoriesData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const CategoryBar = () => {
+const CategoryBar = ({ selectedCategory, setSelectedCategory }) => {
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
   return (
     <CategoryContainer>
       <Swiper
@@ -28,21 +31,32 @@ const CategoryBar = () => {
           return (
             <Fragment key={item?.id}>
               <SwiperSlide>
-                <Category>
+                <Category onClick={() => handleCategoryClick(item?.title)}>
                   <Image
-                    style={{ objectFit: "cover", margin: "auto" }}
+                    style={{
+                      objectFit: "cover",
+                      margin: "auto",
+                      border:
+                        selectedCategory === item?.title
+                          ? "2px solid #8218EA"
+                          : "",
+                      borderRadius: "50%",
+                    }}
                     width={64}
                     height={64}
-                    src={item?.url}
+                    src={item?.image}
                     alt="category"
                   />
                   <Text
                     fontSize={16}
-                    color="#555555"
+                    color={
+                      selectedCategory === item?.title ? "#8218EA" : "#555555"
+                    }
                     lineHeight={18}
                     marginTop={11}
+                    fontWeight={selectedCategory === item?.title ? 700 : 400}
                   >
-                    {item?.name}
+                    {item?.title}
                   </Text>
                 </Category>
               </SwiperSlide>

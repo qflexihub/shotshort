@@ -41,7 +41,7 @@ export default WhyChooseUs;
 const WhyChooseContainer = styled.div`
   max-width: 100%;
   background-color: #fffdf7;
-  padding: 100px 110px;
+  padding: 80px 110px;
 
   @media (max-width: 768px) {
     padding: 50px 20px;
