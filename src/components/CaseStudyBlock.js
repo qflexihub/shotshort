@@ -24,4 +24,8 @@ export default CaseStudyBlock;
 const CardContainer = styled.div`
   padding: 0 120px;
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
 `;

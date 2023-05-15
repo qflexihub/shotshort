@@ -8,6 +8,7 @@ export const caseStudyData = [
     brandLogo: "/amazon.svg",
     videoData: {
       url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/0bb5bb9a-577f-46a5-a7bc-ed3eef650e72/MP4/FabAlley.mp4",
+      poster: "/video-poster5.svg",
       brandLogo: "",
     },
     buttonLink: "",
@@ -38,6 +39,7 @@ export const caseStudyData = [
     brandLogo: "/yamaha.svg",
     videoData: {
       url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/8dbefc6f-2268-4c59-a3f0-efe07f04f744/MP4/jewel-kart.mp4",
+      poster: "/video-poster5.svg",
       brandLogo: "",
     },
     buttonLink: "",
@@ -69,6 +71,7 @@ export const caseStudyData = [
     brandLogo: "/nobero.svg",
     videoData: {
       url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/3e8b35f6-061e-41ac-a476-c567180b17b8/MP4/HnM.mp4",
+      poster: "/video-poster5.svg",
       brandLogo: "",
     },
     buttonLink: "",
@@ -94,6 +97,7 @@ export const caseStudyData = [
     brandLogo: "/distacart.svg",
     videoData: {
       url: "https://drl5d07sf56ow.cloudfront.net/assets/top6/cf10ebd3-01ae-499b-9a15-0adcb589507b/MP4/lorealparis.mp4",
+      poster: "/video-poster5.svg",
       brandLogo: "",
     },
     buttonLink: "",

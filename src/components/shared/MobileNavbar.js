@@ -19,7 +19,7 @@ const MobileNavbar = ({ isMobileNavbar, setIsMobileNavbar }) => {
   const onClickLink = () => {
     setTimeout(() => {
       setIsMobileNavbar(false);
-    }, 500);
+    }, 300);
   };
 
   return (
@@ -146,7 +146,7 @@ const MobileNavbarContainer = styled.div`
   left: ${(props) => (props.isMobileNavbar ? "0px" : "-100%")};
   z-index: 5;
   background-color: #8218ea;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: scroll;
 `;
 

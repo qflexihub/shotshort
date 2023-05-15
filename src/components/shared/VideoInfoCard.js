@@ -5,13 +5,16 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
 import VideoCard from "./videoCard";
+import { useIsMobile } from "@/utils/general";
 
 const VideoInfoCard = ({ data, imageRight = true }) => {
+  const isMobile = useIsMobile();
   return (
     <MainContainer>
       <InfoCardContainer imageRight={imageRight}>
         <InfoBlock imageRight={imageRight}>
           <Image
+            style={{ margin: isMobile ? "auto" : "" }}
             width={169}
             height={57}
             src={data?.brandLogo}
@@ -43,7 +46,7 @@ const VideoInfoCard = ({ data, imageRight = true }) => {
           <Button value={"Contact Us"} marginTop="20px" rightArrow={true} />
         </InfoBlock>
         <VideoBlock>
-          <VideoCard data={data?.videoData} />
+          <VideoCard data={data?.videoData} headerVideo />
         </VideoBlock>
       </InfoCardContainer>
       <CardView>
@@ -79,6 +82,9 @@ export default VideoInfoCard;
 const MainContainer = styled.div`
   padding: 10px;
   width: 100%;
+  @media (max-width: 786px) {
+    text-align: center;
+  }
 `;
 
 const InfoCardContainer = styled.div`
@@ -89,6 +95,10 @@ const InfoCardContainer = styled.div`
   flex-direction: ${(props) => (props.imageRight ? "row" : "row-reverse")};
   gap: 100px;
   align-items: self-end;
+
+  @media (max-width: 786px) {
+    display: block;
+  }
 `;
 
 const InfoBlock = styled.div`
@@ -100,6 +110,10 @@ const HashtagContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 24px;
+
+  @media (max-width: 786px) {
+    justify-content: center;
+  }
 `;
 
 const VideoBlock = styled.div`
@@ -119,6 +133,7 @@ const VideoBlock = styled.div`
     width: 100%;
     max-width: 193px;
     height: 344px;
+    margin: 10px auto;
   }
 `;
 
@@ -130,6 +145,13 @@ const CardView = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const DataView = styled.div`
@@ -138,6 +160,7 @@ const DataView = styled.div`
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   max-width: 360px;
+  width: 100%;
   flex: 4;
   margin: 0 10px;
   padding: 45px 20px;
