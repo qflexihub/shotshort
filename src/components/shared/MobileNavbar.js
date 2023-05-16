@@ -19,7 +19,7 @@ const MobileNavbar = ({ isMobileNavbar, setIsMobileNavbar }) => {
   const onClickLink = () => {
     setTimeout(() => {
       setIsMobileNavbar(false);
-    }, 300);
+    }, 100);
   };
 
   return (

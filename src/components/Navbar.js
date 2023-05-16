@@ -29,6 +29,7 @@ const Navbar = () => {
   return (
     <>
       <NavWrapper
+        backgroundColor={router.pathname == "/contact-us" ? "#24093f" : "#fff"}
         isGradiant={pagesWithGradiant.includes(router.pathname) ? true : false}
       >
         <NavContainer>
@@ -66,7 +67,7 @@ const Navbar = () => {
                 fontSize={16}
                 lineHeight={18}
                 cursor="pointer"
-                color="#000"
+                color={router.pathname == "/contact-us" ? "#fff" : "#000"}
                 // style={{ transition: "transform 0.2s ease-in-out" }}
                 // className="hover:scale-110"
               >
@@ -98,7 +99,11 @@ const Navbar = () => {
                       lineHeight={18}
                       cursor="pointer"
                       color={
-                        router?.pathname === item?.link ? "#8218EA" : "#000"
+                        router?.pathname === item?.link
+                          ? "#8218EA"
+                          : router.pathname == "/contact-us"
+                          ? "#fff"
+                          : "#000"
                       }
                       style={{ transition: "transform 0.2s ease-in-out" }}
                       className="hover:scale-110"
@@ -118,7 +123,12 @@ const Navbar = () => {
                 </div>
               );
             })}
-            <Button value="Contact Us" width="146px" height="50px" />
+            <Button
+              onClick={() => router.push("/contact-us")}
+              value="Contact Us"
+              width="146px"
+              height="50px"
+            />
             {isDropdown && (
               <Dropdown>
                 {dropdownItems?.map((item) => {
@@ -162,7 +172,7 @@ const NavWrapper = styled.div`
   background: ${(props) =>
     props?.isGradiant
       ? "linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%)"
-      : "#fff"};
+      : props.backgroundColor};
 `;
 
 const NavContainer = styled.div`
