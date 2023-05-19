@@ -68,8 +68,17 @@ const BrandVideos = () => {
               nextEl: ".swiper-button-next",
             }}
             breakpoints={{
-              769: {
+              1441: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+              },
+              1025: {
                 slidesPerView: 4,
+                spaceBetween: 8,
+              },
+              769: {
+                slidesPerView: 3,
+                spaceBetween: 8,
               },
               320: {
                 width: 193,

@@ -1,10 +1,6 @@
-import GetInTouchForm from "@/components/GetInTouchForm";
+import ContactUsForm from "@/components/ContactUsForm";
 
 const ContactUs = () => {
-  return (
-    <>
-      <GetInTouchForm />
-    </>
-  );
+  return <></>;
 };
 export default ContactUs;

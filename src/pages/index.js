@@ -1,6 +1,7 @@
 import BrandVideos from "@/components/BrandVideos";
 import BusinessCard from "@/components/BusinessCard";
 import CaseStudyBlock from "@/components/CaseStudyBlock";
+import ContactUsForm from "@/components/ContactUsForm";
 import ContentProcess from "@/components/ContentProcess";
 import Faqs from "@/components/Faqs";
 import GetInTouchForm from "@/components/GetInTouchForm";
@@ -16,8 +17,8 @@ export default function Home() {
     <>
       <BrandVideos />
       <Services />
-      {/* <ContentProcess /> */}
-      <GetInTouchForm />
+      <ContentProcess />
+      <ContactUsForm />
       <Testimonial />
       <WhyChooseUs />
       {/* <BusinessCard /> */}

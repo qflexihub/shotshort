@@ -12,6 +12,7 @@ import InfoCard from "./shared/InfoCard";
 import { services } from "@/data/ServicesData";
 import { CaseStudyHeader } from "@/data/CaseStudyData";
 import MobileNavbar from "./shared/MobileNavbar";
+import ContactUsForm from "./ContactUsForm";
 
 const Navbar = () => {
   const router = useRouter();
@@ -24,12 +25,12 @@ const Navbar = () => {
     setDropdown(false);
   });
 
-  const pagesWithGradiant = ["/", "/case-study"];
+  const pagesWithGradiant = ["/", "/case-study", "/contact-us"];
 
   return (
     <>
       <NavWrapper
-        backgroundColor={router.pathname == "/contact-us" ? "#24093f" : "#fff"}
+        backgroundColor="#fff"
         isGradiant={pagesWithGradiant.includes(router.pathname) ? true : false}
       >
         <NavContainer>
@@ -67,7 +68,7 @@ const Navbar = () => {
                 fontSize={16}
                 lineHeight={18}
                 cursor="pointer"
-                color={router.pathname == "/contact-us" ? "#fff" : "#000"}
+                color="#000"
                 // style={{ transition: "transform 0.2s ease-in-out" }}
                 // className="hover:scale-110"
               >
@@ -99,11 +100,7 @@ const Navbar = () => {
                       lineHeight={18}
                       cursor="pointer"
                       color={
-                        router?.pathname === item?.link
-                          ? "#8218EA"
-                          : router.pathname == "/contact-us"
-                          ? "#fff"
-                          : "#000"
+                        router?.pathname === item?.link ? "#8218EA" : "#000"
                       }
                       style={{ transition: "transform 0.2s ease-in-out" }}
                       className="hover:scale-110"
@@ -154,6 +151,7 @@ const Navbar = () => {
           </MenuBlock>
         </NavContainer>
         {router.pathname === "/" && <Header />}
+        {router.pathname === "/contact-us" && <ContactUsForm />}
         {router.pathname === "/case-study" && (
           <InfoCard data={CaseStudyHeader} imageRight={true} />
         )}

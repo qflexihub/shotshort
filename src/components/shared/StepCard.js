@@ -63,9 +63,11 @@ export default StepCard;
 const StepCardContainer = styled.div`
   width: 100%;
   max-width: 285px;
+  height: 289px;
 
   @media (max-width: 768px) {
-    max-width: 161px;
+    max-width: 160px;
+    height: 170px;
   }
 `;
 
@@ -76,6 +78,10 @@ const BackgroundCardContainer = styled.div`
   height: 100%;
   display: grid;
   place-items: center;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 const MainCardContainer = styled.div`
@@ -91,9 +97,9 @@ const MainCardContainer = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    max-width: 140px;
-    padding: 12px;
-    display: block;
+    /* max-width: 140px; */
+    padding: 8px 12px 5px 12px;
+    /* display: block; */
   }
 `;
 

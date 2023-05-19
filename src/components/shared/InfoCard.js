@@ -54,7 +54,7 @@ const InfoCard = ({
 export default InfoCard;
 
 const InfoCardContainer = styled.div`
-  padding: 0px 120px;
+  /* padding: 0px 120px; */
   width: 100%;
   display: flex;
   justify-content: space-between;

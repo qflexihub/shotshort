@@ -51,20 +51,19 @@ const InputStyle = styled.input.attrs((props) => ({
   htmlFor: props.htmlFor,
 }))`
   max-width: 100%;
-  padding: 30px 20px;
-  font-size: 18px;
+  padding: 17px 20px;
+  font-size: 16px;
   outline: none;
   width: 100%;
-  height: 80px;
-  color: #fff;
-  background: #503b66;
-  border-radius: 10px;
+  height: 50px;
+  color: #797979;
+  background: #f2f2f2;
+  border-radius: 5px;
   box-sizing: border-box;
-  margin-bottom: ${(props) => props.marginBottom || "6px"};
+  margin-bottom: ${(props) => props.marginBottom || "0px"};
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: #ffffff;
-    opacity: 0.5;
+    color: #797979;
   }
 
   @media (max-width: 768px) {
@@ -78,9 +77,9 @@ const InputStyle = styled.input.attrs((props) => ({
 const Label = styled.label`
   font-weight: 700;
   line-height: 29px;
-  margin-bottom: ${(props) => props.marginBottom || "20px"};
-  font-size: ${(props) => props.fontSize || "25px"};
-  color: #fff;
+  margin-bottom: ${(props) => props.marginBottom || "14px"};
+  font-size: ${(props) => props.fontSize || "18px"};
+  color: #000;
   display: ${(props) => props.display || "inline-block"};
 
   @media (max-width: 768px) {

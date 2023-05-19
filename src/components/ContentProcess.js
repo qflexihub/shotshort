@@ -42,12 +42,11 @@ const ContentProcess = () => {
 export default ContentProcess;
 
 const CardContainer = styled.div`
-  padding: 0 120px;
+  padding: 0 120px 80px 120px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   display: flex;
-  margin-bottom: 250px;
 
   @media (max-width: 768px) {
     padding: 50px 20px;

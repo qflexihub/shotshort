@@ -39,7 +39,7 @@ const Form = () => {
     <>
       <FormContainer>
         <form name="getInTouch" onSubmit={handleSubmit}>
-          <div className="mb-5 md:mb-9">
+          <div className="mb-5 md:mb-6">
             <Input
               name="fullName"
               type="text"
@@ -52,7 +52,7 @@ const Form = () => {
               errorMsg={errors.fullName}
             />
           </div>
-          <div className="mb-5 md:mb-9">
+          <div className="mb-5 md:mb-6">
             <Input
               name="email"
               type="email"
@@ -65,7 +65,7 @@ const Form = () => {
               errorMsg={errors.email}
             />
           </div>
-          <div className="mb-5 md:mb-9">
+          <div className="mb-5 md:mb-6">
             <Input
               name="companyName"
               type="text"
@@ -78,7 +78,7 @@ const Form = () => {
               errorMsg={errors.companyName}
             />
           </div>
-          <div className="mb-5 md:mb-9">
+          <div className="mb-5 md:mb-6">
             <Input
               name="contactNumber"
               type="text"
@@ -95,8 +95,8 @@ const Form = () => {
             <Button
               value="Get in Touch"
               rightArrow
-              width={isMobile ? "335px" : "362px"}
-              height="60px"
+              width={isMobile ? "335px" : "347px"}
+              height="50px"
             />
           </div>
         </form>

@@ -5,34 +5,30 @@ import Image from "next/image";
 import Heading from "./shared/Heading";
 import Text from "./shared/Text";
 import { useIsMobile } from "@/utils/general";
+import { useRouter } from "next/router";
 
-const GetInTouchForm = () => {
+const ContactUsForm = () => {
   const isMobile = useIsMobile();
+  const router = useRouter();
+  const pagesWithGradiant = ["/contact-us"];
   return (
     <>
-      <GetInTouchContainer>
+      <GetInTouchContainer
+        isGradiant={pagesWithGradiant.includes(router.pathname) ? false : true}
+      >
         <ContentBlock>
-          <Heading marginBottom={32} color="#fff">
+          <Heading marginBottom={32}>
             Ready To Take Your Business To The Next Level?
           </Heading>
           <Text
             fontSize={25}
             marginBottom={isMobile ? 28 : 86}
-            color="#fff"
             marginRight="140px"
           >
             Talk to our video experts and discuss your business goals. We will
             definitely help your brand achieve great awareness, leads and sales
             through our video content. Let's connect!
           </Text>
-          {!isMobile && (
-            <Image
-              width={387}
-              height={232}
-              src="/contactMail.svg"
-              alt="Email Image"
-            />
-          )}
         </ContentBlock>
         <FormBlock>
           <Form />
@@ -41,14 +37,18 @@ const GetInTouchForm = () => {
     </>
   );
 };
-export default GetInTouchForm;
+export default ContactUsForm;
 
 const GetInTouchContainer = styled.div`
   max-width: 100%;
-  background: #24093f;
-  padding: 100px 120px 90px 120px;
+  background: ${(props) =>
+    props?.isGradiant
+      ? "linear-gradient(180deg, #f4eaff 0%, #ffffff 96.64%)"
+      : props.backgroundColor};
+  padding: 40px 195px 70px 195px;
   display: flex;
-  gap: 80px;
+  gap: 53px;
+  align-items: center;
 
   @media (max-width: 768px) {
     padding: 50px 20px;
@@ -58,7 +58,7 @@ const GetInTouchContainer = styled.div`
 `;
 
 const ContentBlock = styled.div`
-  width: 50%;
+  /* width: 50%; */
   @media (max-width: 768px) {
     text-align: center;
     width: 100%;
@@ -66,7 +66,11 @@ const ContentBlock = styled.div`
 `;
 
 const FormBlock = styled.div`
-  width: 50%;
+  /* width: 50%; */
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
   @media (max-width: 768px) {
     width: 100%;
   }
