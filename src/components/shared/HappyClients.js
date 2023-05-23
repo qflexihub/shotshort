@@ -19,7 +19,7 @@ const HappyClients = () => {
         textAlign="cemter"
         marginBottom={isMobile ? 12 : 42}
       >
-        Our Happy Clients
+        Clients That Speak For Us
       </Heading>
       <BrandsContainer style={{ marginBottom: 12 }}>
         <Swiper

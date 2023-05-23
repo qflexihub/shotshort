@@ -1,31 +1,36 @@
 export const faqsData = {
   title: "FAQs",
-  description:
-    "We offer a variety of videos: long, short, social commerce, video Ads, product videos, educational, promotional, informational, corporate, entertaining, social media Ads, reels, shorts, and much more!",
+  description: "",
   faqs: [
     {
       id: 1,
-      question: "What Are Types Of Videos Which We Offer?",
+      question: "What Videos do we offer?",
       answer:
-        "We offer a wide range of video types, including long and short videos, social commerce videos, video Ads, product videos, educational videos, promotional videos, informational videos, corporate videos, entertaining videos, social media Ads, reels, shorts, and more.",
+        "Whatever you need we have it : informational, short, long, video ads, concept videos, infotainment, entertaining and many more all in one shop.",
     },
     {
       id: 2,
-      question: "What Is The Video Production Process We Follow?",
+      question: "What are our services?",
       answer:
-        "We follow a comprehensive video production process that includes pre-production, production, and post-production stages. During pre-production, we plan and prepare for the shoot. During production, we capture the footage. During post-production, we edit and finalize the video.",
+        "Whatever you need we have it : informational, short, long, video ads, concept videos, infotainment, entertaining , we help get your business to the next level by leveraging creativity and social media’s power.",
     },
     {
       id: 3,
-      question: "How Our Video Production Service Different From Others?",
+      question: "What is our process?",
       answer:
-        "Our video production service is different from others because we focus on understanding our clients' needs and goals and create customized videos that align with their vision. We also have a team of experienced and talented professionals who use the latest technology and techniques to produce high-quality videos.",
+        "Our process is simple, understand your brand and services, build a solid strategy and execute with perfection",
     },
     {
       id: 4,
-      question: "What Is The Difference Between Short Videos And Long Videos?",
+      question: "How are we the best",
       answer:
-        "Short videos are typically under 2 minutes in length and are ideal for social media platforms, while long videos are typically longer than 2 minutes and are better suited for websites or online platforms. Short videos are usually used for quick and engaging content, while long videos are used to provide in-depth information or tell a more complex story.",
+        "Because we have the best minds, the best technology, the best productivity and of course the best clients",
+    },
+    {
+      id: 5,
+      question: "How do we scale your business",
+      answer:
+        "If you see the current market trends and number the use of video ads is all time high and we are the experts in producing trendy videos",
     },
   ],
 };

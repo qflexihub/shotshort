@@ -57,17 +57,34 @@ const Services = () => {
         </Swiper>
       )}
 
-      {!isMobile &&
-        services?.map((item, index) => {
-          return (
-            <Fragment key={item?.id}>
-              <InfoCard
-                data={item}
-                imageRight={index % 2 === 0 ? true : false}
-              />
-            </Fragment>
-          );
-        })}
+      {!isMobile && (
+        <div className="relative">
+          <Image
+            className="absolute"
+            style={{
+              top: "10%",
+              left: 0,
+              right: 0,
+              margin: "auto",
+            }}
+            width={575}
+            height={2221}
+            src="/dotted-line.svg"
+          />
+          {services?.map((item, index) => {
+            return (
+              <Fragment key={item?.id}>
+                <InfoCard
+                  data={item}
+                  imageRight={index % 2 === 0 ? true : false}
+                  marginBottom="200px"
+                  marginTop="200px"
+                />
+              </Fragment>
+            );
+          })}
+        </div>
+      )}
 
       {isMobile && (
         <>

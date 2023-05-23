@@ -11,10 +11,16 @@ const InfoCard = ({
   imageWidth,
   imageHeight,
   imageStyles,
+  marginBottom,
+  marginTop,
 }) => {
   const isMobile = useIsMobile();
   return (
-    <InfoCardContainer imageRight={imageRight}>
+    <InfoCardContainer
+      imageRight={imageRight}
+      marginBottom={marginBottom}
+      marginTop={marginTop}
+    >
       <ImageBlock>
         {/* <Image width={827} height={451} src={data?.image} alt={data?.title} /> */}
         <img
@@ -60,8 +66,9 @@ const InfoCardContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: ${(props) => (props.imageRight ? "row-reverse" : "row")};
-  margin-top: 75px;
-  margin-bottom: 100px;
+  margin-bottom: ${(props) => props.marginBottom || "100px"};
+  margin-top: ${(props) => props.marginTop || "100px"};
+  position: inherit;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -72,7 +79,7 @@ const InfoCardContainer = styled.div`
 `;
 
 const InfoBlock = styled.div`
-  max-width: 560px;
+  max-width: 573px;
   width: 100%;
   text-align: ${(props) => (props.imageRight ? "left" : "right")};
 

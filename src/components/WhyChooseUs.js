@@ -12,12 +12,9 @@ const WhyChooseUs = () => {
     <>
       <WhyChooseContainer>
         <Block1>
-          <Heading marginBottom={30}>
-            Creative And Professional Video Production Company In India ( Why
-            Choose Us)
-          </Heading>
+          <Heading marginBottom={30}>Why we are the one for you</Heading>
           <Button
-            value="Schedule a Call with Video's Expert"
+            value="Schedule A Call With Our Expert"
             width={isMobile ? "335px" : "375px"}
             height="50px"
             rightArrow

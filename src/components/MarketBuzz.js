@@ -22,7 +22,7 @@ const MarketBuzz = () => {
       </MainComponent>
       <Button
         width={isMobile ? "335px" : "375px"}
-        value="Schedule a Call with Video's Expert"
+        value="Schedule A Call With Our Expert"
         rightArrow={true}
       />
     </CardContainer>

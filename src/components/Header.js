@@ -32,8 +32,8 @@ const Header = () => {
           mobileFontSize={28}
           mobileLineHeight={32}
         >
-          Top <span style={{ color: "#8218EA" }}>Video</span> Production Company
-          In India
+          Best <span style={{ color: "#8218EA" }}>Video</span> Production
+          Company In India
         </Heading>
         <Text
           fontWeight={700}
@@ -43,12 +43,12 @@ const Header = () => {
           lineHeight={24}
           textTransform="uppercase"
         >
-          The top video production company that leverages the power
+          ShotShort stands at the top in the video production industry
         </Text>
         <Text fontSize={18} color="#555555" marginTop={15}>
-          The top video production company that leverages the power of 50k+
-          content creators/influencers to produce compelling long as well short
-          form videos to grow your business!
+          We offer creativity with exceptional quality through our long and
+          short-form videos with the credibility of the hottest 50k+ content
+          creators and influencers.
         </Text>
       </TextBlock>
       <VideoBlock>

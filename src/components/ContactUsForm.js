@@ -17,17 +17,16 @@ const ContactUsForm = () => {
         isGradiant={pagesWithGradiant.includes(router.pathname) ? false : true}
       >
         <ContentBlock>
-          <Heading marginBottom={32}>
-            Ready To Take Your Business To The Next Level?
-          </Heading>
+          <Heading marginBottom={32}>Ready to scale your business?</Heading>
           <Text
             fontSize={25}
             marginBottom={isMobile ? 28 : 86}
             marginRight="140px"
           >
-            Talk to our video experts and discuss your business goals. We will
-            definitely help your brand achieve great awareness, leads and sales
-            through our video content. Let's connect!
+            Why wait then, Hire the best Video production company in India in
+            ShotShort, and let our visually appealing and delectable video
+            content skyrocket your business by generating more leads than ever
+            and collecting more revenue than ever. Schedule a call today!
           </Text>
         </ContentBlock>
         <FormBlock>

@@ -14,7 +14,7 @@ const ContentProcess = () => {
       <ContentHeading data={StepsType1?.processHead} />
       <Button
         width={isMobile ? "335px" : "375px"}
-        value="Schedule a Call with Video's Expert"
+        value="Schedule Your Call Today"
         rightArrow={true}
       />
       <Heading

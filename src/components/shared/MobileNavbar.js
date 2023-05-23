@@ -71,9 +71,9 @@ const MobileNavbar = ({ isMobileNavbar, setIsMobileNavbar }) => {
             />
           </div>
           <CollapsedMenu>
-            {dropdownItems?.map((item) => {
+            {dropdownItems?.map((item, index) => {
               return (
-                <Link href={item?.link} onClick={onClickLink}>
+                <Link key={index} href={item?.link} onClick={onClickLink}>
                   <Text
                     fontSize={16}
                     mobileFontSize={16}
@@ -89,9 +89,9 @@ const MobileNavbar = ({ isMobileNavbar, setIsMobileNavbar }) => {
           </CollapsedMenu>
         </div>
 
-        {MenuItems?.map((item) => {
+        {MenuItems?.map((item, index) => {
           return (
-            <MenuItem isCollapsed={isCollapsed}>
+            <MenuItem key={index} isCollapsed={isCollapsed}>
               <Link href={item?.link} onClick={onClickLink}>
                 <Text
                   fontWeight={700}

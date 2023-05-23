@@ -42,14 +42,17 @@ const BrandVideos = () => {
     <>
       <BrandVideoContainer>
         <Block1>
-          <Heading textAlign="center">Video Company For Brand Videos</Heading>
+          <Heading textAlign="center">
+            Videos That Put Spotlight On Your Brand
+          </Heading>
           <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
-            Being the top video agency in India, we offer short video production
-            services and long format videos for marketing and branding. For
-            world class videos, hire the best video company today
+            As India's top video-producing company, we offer short and
+            long-format videos for marketing your brand. We are artists by
+            nature, and our videos are pieces of art. Trust in us; we'll help
+            scale your business to the top.
           </Text>
           <Button
-            value="Get your video now"
+            value="Get Your Video Today"
             width="257px"
             height="50px"
             marginTop="32px"

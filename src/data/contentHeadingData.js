@@ -1,8 +1,8 @@
 export const serviceHeading = {
   id: 1,
-  title: "Video Production Services In India",
+  title: "Videos that Trend In India",
   subtitle:
-    "Being the top video production agency in India for long/short format videos, brand videos & content creator produced videos; our core competencies are social commerce videos",
+    "We specialize in producing videos that convert. Our short or long-format videos are produced by niche-based social media content creators that help build your brand's credibility among your targeted audience.",
 };
 
 // export const processHeading = {

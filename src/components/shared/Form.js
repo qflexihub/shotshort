@@ -44,7 +44,7 @@ const Form = () => {
               name="fullName"
               type="text"
               value={values.fullName}
-              label={"What is your full name"}
+              label={"What is your name here"}
               placeholder={"Enter name here"}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -57,7 +57,7 @@ const Form = () => {
               name="email"
               type="email"
               value={values.email}
-              label={"What is your email address"}
+              label={"What is your email address here"}
               placeholder={"Enter email here"}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -70,7 +70,7 @@ const Form = () => {
               name="companyName"
               type="text"
               value={values.companyName}
-              label={"What is company name"}
+              label={"What is your company name here"}
               placeholder={"Enter here"}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -83,7 +83,7 @@ const Form = () => {
               name="contactNumber"
               type="text"
               value={values.contactNumber}
-              label={"What is your contact number"}
+              label={"What is your contact number here"}
               placeholder={"Enter number here"}
               onChange={handleChange}
               onBlur={handleBlur}

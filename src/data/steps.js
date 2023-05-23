@@ -1,16 +1,15 @@
 export const StepsType1 = {
   processHead: {
-    title: "How Does Our Video Production Agency Work?",
+    title: "How Do We Work?",
     subtitle:
-      "We as a long /short video production agency, position your brand superior in this competitive world with pocket-friendly and edgy videos",
+      "Audience eats up our tasty and snackable content, leaving no crumbs behind, Follow this simple instruction and get ready to witness the magic of ShotShorts",
   },
-  processTitle:
-    "Create highly effective, inspiring, relevant and creative videos in just 3 EASY STEPS",
+  processTitle: "Follow these 4 Steps To Get highly engaging video ads today",
   process: [
     {
       id: 1,
       stepText: "Step 1",
-      title: "Fill our contact us form",
+      title: "Fill out the contact form",
       image: "/formIcon.svg",
       description: "",
       buttonText: "",
@@ -19,7 +18,7 @@ export const StepsType1 = {
     {
       id: 2,
       stepText: "Step 2",
-      title: "Our video expert will connect with you",
+      title: "Talk to our expert",
       image: "/callIcon.svg",
       description: "",
       buttonText: "",
@@ -28,7 +27,7 @@ export const StepsType1 = {
     {
       id: 3,
       stepText: "Step 3",
-      title: "Choose content theme & your niche creators",
+      title: "Choose the creator and content",
       image: "/filterIcon.svg",
       description: "",
       buttonText: "",
@@ -37,7 +36,7 @@ export const StepsType1 = {
     {
       id: 4,
       stepText: "Step 4",
-      title: "Video delivered within 48 hours*",
+      title: "Get the video delivered in 36 hours",
       image: "/checkIcon.svg",
       description: "",
       buttonText: "",
