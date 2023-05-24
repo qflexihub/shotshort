@@ -6,8 +6,14 @@ import ContentHeading from "./shared/contentHeading";
 import Heading from "./shared/Heading";
 import { StepsType1 } from "@/data/steps";
 import { useIsMobile } from "@/utils/general";
+import { curiousAbout } from "@/data/SocialMediaData";
+import Text from "./shared/Text";
 
+<<<<<<< Updated upstream
 const ContentProcess = ({fbSteps}) => {
+=======
+const ContentProcess = ({ data }) => {
+>>>>>>> Stashed changes
   const isMobile = useIsMobile();
   const [expandedItems, setExpandedItems] = useState([]);
   const toggleDescription = (itemId) => {
@@ -20,9 +26,13 @@ const ContentProcess = ({fbSteps}) => {
 
   return (
     <CardContainer>
+<<<<<<< Updated upstream
       {console.log('fbSteps')}
       {console.log(fbSteps)}
       <ContentHeading data={StepsType1?.processHead} />
+=======
+      <ContentHeading data={data?.contentHeading} />
+>>>>>>> Stashed changes
       <Button
         width={isMobile ? "335px" : "375px"}
         value="Schedule Your Call Today"
@@ -36,10 +46,10 @@ const ContentProcess = ({fbSteps}) => {
         color="#8218ea"
         textAlign="center"
       >
-        {StepsType1?.processTitle}
+        {data?.processTitle}
       </Heading>
       <StepComponent>
-        {StepsType1?.process?.map((item) => {
+        {data?.process?.map((item) => {
           return (
             <Fragment key={item?.id}>
               <StepCard
@@ -52,6 +62,15 @@ const ContentProcess = ({fbSteps}) => {
           );
         })}
       </StepComponent>
+      <Text
+        style={{ maxWidth: "665px" }}
+        fontSize={18}
+        color="#555555"
+        marginTop={60}
+        textAlign="center"
+      >
+        {data?.bottomText}
+      </Text>
     </CardContainer>
   );
 };
@@ -79,6 +98,7 @@ const StepComponent = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   margin-top: 30px;
+  align-items: flex-start;
   /* & > * {
     flex: 1;
     margin: 0 10px;

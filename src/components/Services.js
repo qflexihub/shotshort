@@ -12,13 +12,21 @@ import { useIsMobile } from "@/utils/general";
 
 SwiperCore.use([Navigation]);
 
+<<<<<<< Updated upstream
 const Services = ({serviceData, serviceHeadingData}) => {
+=======
+const Services = ({ data }) => {
+>>>>>>> Stashed changes
   const isMobile = useIsMobile();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
     <CardContainer>
+<<<<<<< Updated upstream
       <ContentHeading data={serviceHeadingData} />
+=======
+      <ContentHeading data={data?.contentHeading} />
+>>>>>>> Stashed changes
       {isMobile && (
         <Swiper
           slidesPerView={4}
@@ -37,7 +45,11 @@ const Services = ({serviceData, serviceHeadingData}) => {
           }}
           className="mySwiper"
         >
+<<<<<<< Updated upstream
           {serviceData?.map((item, index) => {
+=======
+          {data?.services?.map((item, index) => {
+>>>>>>> Stashed changes
             return (
               <Fragment key={item?.id}>
                 <SwiperSlide>
@@ -67,9 +79,13 @@ const Services = ({serviceData, serviceHeadingData}) => {
             }}
             width={575}
             height={2221}
-            src="/dotted-line.svg"
+            src={data?.bgImage}
           />
+<<<<<<< Updated upstream
           {serviceData?.map((item, index) => {
+=======
+          {data?.services?.map((item, index) => {
+>>>>>>> Stashed changes
             return (
               <Fragment key={item?.id}>
                 <InfoCard

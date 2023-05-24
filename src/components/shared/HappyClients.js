@@ -8,7 +8,7 @@ import { useIsMobile } from "@/utils/general";
 
 SwiperCore.use([Autoplay, Navigation]);
 
-const HappyClients = () => {
+const HappyClients = ({ data }) => {
   const isMobile = useIsMobile();
   return (
     <HappyClientsContainer>
@@ -19,7 +19,11 @@ const HappyClients = () => {
         textAlign="cemter"
         marginBottom={isMobile ? 12 : 42}
       >
+<<<<<<< Updated upstream
         Our clients speak for us
+=======
+        {data?.heading}
+>>>>>>> Stashed changes
       </Heading>
       <BrandsContainer style={{ marginBottom: 12 }}>
         <Swiper

@@ -16,7 +16,7 @@ import { categories } from "@/data/CategoriesData";
 
 SwiperCore.use([Navigation]);
 
-const BrandVideos = () => {
+const BrandVideos = ({ data }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const playerRefs = useRef([]);
@@ -42,19 +42,19 @@ const BrandVideos = () => {
     <>
       <BrandVideoContainer>
         <Block1>
+<<<<<<< Updated upstream
           <Heading textAlign="center">
           Excerpts of our Work
           </Heading>
           <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
           Want to grow? Connect with us now
+=======
+          <Heading textAlign="center">{data?.heading}</Heading>
+          <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
+            {data?.description}
+>>>>>>> Stashed changes
           </Text>
-          <Button
-            value="Get Your Video Today"
-            width="257px"
-            height="50px"
-            marginTop="32px"
-            rightArrow
-          />
+          <Button value={data?.btnText} marginTop="32px" rightArrow />
         </Block1>
         <CategoryBar
           selectedCategory={selectedCategory}

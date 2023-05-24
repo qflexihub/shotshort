@@ -5,7 +5,11 @@ import Text from "./Text";
 const ContentHeading = ({ data }) => {
   return (
     <HeadingContainer>
+<<<<<<< Updated upstream
       <Heading textAlign="center">{data?.title}</Heading>
+=======
+      <Heading textAlign="center">{data?.heading}</Heading>
+>>>>>>> Stashed changes
       {data?.subtitle && (
         <Text fontSize={18} color="#555555" marginTop={20} textAlign="center">
           {data?.subtitle}

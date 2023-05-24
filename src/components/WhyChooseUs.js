@@ -6,7 +6,7 @@ import Heading from "./shared/Heading";
 import { WhyChooseUsData } from "@/data/commonData";
 import { useIsMobile } from "@/utils/general";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ data }) => {
   const isMobile = useIsMobile();
   return (
     <>

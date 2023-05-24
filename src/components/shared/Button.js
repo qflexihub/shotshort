@@ -55,8 +55,8 @@ const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
   border: 2px solid #8218ea;
-  width: ${(props) => props.width || "257px"};
-  height: ${(props) => props.height || "50px"};
+  /* width: ${(props) => props.width || "257px"};
+  height: ${(props) => props.height || "50px"}; */
   background-color: ${(props) => props.backgroundColor || "#8218ea"};
   color: ${(props) => props.color || "#fff"};
   border-radius: ${(props) => props.borderRadius || "25px"};
@@ -64,6 +64,8 @@ const ButtonContainer = styled.button`
   font-size: ${(props) => props.fontsize || "16px"};
   font-weight: ${(props) => props.fontWeight || "700"};
   transition: transform 0.2s ease-in-out;
+  line-height: ${(props) => (props.lineHeight || 18) + "px"};
+  padding: ${(props) => props.padding || "16px 25px 16px 40px"};
   /* &:hover ${BtnText} {
     font-size: 18px;
   } */

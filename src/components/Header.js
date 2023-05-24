@@ -6,6 +6,10 @@ import HappyClients from "./shared/HappyClients";
 import VideoCard from "./shared/videoCard";
 import { useIsMobile } from "@/utils/general";
 
+const happyClients = {
+  heading: "Clients That Speak For Us",
+};
+
 const Header = () => {
   return (
     <HeaderContainer>
@@ -62,7 +66,7 @@ const Header = () => {
           }}
         />
       </VideoBlock>
-      <HappyClients />
+      <HappyClients data={happyClients} />
     </HeaderContainer>
   );
 };

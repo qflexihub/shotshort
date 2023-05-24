@@ -6,13 +6,13 @@ import ProgressCard from "./shared/ProgressCard";
 import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { useIsMobile } from "@/utils/general";
 
-const MarketBuzz = () => {
+const MarketBuzz = ({ data }) => {
   const isMobile = useIsMobile();
   return (
     <CardContainer>
-      <ContentHeading data={MarketBuzzProcess?.processHeading} />
+      <ContentHeading data={data?.processHeading} />
       <MainComponent>
-        {MarketBuzzProcess?.content?.map((item) => {
+        {data?.content?.map((item) => {
           return (
             <Fragment key={item?.id}>
               <ProgressCard data={item} />

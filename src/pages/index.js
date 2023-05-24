@@ -11,12 +11,13 @@ import Services from "@/components/Services";
 import Testimonial from "@/components/Testimonial";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HappyClients from "@/components/shared/HappyClients";
+import { homePageServices } from "@/data/HomePageData";
 
 export default function Home() {
   return (
     <>
       <BrandVideos />
-      <Services />
+      <Services data={homePageServices} />
       <ContentProcess />
       <ContactUsForm />
       <Testimonial />

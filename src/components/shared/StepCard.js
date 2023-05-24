@@ -9,6 +9,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
+<<<<<<< Updated upstream
   const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 150);
 
   const adjustCardHeight = () => {
@@ -27,9 +28,28 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   useEffect(() => {
     adjustCardHeight();
   }, []);
+=======
+  // useEffect(() => {
+  //   const cards = document.querySelectorAll(".main-card-container");
+  //   let maxHeight = 0;
+  //   cards.forEach((card) => {
+  //     maxHeight = Math.max(maxHeight, card.offsetHeight);
+  //   });
+  //   cards.forEach((card) => {
+  //     card.style.height = `${maxHeight}px`;
+  //   });
+  //   const backgroundCards = document.querySelectorAll(
+  //     ".background-card-container"
+  //   );
+  //   backgroundCards.forEach(
+  //     (el) => (el.style.height = maxHeight / 2 + 20 + "px")
+  //   );
+  // }, []);
+>>>>>>> Stashed changes
 
   return (
     <StepCardContainer>
+      <BackGroundDiv></BackGroundDiv>
       <BackgroundCardContainer
         ref={mainCardRef}
         className="background-card-container"
@@ -41,6 +61,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
             fontWeight={700}
             color="#898989"
             textTransform="uppercase"
+            marginBottom={22}
           >
             {data?.stepText}
           </Text>
@@ -55,6 +76,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
           <Text fontSize={22} fontWeight={700} textAlign="center">
             {data?.title}
           </Text>
+<<<<<<< Updated upstream
           {data?.description.length > 150 && (
             <Button
               value={isExpanded ? "Show less" : "Read more"}
@@ -68,6 +90,18 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
           )}
           <Text>{descriptionContent}</Text>
           
+=======
+          {data?.description && (
+            <Text
+              fontSize={18}
+              fontWeight={400}
+              marginTop={14}
+              textAlign="center"
+            >
+              {data?.description}
+            </Text>
+          )}
+>>>>>>> Stashed changes
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>
@@ -79,7 +113,9 @@ export default StepCard;
 const StepCardContainer = styled.div`
   width: 100%;
   max-width: 285px;
-  height: 289px;
+  position: relative;
+  height: 100%;
+  /* height: 289px; */
 
   @media (max-width: 768px) {
     max-width: 160px;
@@ -87,9 +123,18 @@ const StepCardContainer = styled.div`
   }
 `;
 
+const BackGroundDiv = styled.div`
+  background-color: #f6ecff;
+  height: 153px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
+
 const BackgroundCardContainer = styled.div`
   padding: 20px;
-  background: #f6ecff;
+  /* background: #f6ecff; */
   border-radius: 10px;
   height: 100%;
   display: grid;
@@ -101,16 +146,18 @@ const BackgroundCardContainer = styled.div`
 `;
 
 const MainCardContainer = styled.div`
+  z-index: 1;
   padding: 20px 25px;
   background: #ffffff;
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  display: grid;
+  /* display: grid; */
   grid-template-rows: auto 1fr auto;
   text-align: center;
   gap: 20px;
   max-width: 249px;
   width: 100%;
+  height: 100%;
 
   @media (max-width: 768px) {
     /* max-width: 140px; */
@@ -127,6 +174,7 @@ const CircularImageView = styled.div`
   margin: 0 auto;
   display: grid;
   place-items: center;
+  margin-bottom: 24px;
 
   @media (max-width: 768px) {
     width: 40px;
