@@ -9,7 +9,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
-  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 150)+'...';
+  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 150);
 
   const adjustCardHeight = () => {
     const cards = document.querySelectorAll(".main-card-container");
@@ -58,7 +58,10 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
           {data?.description.length > 150 && (
             <Button
               value={isExpanded ? "Show less" : "Read more"}
-              onClick={() => {toggleDescription(data?.id),adjustCardHeight()}}
+              onClick={() => {
+                toggleDescription(data?.id);
+                adjustCardHeight();
+              }}
               type="text"
               fontWeight="600"
             />
