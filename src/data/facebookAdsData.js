@@ -43,12 +43,13 @@ export const fbServices = [
 ];
 
 export const fbSteps = {
-    processHead: {
+    processHeading: {
       title: "How Do We Work?",
       subtitle:
         "",
     },
     processTitle: "Follow these 4 Steps To Get highly engaging video ads today",
+    footerDescription: "Once our vision matches will be creating a draft for your approval and after jamming on that we will swiftly provide you with the final deliverables",
     process: [
       {
         id: 1,
@@ -87,4 +88,41 @@ export const fbSteps = {
         url: "",
       },
     ],
+};
+
+export const fbWhyChooseData = {
+  title: "Why we are the one for you",
+  buttonTitle: "",
+  buttonLink: "",
+  content: [
+    {
+      id: 1,
+      image: "/wc1.svg",
+      title: "Campaign Analysis",
+      description: "As ShotShort, the best Facebook marketing company in India, we study the market and competitors before creating video ads for your campaigns. This lets us find the best options to push results for your business."
+    },
+    {
+      id: 2,
+      image: "/wc2.svg",
+      title: "Growth That Lasts",
+      description: "Our FB ad and influencer marketing experts help customers get the most worth from our videos featuring relevant creators. By doing so, we help customers stay ahead of the curve and contribute directly to their long-term growth plans."
+    },
+    {
+      id: 3,
+      image: "/wc3.svg",
+      title: "Devoted Admins",
+      description: "We assign personal account managers to each client, delivering dedicated attention to each brand. This helps us keep our customers updated and guarantees they get precisely what they want from our video ads"
+    },
+    {
+      id: 4,
+      image: "/wc4.svg",
+      title: "Proven Mantle",
+      description: "With X years of prominence in Facebook ads management and successfully serving the biggest brands, we have great copywriting expertise and creative videos for campaigns that produce results."
+    }
+    // {
+    //   id: 5,
+    //   image: "/wc5.svg",
+    //   title: "We save your money",
+    // }
+  ],
 };

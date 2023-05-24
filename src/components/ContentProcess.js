@@ -20,7 +20,7 @@ const ContentProcess = ({ data }) => {
 
   return (
     <CardContainer>
-      <ContentHeading data={data?.contentHeading} />
+      <ContentHeading data={data?.processHeading} />
       <Button
         width={isMobile ? "335px" : "375px"}
         value="Schedule Your Call Today"
@@ -57,7 +57,7 @@ const ContentProcess = ({ data }) => {
         marginTop={60}
         textAlign="center"
       >
-        {data?.bottomText}
+        {data?.footerDescription}
       </Text>
     </CardContainer>
   );

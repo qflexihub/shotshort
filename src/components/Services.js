@@ -12,13 +12,13 @@ import { useIsMobile } from "@/utils/general";
 
 SwiperCore.use([Navigation]);
 
-const Services = ({ data }) => {
+const Services = ({serviceData, serviceHeadingData}) => {
   const isMobile = useIsMobile();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
     <CardContainer>
-      <ContentHeading data={data?.contentHeading} />
+      <ContentHeading data={serviceHeadingData} />
       {isMobile && (
         <Swiper
           slidesPerView={4}
@@ -37,7 +37,7 @@ const Services = ({ data }) => {
           }}
           className="mySwiper"
         >
-          {data?.services?.map((item, index) => {
+          {serviceData?.map((item, index) => {
             return (
               <Fragment key={item?.id}>
                 <SwiperSlide>
@@ -67,9 +67,9 @@ const Services = ({ data }) => {
             }}
             width={575}
             height={2221}
-            src={data?.bgImage}
+            src="/dotted-line.svg"
           />
-          {data?.services?.map((item, index) => {
+          {serviceData?.map((item, index) => {
             return (
               <Fragment key={item?.id}>
                 <InfoCard
