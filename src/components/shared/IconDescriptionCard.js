@@ -16,7 +16,7 @@ const IconDescriptionCard = ({ data }) => {
         <Text fontSize={24} lineHeight={27} fontWeight={700} textAlign="center">
           {data?.title}
         </Text>
-        <Text fontSize={14} lineHeight={16} fontWeight={400} textAlign="center" marginTop={10}>
+        <Text fontSize={14} lineHeight={16} fontWeight={400} textAlign="center" marginTop={10} color="#555555">
           {data?.description}
         </Text>
       </CardContainer>
