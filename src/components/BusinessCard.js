@@ -3,14 +3,14 @@ import { BusinesdCardData } from "@/data/BusinessCardData";
 import BusinessCardView from "./shared/BusinessCard";
 import styled from "styled-components";
 
-const BusinessCard = () => {
+const BusinessCard = ({ data }) => {
   return (
     <BusinessCardContainer>
       <BusinessCardHeading>
-        How Our Short Video Ads Company Can Help Your Business?
+        {data?.heading}
       </BusinessCardHeading>
       <BusinessCardSection>
-        {BusinesdCardData?.map((item) => {
+        {data.content?.map((item) => {
           return (
             <Fragment key={item?.id}>
               <BusinessCardView data={item} />

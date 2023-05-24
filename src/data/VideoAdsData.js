@@ -21,43 +21,111 @@ export const videoAdsSteps = {
         "We put spotlight on your product or your service, while invigorating emotions among the audience, through our entertaining yet informative short video Ads that inspire your target audience.",
     },
     processTitle: "With these 4 easy steps, you can also get your creative video Ads to skyrocket your sales.",
-    footerDescription: "Once our vision matches will be creating a draft for your approval and after jamming on that we will swiftly provide you with the final deliverables",
+    footerDescription: "We help you to reach your audience and generate leads, and boost sales. Connect with our team of video experts today to get started.",
     process: [
       {
         id: 1,
         stepText: "Step 1",
         title: "Fill out the contact form",
         image: "/formIcon.svg",
-        description: "You can fill all the required details, like your name, email, personal phone number, and information about your business, and submit the form",
+        description: "Provide your name and phone number on our website's contact form to get started.",
         buttonText: "",
         url: "",
       },
       {
         id: 2,
         stepText: "Step 2",
-        title: "Set Your Brand Objective",
+        title: "Talk with our Ad Expert",
         image: "/callIcon.svg",
-        description: "After we receive your contact form, we’ll arrange your meeting with our strategy expert, and they will provide you with a complete strategy that is most beneficial and efficient for your brand",
+        description: "We'll schedule a call with our video content lead to understand your needs and suggest the best relevant content themes for your social media channel",
         buttonText: "",
         url: "",
       },
       {
         id: 3,
         stepText: "Step 3",
-        title: "Choosing Strategy that works wonder",
+        title: "Choose what suits you",
         image: "/filterIcon.svg",
-        description: "We are connected with the hottest celebs and creators that bring high engagement and get people to talk about your brand, our team of creative geniuses create the most viral and gripping content that sell and brings business",
+        description: "Choose the video themes we discussed and select the relevant package that fits your budget and needs",
         buttonText: "",
         url: "",
       },
       {
         id: 4,
         stepText: "Step 4",
-        title: "Facebook ad production",
+        title: " Get Your Video within 36 Hours",
         image: "/checkIcon.svg",
-        description: "Your fb ads will be created by marketing experts who are well versed and experienced in enhancing your brand image and bringing numbers. They will devise the most effective post that empties out your inventory",
+        description: "We'll deliver the highest quality and most effective video within 36 hours after your purchase, helping you enhance your brand's visibility and drive sales.",
         buttonText: "",
         url: "",
+      },
+    ],
+};
+export const videoAdsBusinessCardData = {
+    heading: "How we benefit your business",
+    content: [
+        {
+          id: 1,
+          logo: "/bsearch.svg",
+          heading: "Reach your audience",
+          description:
+            "Utilize the power of market-specific influencers to reach your TG and aware them about your brand, product, or service through engaging video campaigns and captivating stories.",
+        },
+        {
+          id: 2,
+          logo: "/blauncher.svg",
+          heading: "Persuasion",
+          description:
+            "Give your potential customers a persuasive reason to consider you over your competitors.",
+        },
+        {
+          id: 3,
+          logo: "/bcoin.svg",
+          heading: "Skyrocket your sales",
+          description: "Our video-ads will help you Increase sales and drive quality leads to your business. So, partner with the top video-ad company In India.",
+        },
+    ]
+};
+export const videoAdsWhyChooseUsData = {
+    title: "What makes us the best in Video-ad agency in India",
+    buttonTitle: "OUR USPs",
+    buttonLink: "",
+    content: [
+      {
+        id: 1,
+        image: "/wc1.svg",
+        title: "1500+ Satisfied Brands",
+        description: "",
+      },
+      {
+        id: 2,
+        image: "/wc2.svg",
+        title: "200000+ Content Creators",
+        description: "",
+      },
+      {
+        id: 3,
+        image: "/wc3.svg",
+        title: "Personal Brand Manager",
+        description: "",
+      },
+      {
+        id: 4,
+        image: "/wc4.svg",
+        title: "Effective Content Strategy",
+        description: "",
+      },
+      {
+        id: 5,
+        image: "/wc5.svg",
+        title: "A competent team of experts",
+        description: "",
+      },
+      {
+        id: 6,
+        image: "/wc1.svg",
+        title: "Pocket friendly",
+        description: "",
       },
     ],
 };

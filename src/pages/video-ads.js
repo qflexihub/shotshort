@@ -9,8 +9,10 @@ import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { services } from "@/data/ServicesData";
 import { StepsType1 } from "@/data/steps";
 import HappyClients from "@/components/shared/HappyClients";
-import { videoAdsBrandVideos, videoAdsHappyClients, videoAdsServicesHeader, videoAdsSteps } from "@/data/VideoAdsData";
+import { videoAdsBrandVideos, videoAdsBusinessCardData, videoAdsHappyClients, videoAdsServicesHeader, videoAdsSteps, videoAdsWhyChooseUsData } from "@/data/VideoAdsData";
 import { useIsMobile } from "@/utils/general";
+import InfluencerMarketingCardView from "@/components/InfluencerMarketingCardView";
+import { SocialWhyChooseUsData } from "@/data/SocialMediaData";
 
 const videoAds = () => {
   const isMobile = useIsMobile();
@@ -24,8 +26,8 @@ const videoAds = () => {
       </div>
       <BrandVideos data={videoAdsBrandVideos} />
       <ContentProcess data={videoAdsSteps} />
-      <BusinessCard />
-      <WhyChooseUs />
+      <BusinessCard data={videoAdsBusinessCardData}/>
+      <WhyChooseUs data={videoAdsWhyChooseUsData} />
       <InfoCard data={services[2]} imageRight={true} />
       <MarketBuzz data={MarketBuzzProcess} />
     </>
