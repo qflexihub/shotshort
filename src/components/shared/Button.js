@@ -85,6 +85,7 @@ const TextLinkContainer = styled.span`
   margin-top: ${(props) => props.marginTop || "0px"};
   font-size: ${(props) => props.fontsize || "16px"};
   font-weight: ${(props) => props.fontWeight || "bold"};
+  cursor: pointer;
   @media (max-width: 375px) {
     font-size: 12px;
   }

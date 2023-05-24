@@ -9,22 +9,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
-  // useEffect(() => {
-  //   const cards = document.querySelectorAll(".main-card-container");
-  //   let maxHeight = 0;
-  //   cards.forEach((card) => {
-  //     maxHeight = Math.max(maxHeight, card.offsetHeight);
-  //   });
-  //   cards.forEach((card) => {
-  //     card.style.height = `${maxHeight}px`;
-  //   });
-  //   const backgroundCards = document.querySelectorAll(
-  //     ".background-card-container"
-  //   );
-  //   backgroundCards.forEach(
-  //     (el) => (el.style.height = maxHeight / 2 + 20 + "px")
-  //   );
-  // }, []);
+  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 120)+'...';
 
   return (
     <StepCardContainer>
@@ -62,9 +47,15 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
               marginTop={14}
               textAlign="center"
             >
-              {data?.description}
+              {descriptionContent}
             </Text>
           )}
+          <Button
+              value={isExpanded ? "Show less" : "Read more"}
+              onClick={() => { toggleDescription(data?.id) }}
+              type="text"
+              fontWeight="600"
+            />
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>

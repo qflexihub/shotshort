@@ -4,9 +4,7 @@ import Button from "./shared/Button";
 import StepCard from "./shared/StepCard";
 import ContentHeading from "./shared/contentHeading";
 import Heading from "./shared/Heading";
-import { StepsType1 } from "@/data/steps";
 import { useIsMobile } from "@/utils/general";
-import { curiousAbout } from "@/data/SocialMediaData";
 import Text from "./shared/Text";
 
 const ContentProcess = ({ data }) => {
