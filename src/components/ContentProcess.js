@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 import Button from "./shared/Button";
 import StepCard from "./shared/StepCard";
@@ -7,10 +7,21 @@ import Heading from "./shared/Heading";
 import { StepsType1 } from "@/data/steps";
 import { useIsMobile } from "@/utils/general";
 
-const ContentProcess = () => {
+const ContentProcess = ({fbSteps}) => {
   const isMobile = useIsMobile();
+  const [expandedItems, setExpandedItems] = useState([]);
+  const toggleDescription = (itemId) => {
+    if (expandedItems.includes(itemId)) {
+      setExpandedItems(expandedItems.filter((id) => id !== itemId));
+    } else {
+      setExpandedItems([...expandedItems, itemId]);
+    }
+  };
+
   return (
     <CardContainer>
+      {console.log('fbSteps')}
+      {console.log(fbSteps)}
       <ContentHeading data={StepsType1?.processHead} />
       <Button
         width={isMobile ? "335px" : "375px"}
@@ -31,7 +42,12 @@ const ContentProcess = () => {
         {StepsType1?.process?.map((item) => {
           return (
             <Fragment key={item?.id}>
-              <StepCard data={item} />
+              <StepCard
+                key={item?.id}
+                data={item}
+                isExpanded={expandedItems.includes(item.id)}
+                toggleDescription={toggleDescription}
+              />
             </Fragment>
           );
         })}

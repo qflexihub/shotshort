@@ -82,10 +82,9 @@ export const fbSteps = {
         stepText: "Step 4",
         title: "Facebook ad production",
         image: "/checkIcon.svg",
-        description: ": Your fb ads will be created by marketing experts who are well versed and experienced in enhancing your brand image and bringing numbers. They will devise the most effective post that empties out your inventory",
+        description: "Your fb ads will be created by marketing experts who are well versed and experienced in enhancing your brand image and bringing numbers. They will devise the most effective post that empties out your inventory",
         buttonText: "",
         url: "",
       },
     ],
-  };
-  
+};

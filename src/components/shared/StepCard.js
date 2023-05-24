@@ -1,14 +1,17 @@
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Text from "./Text";
 import { useIsMobile } from "@/utils/general";
+import Button from "./Button";
 
-const StepCard = ({ data }) => {
+const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
-  useEffect(() => {
+  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 150)+'...';
+
+  const adjustCardHeight = () => {
     const cards = document.querySelectorAll(".main-card-container");
     let maxHeight = 0;
     cards.forEach((card) => {
@@ -17,12 +20,12 @@ const StepCard = ({ data }) => {
     cards.forEach((card) => {
       card.style.height = `${maxHeight}px`;
     });
-    const backgroundCards = document.querySelectorAll(
-      ".background-card-container"
-    );
-    backgroundCards.forEach(
-      (el) => (el.style.height = maxHeight / 2 + 20 + "px")
-    );
+    const backgroundCards = document.querySelectorAll(".background-card-container");
+    backgroundCards.forEach((el) => (el.style.height = maxHeight / 2 + 20 + "px"));
+  };
+
+  useEffect(() => {
+    adjustCardHeight();
   }, []);
 
   return (
@@ -52,6 +55,16 @@ const StepCard = ({ data }) => {
           <Text fontSize={22} fontWeight={700} textAlign="center">
             {data?.title}
           </Text>
+          {data?.description.length > 150 && (
+            <Button
+              value={isExpanded ? "Show less" : "Read more"}
+              onClick={() => {toggleDescription(data?.id),adjustCardHeight()}}
+              type="text"
+              fontWeight="600"
+            />
+          )}
+          <Text>{descriptionContent}</Text>
+          
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>

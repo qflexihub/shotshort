@@ -16,6 +16,8 @@ const FacebookAds = () => {
       </div>
       <BrandVideos />
       <Services serviceData={fbServices} serviceHeadingData={fbServicesHeader} />
+      {console.log('test')}
+      {console.log(fbSteps)}
       <ContentProcess data={fbSteps} />
       <BusinessCard />
       <WhyChooseUs />

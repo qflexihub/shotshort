@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Button = ({
+  type = 'default',
   value,
   width,
   height,
@@ -11,6 +12,17 @@ const Button = ({
   rightArrow = false,
   ...rest
 }) => {
+  if (type === 'text') {
+    return (
+      <TextLinkContainer
+        color={color}
+        {...rest}
+      >
+        {value}
+      </TextLinkContainer>
+    );
+  }
+
   return (
     <ButtonContainer
       width={width}
@@ -62,6 +74,15 @@ const ButtonContainer = styled.button`
     height: 50px;
   }
 
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
+`;
+const TextLinkContainer = styled.span`
+  color: ${(props) => props.color || "#8218EA"};
+  margin-top: ${(props) => props.marginTop || "0px"};
+  font-size: ${(props) => props.fontsize || "16px"};
+  font-weight: ${(props) => props.fontWeight || "bold"};
   @media (max-width: 375px) {
     font-size: 12px;
   }

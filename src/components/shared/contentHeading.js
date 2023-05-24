@@ -6,7 +6,7 @@ const ContentHeading = ({ data }) => {
   return (
     <HeadingContainer>
       <Heading textAlign="center">{data?.title}</Heading>
-      {data.subtitle && (
+      {data?.subtitle && (
         <Text fontSize={18} color="#555555" marginTop={20} textAlign="center">
           {data?.subtitle}
         </Text>
