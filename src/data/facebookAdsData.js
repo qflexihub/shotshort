@@ -6,11 +6,14 @@ export const fbServicesHeader = {
     image: "/smv.svg",
     buttonText: "Connect Now",
 };
-
-// export const fbServices = [
-    
-// ];
-
+export const fbServiceHappyClients = {
+  heading: "Our clients speak for us",
+};
+export const fbBrandVideos = {
+  heading: "Our creators’ creative work",
+  description: "",
+  btnText: "Get your customized videos",
+};
 export const facebookPageServices = {
   contentHeading: {
     heading: "Best Facebook-Ad Agency In India",

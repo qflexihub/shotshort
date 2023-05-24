@@ -5,16 +5,20 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HappyClients from "@/components/shared/HappyClients";
 import InfoCard from "@/components/shared/InfoCard";
-import { facebookPageServices, fbServicesHeader, fbSteps, fbWhyChooseData } from "@/data/facebookAdsData";
+import { facebookPageServices, fbBrandVideos, fbServiceHappyClients, fbServicesHeader, fbSteps, fbWhyChooseData } from "@/data/facebookAdsData";
+import { useIsMobile } from "@/utils/general";
 
 const FacebookAds = () => {
+  const isMobile = useIsMobile();
   return (
     <>
-      <InfoCard data={fbServicesHeader} imageRight={true} />
-      <div className="text-center">
-        <HappyClients />
+      <div style={{ padding: isMobile ? "0px 20px" : "0px 120px" }}>
+        <InfoCard data={fbServicesHeader} imageRight={true} />
       </div>
-      <BrandVideos />
+      <div className="text-center">
+        <HappyClients data={fbServiceHappyClients}/>
+      </div>
+      <BrandVideos data={fbBrandVideos} />
       <Services data={facebookPageServices} />
       <ContentProcess data={fbSteps} />
       <WhyChooseUs data={fbWhyChooseData} />

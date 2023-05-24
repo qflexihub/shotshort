@@ -9,16 +9,21 @@ import { MarketBuzzProcess } from "@/data/marketBuzzProcess";
 import { services } from "@/data/ServicesData";
 import { StepsType1 } from "@/data/steps";
 import HappyClients from "@/components/shared/HappyClients";
+import { videoAdsBrandVideos, videoAdsHappyClients, videoAdsServicesHeader, videoAdsSteps } from "@/data/VideoAdsData";
+import { useIsMobile } from "@/utils/general";
 
 const videoAds = () => {
+  const isMobile = useIsMobile();
   return (
     <>
-      <InfoCard data={services[0]} imageRight={false} />
-      <div className="text-center">
-        <HappyClients />
+      <div style={{ padding: isMobile ? "0px 20px" : "0px 120px" }}>
+        <InfoCard data={videoAdsServicesHeader} imageRight={false} />
       </div>
-      <BrandVideos />
-      <ContentProcess data={StepsType1} />
+      <div className="text-center">
+        <HappyClients data={videoAdsHappyClients} />
+      </div>
+      <BrandVideos data={videoAdsBrandVideos} />
+      <ContentProcess data={videoAdsSteps} />
       <BusinessCard />
       <WhyChooseUs />
       <InfoCard data={services[2]} imageRight={true} />

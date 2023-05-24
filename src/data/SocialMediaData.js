@@ -124,7 +124,7 @@ export const curiousAbout = {
 
 export const SocialMediaMarketBuzz = {
   processHeading: {
-    heading: "What do the experts say about videos",
+    title: "What do the experts say about videos",
     subtitle: "",
   },
   content: [
