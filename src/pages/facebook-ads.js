@@ -5,19 +5,18 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HappyClients from "@/components/shared/HappyClients";
 import InfoCard from "@/components/shared/InfoCard";
-import { services } from "@/data/ServicesData";
-import { StepsType1 } from "@/data/steps";
+import { fbServices, fbServicesHeader, fbSteps } from "@/data/facebookAdsData";
 
 const FacebookAds = () => {
   return (
     <>
-      <InfoCard data={services[0]} imageRight={true} />
+      <InfoCard data={fbServicesHeader} imageRight={true} />
       <div className="text-center">
         <HappyClients />
       </div>
       <BrandVideos />
-      <Services />
-      <ContentProcess data={StepsType1} />
+      <Services serviceData={fbServices} serviceHeadingData={fbServicesHeader} />
+      <ContentProcess data={fbSteps} />
       <BusinessCard />
       <WhyChooseUs />
     </>

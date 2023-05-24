@@ -1,34 +1,43 @@
 export const services = [
   {
     id: 1,
-    title: "Videos that go viral on social media",
+    title: "Win Big with ShotShort’s FB ADs Reach The World",
     description:
-      "Need videos for your social media channels that go viral? You are at the right place. Let us help you create social media videos, be it Youtube Shorts, Insta reels, Linkedin & Facebook explainers, or infotainment videos that will leave your audience wanting more! Our videos are customized according to your needs and effectively target your audience because we use social media creators who are already well-refined, informed, and respected in that field. Hire us today to become the talk of the town.",
+      "With billions of monthly active users, Facebook has become an essential medium for companies to reach customers. At ShotShort, we offer top-notch advertising services that help capture the TG and dab into the untapped audience.",
     image: "/smv.svg",
-    buttonText: "Learn More",
+    buttonText: "",
   },
   {
     id: 2,
-    title: "Video Ads that scale",
+    title: "Engage Your Audience With Facebook Videos",
     description:
-      "Want to increase click-through rates and decrease cost per acquisition? ShotShort's video ads comprising industry-oriented content creators and influencers will do just that. The Creative process behind our videos are extremely refined and designed according to the audience behavior across social media channels. Get ready to witness the magic of India’s best video agency and let us shine the light on your brand.",
+      "Facebook videos generate higher engagement than other ad formats, making them an ideal choice for businesses looking to engage with their target audience. As a cost-effective Facebook Ad Agency, we help companies create tailored videos that feature influencers and capture their audience's attention through in-stream, feed, or stories.",
     image: "/va.svg",
-    buttonText: "Learn More",
+    buttonText: "",
   },
   {
     id: 3,
-    title: "Videos that highlight your products",
+    title: "Fitting every business aspect",
     description:
-      "Highlight your products with our personalized usp-explanatory videos across all ecommerce platforms such as Amazon, Flipkart and eBay. We utilize the trendy social media creators who are experts in your product category to build trust and credibility among the audience, our primary goal is to make your products stand out from your competitors, so you gain all the benefits and profits.",
+      "While Facebook has traditionally been perfect for B2C companies, it's also an ideal platform for B2B businesses. People consume considerable time on Facebook, making it a viable platform to reach out to them. We offer Facebook Ad managing services that allow companies to target B2B businesses.",
     image: "/pvr.svg",
-    buttonText: "Learn More",
+    buttonText: "",
   },
   {
     id: 4,
-    title: "Convincing Video Testimonials",
+    title: "Target Consumers at every sales funnel stage",
     description:
-      "When you hire ShotShorts, the best video production company in India, you get only the best services, like our compelling testimonial videos that connect with people and help them make a quick decision to buy your products. Also, they help in building a community and a loyal base, also enhancing your brand’s visibility and growth. We help your customers understand your products and services, eliminating any doubts. Contact us now!",
+      "At ShotShort, we understand that the sales funnel has different stages, and businesses must target consumers in individual steps. We utilize custom call-to-action buttons to drive customers down the buying funnel, making it easier for companies to achieve their conversion plans.",
     image: "/brvt.svg",
-    buttonText: "Learn More",
+    buttonText: "",
   },
 ];
+
+export const servicesHeader = {
+  title: "Best Facebook-Ad Agency In India",
+  description:
+    "Looking to boost your ROI with Facebook advertising? ShotShort is the only choice for you! As a leading Facebook marketing company in India, we develop attractive and effective Facebook video Ads featuring famous influencers in your niche. By incorporating video content, influencer marketing, and strategic planning, we drive the consumers to buy your products.",
+  note: "Contact us today to see how we can help boost your ROI with Facebook advertising!",
+  image: "/smv.svg",
+  buttonText: "Connect Now",
+};

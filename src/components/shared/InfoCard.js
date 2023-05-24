@@ -43,6 +43,11 @@ const InfoCard = ({
             {data?.description}
           </Text>
         )}
+        {data?.note && (
+          <Text fontSize={20} lineHeight={24} color="#000000" fontWeight="600" marginTop={20}>
+            {data?.note}
+          </Text>
+        )}
         {data?.buttonText && (
           <Button
             value={data?.buttonText}

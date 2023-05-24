@@ -2,8 +2,6 @@ import React, { Fragment, useRef } from "react";
 import styled from "styled-components";
 import InfoCard from "./shared/InfoCard";
 import ContentHeading from "./shared/contentHeading";
-import { services } from "@/data/ServicesData";
-import { serviceHeading } from "@/data/contentHeadingData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
 import "swiper/css";
@@ -14,13 +12,13 @@ import { useIsMobile } from "@/utils/general";
 
 SwiperCore.use([Navigation]);
 
-const Services = () => {
+const Services = ({serviceData, serviceHeadingData}) => {
   const isMobile = useIsMobile();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
     <CardContainer>
-      <ContentHeading data={serviceHeading} />
+      <ContentHeading data={serviceHeadingData} />
       {isMobile && (
         <Swiper
           slidesPerView={4}
@@ -39,7 +37,7 @@ const Services = () => {
           }}
           className="mySwiper"
         >
-          {services?.map((item, index) => {
+          {serviceData?.map((item, index) => {
             return (
               <Fragment key={item?.id}>
                 <SwiperSlide>
@@ -71,7 +69,7 @@ const Services = () => {
             height={2221}
             src="/dotted-line.svg"
           />
-          {services?.map((item, index) => {
+          {serviceData?.map((item, index) => {
             return (
               <Fragment key={item?.id}>
                 <InfoCard
