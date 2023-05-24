@@ -32,7 +32,7 @@ const InfoCard = ({
       </ImageBlock>
       <InfoBlock imageRight={imageRight}>
         <Heading
-          fontSize={64}
+          fontSize={54}
           marginBottom={isMobile ? 10 : 24}
           marginTop={isMobile && 21}
         >
@@ -44,15 +44,24 @@ const InfoCard = ({
           </Text>
         )}
         {data?.note && (
-          <Text fontSize={20} lineHeight={24} color="#000000" fontWeight="600" marginTop={20}>
+          <Text
+            fontSize={20}
+            lineHeight={24}
+            color="#000000"
+            fontWeight="600"
+            marginTop={20}
+          >
             {data?.note}
           </Text>
         )}
         {data?.buttonText && (
           <Button
             value={data?.buttonText}
-            backgroundColor="rgba(130, 24, 234, 0.2)"
-            color="#8218EA"
+            backgroundColor={
+              data?.buttonType == "solid" ? "" : "rgba(130, 24, 234, 0.2)"
+            }
+            color={data?.buttonType == "solid" ? "" : "#8218EA"}
+            rightArrow={data?.buttonType == "solid"}
             width="207px"
             height="48px"
             marginTop={isMobile ? "20px" : "60px"}
@@ -71,9 +80,10 @@ const InfoCardContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: ${(props) => (props.imageRight ? "row-reverse" : "row")};
-  margin-bottom: ${(props) => props.marginBottom || "100px"};
-  margin-top: ${(props) => props.marginTop || "100px"};
+  margin-bottom: ${(props) => props.marginBottom};
+  margin-top: ${(props) => props.marginTop};
   position: inherit;
+  background-color: #fff;
 
   @media (max-width: 768px) {
     margin: 0;

@@ -9,7 +9,9 @@ import { StepsType1 } from "@/data/steps";
 import HappyClients from "@/components/shared/HappyClients";
 import { useIsMobile } from "@/utils/general";
 import {
+  SocialHeader,
   SocialMediaMarketBuzz,
+  SocialWhyChooseUsData,
   curiousAbout,
   socialMediaBrandVideos,
   socialMediaHeader,
@@ -22,8 +24,8 @@ const SocialMedia = () => {
 
   return (
     <>
-      <div style={{ padding: isMobile ? "0px 20px" : "0px 120px" }}>
-        <InfoCard data={socialMediaHeader[0]} imageRight={true} />
+      <div style={{ padding: isMobile ? "0px 20px" : "40px 20px 100px 120px" }}>
+        <InfoCard data={SocialHeader} imageRight={true} />
       </div>
       <div className="text-center">
         <HappyClients data={socialMediahappyClients} />
@@ -32,7 +34,7 @@ const SocialMedia = () => {
       <Services data={socialMediaServices} />
       <ContentProcess data={curiousAbout} />
       <MarketBuzz data={SocialMediaMarketBuzz} />
-      <WhyChooseUs />
+      <WhyChooseUs data={SocialWhyChooseUsData} />
     </>
   );
 };

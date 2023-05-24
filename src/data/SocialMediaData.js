@@ -1,13 +1,12 @@
-export const socialMediaHeader = [
-  {
-    id: 1,
-    title: "Best Social Media Video Production Company",
-    description:
-      "If you are looking for the best social media video production agency in India, you've come to the right spot. Our creative team produces high-quality and effective videos for your brand by working with market-specific social media content creators. Our primary focus is to provide you with only the most engaging and effective videos that align with your brand goal, and skyrocket your sales.",
-    image: "/smv.svg",
-    buttonText: "Connect to scale your business",
-  },
-];
+export const SocialHeader = {
+  title: "Best Social Media Video Production Company",
+  description:
+    "If you are looking for the best social media video production agency in India, you've come to the right spot. Our creative team produces high-quality and effective videos for your brand by working with market-specific social media content creators. Our primary focus is to provide you with only the most engaging and effective videos that align with your brand goal, and skyrocket your sales.",
+  note: "Contact us today to see how we can help boost your ROI with Facebook advertising!",
+  image: "/social-header.svg",
+  buttonText: "Connect to scale your business",
+  buttonType: "solid",
+};
 
 export const socialMediahappyClients = {
   heading: "Our clients speak for us",
@@ -163,6 +162,49 @@ export const SocialMediaMarketBuzz = {
       percentage: 70,
       description:
         "70% of the marketers who don't currently use video as a marketing tool, told us they plan to start in 2023.",
+    },
+  ],
+};
+
+export const SocialWhyChooseUsData = {
+  title: "Why we are the one for you",
+  buttonTitle: "Schedule A Call With Our Expert",
+  buttonLink: "",
+  content: [
+    {
+      id: 1,
+      image: "/wc1.svg",
+      title: "Hottest Content Creators",
+      description:
+        "We are associated with the biggest and hottest social media celebs that help put spotlight on your brand through their massive reach",
+    },
+    {
+      id: 2,
+      image: "/wc2.svg",
+      title: "Unbeatable Experience In Influencer Marketing",
+      description:
+        "We have unmatchable experience in content marketing on social media and leveraging the power of influencers",
+    },
+    {
+      id: 3,
+      image: "/wc3.svg",
+      title: "We are artistic geniuses",
+      description:
+        "Our team if made of artistic people that have expertise in creating content that excels on social media",
+    },
+    {
+      id: 4,
+      image: "/wc4.svg",
+      title: "We deliver fast",
+      description:
+        "We deliver your project with lightning fast speed and unmatchable and unbeatable quality",
+    },
+    {
+      id: 5,
+      image: "/wc5.svg",
+      title: "We save your money",
+      description:
+        "We save your money by giving you the best services with affordable price that you will not get anywhere",
     },
   ],
 };
