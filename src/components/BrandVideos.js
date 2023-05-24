@@ -42,17 +42,9 @@ const BrandVideos = ({ data }) => {
     <>
       <BrandVideoContainer>
         <Block1>
-<<<<<<< Updated upstream
-          <Heading textAlign="center">
-          Excerpts of our Work
-          </Heading>
-          <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
-          Want to grow? Connect with us now
-=======
           <Heading textAlign="center">{data?.heading}</Heading>
           <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
             {data?.description}
->>>>>>> Stashed changes
           </Text>
           <Button value={data?.btnText} marginTop="32px" rightArrow />
         </Block1>

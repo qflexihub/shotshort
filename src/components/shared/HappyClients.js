@@ -19,11 +19,7 @@ const HappyClients = ({ data }) => {
         textAlign="cemter"
         marginBottom={isMobile ? 12 : 42}
       >
-<<<<<<< Updated upstream
-        Our clients speak for us
-=======
         {data?.heading}
->>>>>>> Stashed changes
       </Heading>
       <BrandsContainer style={{ marginBottom: 12 }}>
         <Swiper

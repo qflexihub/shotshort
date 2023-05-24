@@ -9,11 +9,7 @@ import { useIsMobile } from "@/utils/general";
 import { curiousAbout } from "@/data/SocialMediaData";
 import Text from "./shared/Text";
 
-<<<<<<< Updated upstream
-const ContentProcess = ({fbSteps}) => {
-=======
 const ContentProcess = ({ data }) => {
->>>>>>> Stashed changes
   const isMobile = useIsMobile();
   const [expandedItems, setExpandedItems] = useState([]);
   const toggleDescription = (itemId) => {
@@ -26,13 +22,7 @@ const ContentProcess = ({ data }) => {
 
   return (
     <CardContainer>
-<<<<<<< Updated upstream
-      {console.log('fbSteps')}
-      {console.log(fbSteps)}
-      <ContentHeading data={StepsType1?.processHead} />
-=======
       <ContentHeading data={data?.contentHeading} />
->>>>>>> Stashed changes
       <Button
         width={isMobile ? "335px" : "375px"}
         value="Schedule Your Call Today"

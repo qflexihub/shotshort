@@ -9,26 +9,6 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
-<<<<<<< Updated upstream
-  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 150);
-
-  const adjustCardHeight = () => {
-    const cards = document.querySelectorAll(".main-card-container");
-    let maxHeight = 0;
-    cards.forEach((card) => {
-      maxHeight = Math.max(maxHeight, card.offsetHeight);
-    });
-    cards.forEach((card) => {
-      card.style.height = `${maxHeight}px`;
-    });
-    const backgroundCards = document.querySelectorAll(".background-card-container");
-    backgroundCards.forEach((el) => (el.style.height = maxHeight / 2 + 20 + "px"));
-  };
-
-  useEffect(() => {
-    adjustCardHeight();
-  }, []);
-=======
   // useEffect(() => {
   //   const cards = document.querySelectorAll(".main-card-container");
   //   let maxHeight = 0;
@@ -45,7 +25,6 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   //     (el) => (el.style.height = maxHeight / 2 + 20 + "px")
   //   );
   // }, []);
->>>>>>> Stashed changes
 
   return (
     <StepCardContainer>
@@ -76,21 +55,6 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
           <Text fontSize={22} fontWeight={700} textAlign="center">
             {data?.title}
           </Text>
-<<<<<<< Updated upstream
-          {data?.description.length > 150 && (
-            <Button
-              value={isExpanded ? "Show less" : "Read more"}
-              onClick={() => {
-                toggleDescription(data?.id);
-                adjustCardHeight();
-              }}
-              type="text"
-              fontWeight="600"
-            />
-          )}
-          <Text>{descriptionContent}</Text>
-          
-=======
           {data?.description && (
             <Text
               fontSize={18}
@@ -101,7 +65,6 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
               {data?.description}
             </Text>
           )}
->>>>>>> Stashed changes
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>
