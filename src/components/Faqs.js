@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useIsMobile } from "@/utils/general";
 
-const Faqs = () => {
+const Faqs = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const isMobile = useIsMobile();
 
@@ -24,7 +24,7 @@ const Faqs = () => {
           fontWeight={"700"}
           textAlign={isMobile ? "center" : ""}
         >
-          {faqsData?.title}
+          {data?.title}
         </Text>
         <Text
           fontSize={18}
@@ -34,11 +34,11 @@ const Faqs = () => {
           fontWeight={"400"}
           marginTop={isMobile ? 10 : 8}
         >
-          {faqsData?.description}
+          {data?.description}
         </Text>
       </HeadingContainer>
       <DetailContainer>
-        {faqsData?.faqs?.map((item, index) => {
+        {data?.faqs?.map((item, index) => {
           return (
             <Accordian key={item?.id}>
               <AccordianHeading onClick={() => handleAccordianClick(index)}>

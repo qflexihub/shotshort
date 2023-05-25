@@ -129,3 +129,92 @@ export const videoAdsWhyChooseUsData = {
       },
     ],
 };
+export const videoAdsInfoService = {
+    title: "Leaders in short-video ad industry",
+    description:
+      "As the best video-ad agency in the industry we provide top notch yet affordable video ad solutions that align with your needs. With a solid experience in this industry, we have built an unmatchable portfolio, and our satisfied clients speak for us. We understand our client's needs and create informative, entertaining, and call-to-action-based advertisements that meet their goals. By utilizing the power of celebs and hottest social media influencers, we give our clients an edge over their competition with increased metrics like click-through rates, engagement rates, leads, return on ad spend, and sales.",
+    note: "",
+    image: "/smv.svg",
+    buttonText: "Contact Us",
+};
+export const videoAdsMarketBuzzProcess = {
+    processHeading: {
+      title: "What do the experts say about videos",
+      subtitle: "",
+    },
+    content: [
+      {
+        id: 1,
+        percentage: 84,
+        description:
+          "84% of people have been compelled to buy a product after watching a video",
+      },
+      {
+        id: 2,
+        percentage: 92,
+        description: "92% marketers told us they get a good ROI on video content",
+      },
+      {
+        id: 3,
+        percentage: 91,
+        description:
+          "91% of businesses use video as a marketing tool - an all-time high",
+      },
+      {
+        id: 4,
+        percentage: 87,
+        description:
+          "87% of marketers feel that video has a direct, positive impact on sales",
+      },
+      {
+        id: 5,
+        percentage: 96,
+        description:
+          "96% of marketers agree that videos have helped increase user understanding of their product",
+      },
+      {
+        id: 6,
+        percentage: 70,
+        description:
+          "70% of the marketers who don't currently use video as a marketing tool, told us they plan to start in 2023",
+      },
+    ],
+};
+export const videoAdsFaqsData = {
+    title: "FAQs",
+    description: "",
+    faqs: [
+      {
+        id: 1,
+        question: "What Videos do we offer?",
+        answer:
+          "Whatever you need we have it : informational, short, long, video ads, concept videos, infotainment, entertaining and many more all in one shop.",
+      },
+      {
+        id: 2,
+        question: "What are our services?",
+        answer:
+          "Whatever you need we have it : informational, short, long, video ads, concept videos, infotainment, entertaining , we help get your business to the next level by leveraging creativity and social media’s power.",
+      },
+      {
+        id: 3,
+        question: "What is our process?",
+        answer:
+          "Our process is simple, understand your brand and services, build a solid strategy and execute with perfection",
+      },
+      {
+        id: 4,
+        question: "How are we the best",
+        answer:
+          "Because we have the best minds, the best technology, the best productivity and of course the best clients",
+      },
+      {
+        id: 5,
+        question: "How do we scale your business",
+        answer:
+          "If you see the current market trends and number the use of video ads is all time high and we are the experts in producing trendy videos",
+      },
+    ],
+};
+  
+  
