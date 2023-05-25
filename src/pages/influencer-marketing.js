@@ -1,34 +1,34 @@
+import CaseStudyBlock from "@/components/CaseStudyBlock";
 import ContentProcess from "@/components/ContentProcess";
 import Faqs from "@/components/Faqs";
 import InfluencerMarketingCardView from "@/components/InfluencerMarketingCardView";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import CardBadge from "@/components/shared/CardBadge";
 import HappyClients from "@/components/shared/HappyClients";
 import InfoCard from "@/components/shared/InfoCard";
+import { imServicesHeader, imServiceHappyClients, imPageServices, imSteps, imSocialMediaData, imWhyChooseUsData } from "@/data/InfluencerMarketingData";
+import { facebookPageServices, fbWhyChooseData, imFaqsData } from "@/data/facebookAdsData";
 import { StepsType1 } from "@/data/steps";
+import { useIsMobile } from "@/utils/general";
 
 const InfluencerMarketing = () => {
-  const InfoData = {
-    id: 1,
-    title: "Social Media Videos",
-    description:
-      "We strategize and deliver long videos as well as short videos for social media that comprise niche-based social media influencers which our customers can utilize as organic videos on their social media platforms to aware, educate",
-    image: "/smv.svg",
-    buttonText: "Learn More",
-  };
+  const isMobile = useIsMobile();
 
   return (
     <>
-      <InfoCard data={InfoData} imageRight={true} />
-      <div className="text-center">
-        <HappyClients />
+      <div style={{ padding: isMobile ? "0px 20px" : "0px 120px" }}>
+        <InfoCard data={imServicesHeader} imageRight={true} />
       </div>
-      <Services />
-      <ContentProcess data={StepsType1} />
-      <WhyChooseUs />
-      {/* <WhyChooseUs /> */}
+      <div className="text-center">
+        <HappyClients data={imServiceHappyClients}/>
+      </div>
+      <Services data={imPageServices} />
+      <ContentProcess data={imSteps} />
+      <WhyChooseUs data={imSocialMediaData} />
+      <WhyChooseUs data={imWhyChooseUsData} />
       <InfluencerMarketingCardView />
-      <Faqs />
+      <Faqs data={imFaqsData} />
     </>
   );
 };

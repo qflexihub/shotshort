@@ -5,6 +5,7 @@ import { BrandsLogo } from "@/data/HappyClientData";
 import styled from "styled-components";
 import Heading from "./Heading";
 import { useIsMobile } from "@/utils/general";
+import CardBadge from "./CardBadge";
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -100,6 +101,9 @@ const HappyClients = ({ data }) => {
           })}
         </Swiper>
       </BrandsContainer>
+      <div style={{display: "flex", flexDirection: 'row'}}>
+        <CardBadge data={data?.cardData} />
+      </div>
     </HappyClientsContainer>
   );
 };
