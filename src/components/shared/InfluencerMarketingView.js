@@ -1,13 +1,22 @@
 import styled from "styled-components";
 import Heading from "./Heading";
 import Text from "./Text";
+import Image from "next/image";
 import Link from "next/link";
 
 const InfluencerMarketingView = ({ data }) => {
   return (
     <>
       <MarketingCard>
-        <Logo></Logo>
+        <Logo>
+          <Image
+            style={{ objectFit: "none" }}
+            width={50}
+            height={50}
+            src={data?.icon}
+            alt={data?.title}
+          />
+        </Logo>
         <MarketingCardContent>
           <Heading fontSize={25} fontWeight={700} color={"#8218EA"}>
             {data.heading}
@@ -16,7 +25,7 @@ const InfluencerMarketingView = ({ data }) => {
             {data.description}
           </Text>
           <SeeMoreLink>
-            <Link href={data.link}>See More</Link>
+            {/* <Link>See More</Link> */}
           </SeeMoreLink>
         </MarketingCardContent>
       </MarketingCard>
@@ -31,11 +40,11 @@ const MarketingCard = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 `;
 
 const MarketingCardContent = styled.div`
-  height: 197px;
+  height: 275px;
   width: 387px;
   background: #ffffff;
   border: 1px solid #cfcfcf;
@@ -43,7 +52,7 @@ const MarketingCardContent = styled.div`
   border-radius: 10px;
   display: grid;
   text-align: center;
-  padding: 66px 42px 20px 42px;
+  padding: 70px 42px 20px 42px;
   font-weight: 400;
   color: #000000;
 `;
@@ -64,4 +73,7 @@ const Logo = styled.div`
   width: 110px;
   background: linear-gradient(180deg, #8c51a2 0%, #592789 100%);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

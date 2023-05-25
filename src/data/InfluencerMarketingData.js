@@ -153,13 +153,13 @@ export const imWhyChooseUsData = {
     content: [
       {
         id: 1,
-        image: "/wc1.svg",
+        image: "/wc6.svg",
         title: "Powerful Influencer Network",
         description: "ShotShort boasts a robust network of thousands of verified social media influencers across various niches, including health and fitness, beauty, and lifestyle. As a result, we are equipped to cater to brands across diverse industries."
       },
       {
         id: 2,
-        image: "/wc2.svg",
+        image: "/wc7.svg",
         title: "Methods That Multiply",
         description: "Our product video-making approach is driven by decisive insights, influential creators, inventiveness, and leading-edge techniques to drive engagement. We study the market thoroughly and ride the high wave of trends to dish the perfect solution for your brand"
       },
@@ -171,31 +171,31 @@ export const imWhyChooseUsData = {
       },
       {
         id: 4,
-        image: "/wc4.svg",
+        image: "/wc8.svg",
         title: "Highly Competent Experts",
         description: "Our creative enigmas, strategists, and influencer marketing specialists develop a customized strategy that contains content creation, curation, management, TG analysis, and the proper influencer selection to drive the best results. We are composed of artists who create art in whatever we do, making us a one-stop shop for all your product video production needs."
       },
       {
         id: 5,
-        image: "/wc1.svg",
+        image: "/wc5.svg",
         title: "Experience That Radiates",
         description: "With our years of experience in influencer and digital marketing, we have strategized and delivered hundreds of high-performing campaigns that have transformed brands, including product videos. We have helped numerous brands achieve their goals in record time and produced exceptional results."
       },
       {
         id: 6,
-        image: "/wc2.svg",
+        image: "/wc9.svg",
         title: "Vast Clientele",
         description: "With our emergent dedication, we have put quite heavy names in our clientele, here are some of them. Our work shows the unique value of your product to your target customers, surpassing your competitors. Contact us today to see how we can help your business grow"
       },
       {
         id: 7,
-        image: "/wc3.svg",
+        image: "/wc10.svg",
         title: "Videos That Shine On Biggest Platforms",
         description: "It is essential to have compelling product videos to correspond to customer queries. We provide the best services to help you captivate consumers and drive sales on all social media platforms"
       },
       {
         id: 8,
-        image: "/wc4.svg",
+        image: "/wc11.svg",
         title: "Impressive numbers",
         description: "Our videos are developed to help persuade potential consumers to buy your product. Our squad of experts has performed tremendously with numerous brands on their brand voice, brand legacy, and content marketing strategies to develop an interest in their offering with suitable influencers and profoundly emphasize the product's salient characteristics"
       },
@@ -209,43 +209,42 @@ export const imCardData = {
       heading: "Giveaways & Contests",
       description:
         "We run giveaways to promote your brand and get people talking, and connecting with your brand, so your brand has a loyal community",
-      link: "/home",
+      icon: "/im1.svg",
     },
     {
       id: 2,
       heading: "Sponsored Content",
       description:
         "Sponsored content is a type of promotional media that's paid for by an advertiser, but created and shared by another brand, influencer and that’s how we leverage the power of social celebs for you",
-      link: "/home",
+        icon: "/im2.svg",
     },
     {
       id: 3,
       heading: "Social Media Management",
       description:
         "We manage your brand on social media, meaning your brand voice, engagement, social listening, all in all everything related to social media",
-      link: "/home",
+        icon: "/im3.svg",
     },
     {
       id: 4,
       heading: "Reviews & Unboxing",
       description:
         "We help you get ravishing reviews and promotional unboxing of your products through the immense creator network, and let their popularity prop up your reputation",
-      link: "/home",
+        icon: "/im4.svg",
     },
-
     {
       id: 5,
       heading: "Affiliate Marketing",
       description:
         "Currently this is becoming the most sort after marketing strategy and we are the experts of it, we help you leverage the numbers of our creators to grow big",
-      link: "/home",
+        icon: "/im5.svg",
     },
     {
       id: 6,
       heading: "Product Promotion",
       description:
         "Product promotion is a great way to highlight your products, and we place them where they get the most spotlight, through the hottest celebs and influencers",
-      link: "/home",
+        icon: "/im6.svg",
     },
   ],
 };
