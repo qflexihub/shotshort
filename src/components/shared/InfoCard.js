@@ -13,6 +13,7 @@ const InfoCard = ({
   imageStyles,
   marginBottom,
   marginTop,
+  isSingle = false,
 }) => {
   const isMobile = useIsMobile();
   return (
@@ -30,7 +31,7 @@ const InfoCard = ({
           style={imageStyles}
         />
       </ImageBlock>
-      <InfoBlock imageRight={imageRight}>
+      <InfoBlock isSingle={isSingle} imageRight={imageRight}>
         <Heading
           fontSize={54}
           marginBottom={isMobile ? 10 : 24}
@@ -62,8 +63,9 @@ const InfoCard = ({
             }
             color={data?.buttonType == "solid" ? "" : "#8218EA"}
             rightArrow={data?.buttonType == "solid"}
-            width="207px"
+            width={"100%"}
             height="48px"
+            style={{ fontSize: isMobile && 15 }}
             marginTop={isMobile ? "20px" : "60px"}
           />
         )}
@@ -100,7 +102,7 @@ const InfoBlock = styled.div`
 
   @media (max-width: 768px) {
     text-align: center;
-    padding: 0px 24px;
+    padding: ${(props) => (props.isSingle ? "0px" : "0px 24px")};
     margin: auto;
   }
 `;

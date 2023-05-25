@@ -11,7 +11,7 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
 
   const descriptionContent = isExpanded
     ? data?.description
-    : data?.description.slice(0, 120) + "...";
+    : data?.description.slice(0, isMobile ? 40 : 120) + "...";
 
   return (
     <StepCardContainer>
@@ -79,7 +79,7 @@ const StepCardContainer = styled.div`
 
   @media (max-width: 768px) {
     max-width: 160px;
-    height: 170px;
+    /* height: 170px; */
   }
 `;
 

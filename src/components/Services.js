@@ -84,7 +84,7 @@ const Services = ({ data }) => {
         </div>
       )}
 
-      {isMobile && (
+      {data?.services?.length > 1 && isMobile && (
         <>
           <NextArrow
             style={{ display: "flex", right: "0px" }}

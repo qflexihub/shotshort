@@ -82,7 +82,7 @@ export const HomeWhyChooseUsData = {
 };
 
 export const homeCuriousAbout = {
-  contentHeading: {
+  processHeading: {
     heading: "How Do We Work?",
     subtitle:
       "Audience eats up our tasty and snackable content, leaving no crumbs behind, Follow this simple instruction and get ready to witness the magic of ShotShorts",

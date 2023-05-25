@@ -3,7 +3,7 @@ export const ProductVideoHeader = {
   description:
     "We are recognized as the best product video company because we have expertise in producing compelling videos to promote your products on various e-commerce platforms like Amazon, Flipkart. Our creative storytelling and premium production quality help encourage various stakeholders to buy your products while highlighting your product/service USPs.",
   note: "",
-  image: "/social-header.svg",
+  image: "/smv.svg",
   buttonText: "",
   buttonType: "solid",
 };
@@ -33,12 +33,12 @@ export const productVideoServices = {
 
 export const productVideoSteps = {
   processHeading: {
-    title: "How Do We Work?",
-    subtitle: "",
+    title: "How Do we work?",
+    subtitle:
+      "A stand-out product video makes customers pay attention; it informs the public about a product's services, features, and functions and inspires people to make the buying decision immediately.",
   },
-  processTitle: "Follow these 4 Steps To Get highly engaging video ads today",
-  footerDescription:
-    "Once our vision matches will be creating a draft for your approval and after jamming on that we will swiftly provide you with the final deliverables",
+  btnText: "Schedule A Call With Our Expert",
+  processTitle: "Let’s get snapping in these 4 steps",
   process: [
     {
       id: 1,
@@ -46,41 +46,42 @@ export const productVideoSteps = {
       title: "Fill out the contact form",
       image: "/formIcon.svg",
       description:
-        "You can fill all the required details, like your name, email, personal phone number, and information about your business, and submit the form",
+        "You can fill all the required details,like your name, email, personal phone number, and information about your business, and submit the form",
       buttonText: "",
       url: "",
     },
     {
       id: 2,
       stepText: "Step 2",
-      title: "Set Your Brand Objective",
+      title: "Talk to our product ad specialist",
       image: "/callIcon.svg",
       description:
-        "After we receive your contact form, we’ll arrange your meeting with our strategy expert, and they will provide you with a complete strategy that is most beneficial and efficient for your brand",
+        "After we receive your contact form, we’ll arrange your face to face meeting with our production expert, and they will provide you with a complete strategy that is most beneficial and efficient for your business",
       buttonText: "",
       url: "",
     },
     {
       id: 3,
       stepText: "Step 3",
-      title: "Choosing Strategy that works wonder",
+      title: "Choose your industry specific creators",
       image: "/filterIcon.svg",
       description:
-        "We are connected with the hottest celebs and creators that bring high engagement and get people to talk about your brand, our team of creative geniuses create the most viral and gripping content that sell and brings business",
+        "You can choose the theme of your video content that is most suited and also the niche based creators that align with your goal and spending budget.",
       buttonText: "",
       url: "",
     },
     {
       id: 4,
       stepText: "Step 4",
-      title: "Facebook ad production",
+      title: "Get your product ad in hours",
       image: "/checkIcon.svg",
       description:
-        "Your fb ads will be created by marketing experts who are well versed and experienced in enhancing your brand image and bringing numbers. They will devise the most effective post that empties out your inventory",
+        "We will swiftly provide you with the best product ad that will help skyrocket your business, and the delivery will be done within hours.",
       buttonText: "",
       url: "",
     },
   ],
+  bottomText: "",
 };
 
 export const productVideoMarketBuzz = {
@@ -128,71 +129,64 @@ export const productVideoMarketBuzz = {
 };
 
 export const productVideoWhyChooseUsData = {
-  title: "Why we are the one for you",
-  buttonTitle: "Schedule A Call With Our Expert",
+  title: "",
+  buttonTitle: "",
   buttonLink: "",
+  bottomText:
+    "Our understanding of audience behavior on social media is surely to impact your consumer’s decision-making process.",
+  bottomButton: "Connect with our expert",
   content: [
     {
       id: 1,
       image: "/wc1.svg",
-      title: "Hottest Content Creators",
-      description:
-        "We are associated with the biggest and hottest social media celebs that help put spotlight on your brand through their massive reach",
+      title: "We give Strategy that rides the Trends",
     },
     {
       id: 2,
       image: "/wc2.svg",
-      title: "Unbeatable Experience In Influencer Marketing",
-      description:
-        "We have unmatchable experience in content marketing on social media and leveraging the power of influencers",
+      title: "We Manage Your Brand",
     },
     {
       id: 3,
       image: "/wc3.svg",
       title: "We are artistic geniuses",
-      description:
-        "Our team if made of artistic people that have expertise in creating content that excels on social media",
     },
     {
       id: 4,
       image: "/wc4.svg",
       title: "We deliver fast",
-      description:
-        "We deliver your project with lightning fast speed and unmatchable and unbeatable quality",
     },
     {
       id: 5,
       image: "/wc5.svg",
       title: "We save your money",
-      description:
-        "We save your money by giving you the best services with affordable price that you will not get anywhere",
     },
   ],
 };
 
 export const productVideoBusinessCardData = {
-  heading: "How we benefit your business",
+  heading: "How great product videos scale your business",
   content: [
     {
       id: 1,
       logo: "/bsearch.svg",
-      heading: "Reach your audience",
+      heading: "Improved ranking",
       description:
-        "Utilize the power of market-specific influencers to reach your TG and aware them about your brand, product, or service through engaging video campaigns and captivating stories.",
+        "Improve your ranking on google search by utilizing the magical powers of videos, At ShotShort, we create high-quality product videos that put your target audience in a spell and increase your search ranking. Product videos are more likely to appear in Google searches, generating 40%> more web traffic than any other form of content.",
     },
     {
       id: 2,
       logo: "/blauncher.svg",
-      heading: "Persuasion",
+      heading: "Raise Engagement",
       description:
-        "Give your potential customers a persuasive reason to consider you over your competitors.",
+        "Our product video production services combine all branding, strategy, technology, and research elements to create engaging communications that encourage more profound relationships between brands and their audience. By hiring us, you can change your brand competencies into your preferred future state and boost your brand's presence.",
     },
     {
       id: 3,
       logo: "/bcoin.svg",
-      heading: "Skyrocket your sales",
+      heading: "Higher Conversion Rates",
       description:
-        "Our video-ads will help you Increase sales and drive quality leads to your business. So, partner with the top video-ad company In India.",
+        "Immerse your consumers with compelling product videos that deliver a better sense of your products and services. Our attractive product videos can help boost conversions and drive sales for your company.",
     },
   ],
 };

@@ -2,7 +2,7 @@ export const SocialHeader = {
   title: "Best Social Media Video Production Company",
   description:
     "If you are looking for the best social media video production agency in India, you've come to the right spot. Our creative team produces high-quality and effective videos for your brand by working with market-specific social media content creators. Our primary focus is to provide you with only the most engaging and effective videos that align with your brand goal, and skyrocket your sales.",
-  note: "Contact us today to see how we can help boost your ROI with Facebook advertising!",
+  note: "",
   image: "/social-header.svg",
   buttonText: "Connect to scale your business",
   buttonType: "solid",
@@ -20,7 +20,7 @@ export const socialMediaBrandVideos = {
 
 export const socialMediaServices = {
   contentHeading: {
-    heading: "How we can help you grow",
+    title: "How we can help you grow",
     subtitle: "",
   },
   bgImage: "/dotted-line-social.svg",
@@ -69,8 +69,8 @@ export const socialMediaServices = {
 };
 
 export const curiousAbout = {
-  contentHeading: {
-    heading: "Curious about how we can elevate your business?",
+  processHeading: {
+    title: "Curious about how we can elevate your business?",
     subtitle:
       "As the top video production company in India, we excel at producing content that people love and can’t get enough of. Our mission is to help position your brand as a leader in the industry with engaging videos that skyrocket your sales. Contact us so we can work with you to level up your brand.",
   },

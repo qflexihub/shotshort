@@ -25,7 +25,7 @@ const SocialMedia = () => {
   return (
     <>
       <div style={{ padding: isMobile ? "0px 20px" : "40px 20px 100px 120px" }}>
-        <InfoCard data={SocialHeader} imageRight={true} />
+        <InfoCard isSingle data={SocialHeader} imageRight={true} />
       </div>
       <div className="text-center">
         <HappyClients data={socialMediahappyClients} />

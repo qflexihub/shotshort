@@ -25,7 +25,7 @@ const ProductVideo = () => {
   return (
     <>
       <div style={{ padding: isMobile ? "0px 20px" : "40px 20px 100px 120px" }}>
-        <InfoCard data={ProductVideoHeader} imageRight={true} />
+        <InfoCard isSingle data={ProductVideoHeader} imageRight={true} />
       </div>
 
       <div className="text-center">

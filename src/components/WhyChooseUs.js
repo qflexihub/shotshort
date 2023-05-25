@@ -5,6 +5,7 @@ import IconDescriptionCard from "./shared/IconDescriptionCard";
 import Heading from "./shared/Heading";
 import { WhyChooseUsData } from "@/data/commonData";
 import { useIsMobile } from "@/utils/general";
+import Text from "./shared/Text";
 
 const WhyChooseUs = ({ data }) => {
   const isMobile = useIsMobile();
@@ -32,6 +33,28 @@ const WhyChooseUs = ({ data }) => {
             );
           })}
         </Block2>
+        <div className="text-center max-w-[665px] m-auto">
+          <Text
+            fontSize={18}
+            lineHeight={28}
+            mobileLineHeight={24}
+            fontWeight={400}
+            textAlign="center"
+            marginTop={30}
+            marginBottom={30}
+          >
+            {data?.bottomText}
+          </Text>
+          {data?.bottomButton && (
+            <Button
+              style={{ fontSize: isMobile && 15 }}
+              value={data?.bottomButton}
+              width={isMobile ? "335px" : "375px"}
+              height="50px"
+              rightArrow
+            />
+          )}
+        </div>
       </WhyChooseContainer>
     </>
   );
