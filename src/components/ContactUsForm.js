@@ -46,6 +46,7 @@ const GetInTouchContainer = styled.div`
       : props.backgroundColor};
   padding: 40px 195px 70px 195px;
   display: flex;
+  justify-content: space-between;
   gap: 53px;
   align-items: center;
 
@@ -57,7 +58,7 @@ const GetInTouchContainer = styled.div`
 `;
 
 const ContentBlock = styled.div`
-  /* width: 50%; */
+  width: 50%;
   @media (max-width: 768px) {
     text-align: center;
     width: 100%;
@@ -65,12 +66,14 @@ const ContentBlock = styled.div`
 `;
 
 const FormBlock = styled.div`
-  /* width: 50%; */
+  max-width: 407px;
+  width: 100%;
   background-color: #fff;
   padding: 30px;
   box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 100%;
   }
 `;

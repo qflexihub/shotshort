@@ -100,6 +100,8 @@ const InfoBlock = styled.div`
 
   @media (max-width: 768px) {
     text-align: center;
+    padding: 0px 24px;
+    margin: auto;
   }
 `;
 

@@ -21,6 +21,7 @@ const MarketBuzz = ({ data }) => {
         })}
       </MainComponent>
       <Button
+        style={{ fontSize: isMobile && 15 }}
         width={isMobile ? "335px" : "375px"}
         value="Schedule A Call With Our Expert"
         rightArrow={true}

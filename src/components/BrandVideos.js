@@ -46,7 +46,12 @@ const BrandVideos = ({ data }) => {
           <Text fontSize={18} color="#555555" marginTop={17} textAlign="center">
             {data?.description}
           </Text>
-          <Button value={data?.btnText} marginTop="32px" rightArrow />
+          <Button
+            fontsize={"16px"}
+            value={data?.btnText}
+            marginTop="32px"
+            rightArrow
+          />
         </Block1>
         <CategoryBar
           selectedCategory={selectedCategory}

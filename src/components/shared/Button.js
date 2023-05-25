@@ -2,7 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Button = ({
-  type = 'default',
+  type = "default",
   value,
   width,
   height,
@@ -12,12 +12,9 @@ const Button = ({
   rightArrow = false,
   ...rest
 }) => {
-  if (type === 'text') {
+  if (type === "text") {
     return (
-      <TextLinkContainer
-        color={color}
-        {...rest}
-      >
+      <TextLinkContainer color={color} {...rest}>
         {value}
       </TextLinkContainer>
     );
@@ -55,8 +52,8 @@ const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
   border: 2px solid #8218ea;
-  /* width: ${(props) => props.width || "257px"};
-  height: ${(props) => props.height || "50px"}; */
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background-color: ${(props) => props.backgroundColor || "#8218ea"};
   color: ${(props) => props.color || "#fff"};
   border-radius: ${(props) => props.borderRadius || "25px"};
@@ -71,13 +68,13 @@ const ButtonContainer = styled.button`
   } */
 
   @media (max-width: 768px) {
-    max-width: ${(props) => props.width || "235px"};
+    max-width: ${(props) => props.width || "100%"};
     width: 100%;
     height: 50px;
   }
 
   @media (max-width: 375px) {
-    font-size: 12px;
+    font-size: ${(props) => props.fontsize || "16px"};
   }
 `;
 const TextLinkContainer = styled.span`

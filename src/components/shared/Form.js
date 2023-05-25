@@ -95,7 +95,7 @@ const Form = () => {
             <Button
               value="Get in Touch"
               rightArrow
-              width={isMobile ? "335px" : "347px"}
+              width={isMobile ? "335px" : "100%"}
               height="50px"
             />
           </div>

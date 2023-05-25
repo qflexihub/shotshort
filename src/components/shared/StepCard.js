@@ -9,7 +9,9 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
   const mainCardRef = useRef(null);
   const isMobile = useIsMobile();
 
-  const descriptionContent = isExpanded ? data?.description : data?.description.slice(0, 120)+'...';
+  const descriptionContent = isExpanded
+    ? data?.description
+    : data?.description.slice(0, 120) + "...";
 
   return (
     <StepCardContainer>
@@ -41,21 +43,25 @@ const StepCard = ({ data, isExpanded, toggleDescription }) => {
             {data?.title}
           </Text>
           {data?.description && (
-            <Text
-              fontSize={18}
-              fontWeight={400}
-              marginTop={14}
-              textAlign="center"
-            >
-              {descriptionContent}
-            </Text>
+            <>
+              <Text
+                fontSize={18}
+                fontWeight={400}
+                marginTop={14}
+                textAlign="center"
+              >
+                {descriptionContent}
+              </Text>
+              <Button
+                value={isExpanded ? "Show less" : "Read more"}
+                onClick={() => {
+                  toggleDescription(data?.id);
+                }}
+                type="text"
+                fontWeight="600"
+              />
+            </>
           )}
-          <Button
-              value={isExpanded ? "Show less" : "Read more"}
-              onClick={() => { toggleDescription(data?.id) }}
-              type="text"
-              fontWeight="600"
-            />
         </MainCardContainer>
       </BackgroundCardContainer>
     </StepCardContainer>
@@ -84,6 +90,10 @@ const BackGroundDiv = styled.div`
   top: 0;
   left: 0;
   right: 0;
+
+  @media (max-width: 768px) {
+    height: 86px;
+  }
 `;
 
 const BackgroundCardContainer = styled.div`

@@ -20,7 +20,23 @@ const Services = ({ data }) => {
     <CardContainer>
       <ContentHeading data={data?.contentHeading} />
       {isMobile && (
-        <Swiper slidesPerView={4}>
+        <Swiper
+          slidesPerView={4}
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
+          breakpoints={{
+            769: {
+              slidesPerView: 4,
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 8,
+            },
+          }}
+          className="mySwiper"
+        >
           {data?.services?.map((item, index) => {
             return (
               <Fragment key={item?.id}>

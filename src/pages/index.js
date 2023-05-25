@@ -11,20 +11,26 @@ import Services from "@/components/Services";
 import Testimonial from "@/components/Testimonial";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HappyClients from "@/components/shared/HappyClients";
-import { homePageServices } from "@/data/HomePageData";
+import {
+  HomeWhyChooseUsData,
+  homeBrandVideos,
+  homeCuriousAbout,
+  homeFaqsData,
+  homeMarketBuzz,
+  homePageServices,
+} from "@/data/HomePageData";
 
 export default function Home() {
   return (
     <>
-      <BrandVideos />
+      <BrandVideos data={homeBrandVideos} />
       <Services data={homePageServices} />
-      <ContentProcess />
+      <ContentProcess data={homeCuriousAbout} />
       <ContactUsForm />
       <Testimonial />
-      <WhyChooseUs />
-      {/* <BusinessCard /> */}
-      <MarketBuzz />
-      <Faqs />
+      <WhyChooseUs data={HomeWhyChooseUsData} />
+      <MarketBuzz data={homeMarketBuzz} />
+      <Faqs data={homeFaqsData} />
     </>
   );
 }

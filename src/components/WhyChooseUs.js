@@ -13,12 +13,15 @@ const WhyChooseUs = ({ data }) => {
       <WhyChooseContainer>
         <Block1>
           <Heading marginBottom={30}>{data?.title}</Heading>
-          {data?.buttonTitle && <Button
-            value={data?.buttonTitle}
-            width={isMobile ? "335px" : "375px"}
-            height="50px"
-            rightArrow
-          />}
+          {data?.buttonTitle && (
+            <Button
+              style={{ fontSize: isMobile && 15 }}
+              value={data?.buttonTitle}
+              width={isMobile ? "335px" : "375px"}
+              height="50px"
+              rightArrow
+            />
+          )}
         </Block1>
         <Block2>
           {data?.content?.map((item) => {

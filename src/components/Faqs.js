@@ -20,22 +20,26 @@ const Faqs = ({ data }) => {
           fontSize={74}
           mobileFontSize={34}
           lineHeight={98}
+          mobileLineHeight={42}
           color="#8218EA"
           fontWeight={"700"}
           textAlign={isMobile ? "center" : ""}
+          marginBottom={10}
         >
           {data?.title}
         </Text>
-        <Text
-          fontSize={18}
-          mobileFontSize={14}
-          lineHeight={20}
-          color="#555555"
-          fontWeight={"400"}
-          marginTop={isMobile ? 10 : 8}
-        >
-          {data?.description}
-        </Text>
+        {data?.description && (
+          <Text
+            fontSize={18}
+            mobileFontSize={14}
+            lineHeight={20}
+            color="#555555"
+            fontWeight={"400"}
+            marginTop={isMobile ? 10 : 8}
+          >
+            {data?.description}
+          </Text>
+        )}
       </HeadingContainer>
       <DetailContainer>
         {data?.faqs?.map((item, index) => {
@@ -87,14 +91,14 @@ const MainContainer = styled.div`
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
-    padding: 34px 20px;
+    padding: 0px 20px;
     display: block;
   }
 `;
 
 const HeadingContainer = styled.div`
   max-width: 380px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 `;
 
 const DetailContainer = styled.div`
