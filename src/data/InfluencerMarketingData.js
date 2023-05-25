@@ -201,3 +201,51 @@ export const imWhyChooseUsData = {
       },
     ],
 };
+export const imCardData = {
+  title: "Influencer Marketing Done Right",
+  content: [
+    {
+      id: 1,
+      heading: "Giveaways & Contests",
+      description:
+        "We run giveaways to promote your brand and get people talking, and connecting with your brand, so your brand has a loyal community",
+      link: "/home",
+    },
+    {
+      id: 2,
+      heading: "Sponsored Content",
+      description:
+        "Sponsored content is a type of promotional media that's paid for by an advertiser, but created and shared by another brand, influencer and that’s how we leverage the power of social celebs for you",
+      link: "/home",
+    },
+    {
+      id: 3,
+      heading: "Social Media Management",
+      description:
+        "We manage your brand on social media, meaning your brand voice, engagement, social listening, all in all everything related to social media",
+      link: "/home",
+    },
+    {
+      id: 4,
+      heading: "Reviews & Unboxing",
+      description:
+        "We help you get ravishing reviews and promotional unboxing of your products through the immense creator network, and let their popularity prop up your reputation",
+      link: "/home",
+    },
+
+    {
+      id: 5,
+      heading: "Affiliate Marketing",
+      description:
+        "Currently this is becoming the most sort after marketing strategy and we are the experts of it, we help you leverage the numbers of our creators to grow big",
+      link: "/home",
+    },
+    {
+      id: 6,
+      heading: "Product Promotion",
+      description:
+        "Product promotion is a great way to highlight your products, and we place them where they get the most spotlight, through the hottest celebs and influencers",
+      link: "/home",
+    },
+  ],
+};

@@ -7,7 +7,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CardBadge from "@/components/shared/CardBadge";
 import HappyClients from "@/components/shared/HappyClients";
 import InfoCard from "@/components/shared/InfoCard";
-import { imServicesHeader, imServiceHappyClients, imPageServices, imSteps, imSocialMediaData, imWhyChooseUsData } from "@/data/InfluencerMarketingData";
+import { imServicesHeader, imServiceHappyClients, imPageServices, imSteps, imSocialMediaData, imWhyChooseUsData, imCardData } from "@/data/InfluencerMarketingData";
 import { facebookPageServices, fbWhyChooseData, imFaqsData } from "@/data/facebookAdsData";
 import { StepsType1 } from "@/data/steps";
 import { useIsMobile } from "@/utils/general";
@@ -27,7 +27,7 @@ const InfluencerMarketing = () => {
       <ContentProcess data={imSteps} />
       <WhyChooseUs data={imSocialMediaData} />
       <WhyChooseUs data={imWhyChooseUsData} />
-      <InfluencerMarketingCardView />
+      <InfluencerMarketingCardView data={imCardData} />
       <Faqs data={imFaqsData} />
     </>
   );

@@ -4,14 +4,14 @@ import InfluencerMarketingView from "./shared/InfluencerMarketingView";
 import styled from "styled-components";
 import Heading from "./shared/Heading";
 
-const InfluencerMarketingCardView = () => {
+const InfluencerMarketingCardView = ({ data }) => {
   return (
     <InfluencerMarketingContainer>
       <Heading fontSize={54} marginTop={80} textAlign={"center"}>
-        Influencer Marketing Service
+        {data?.title}
       </Heading>
       <MarketingSection>
-        {MarketingCardData?.map((item) => {
+        {data?.content?.map((item) => {
           return (
             <Fragment key={item?.id}>
               <InfluencerMarketingView data={item} />

@@ -101,7 +101,7 @@ const HappyClients = ({ data }) => {
           })}
         </Swiper>
       </BrandsContainer>
-      <div style={{display: "flex", flexDirection: 'row'}}>
+      <div style={{display: data?.cardData ? "flex" : "none", flexDirection: 'row'}}>
         <CardBadge data={data?.cardData} />
       </div>
     </HappyClientsContainer>
