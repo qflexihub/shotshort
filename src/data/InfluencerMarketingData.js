@@ -187,5 +187,17 @@ export const imWhyChooseUsData = {
         title: "Vast Clientele",
         description: "With our emergent dedication, we have put quite heavy names in our clientele, here are some of them. Our work shows the unique value of your product to your target customers, surpassing your competitors. Contact us today to see how we can help your business grow"
       },
+      {
+        id: 7,
+        image: "/wc3.svg",
+        title: "Videos That Shine On Biggest Platforms",
+        description: "It is essential to have compelling product videos to correspond to customer queries. We provide the best services to help you captivate consumers and drive sales on all social media platforms"
+      },
+      {
+        id: 8,
+        image: "/wc4.svg",
+        title: "Impressive numbers",
+        description: "Our videos are developed to help persuade potential consumers to buy your product. Our squad of experts has performed tremendously with numerous brands on their brand voice, brand legacy, and content marketing strategies to develop an interest in their offering with suitable influencers and profoundly emphasize the product's salient characteristics"
+      },
     ],
 };
