@@ -11,7 +11,11 @@ import HappyClients from "@/components/shared/HappyClients";
 import { useIsMobile } from "@/utils/general";
 import {
   ProductVideoHeader,
+  productVideoBusinessCardData,
+  productVideoMarketBuzz,
   productVideoServices,
+  productVideoSteps,
+  productVideoWhyChooseUsData,
   productVideohappyClients,
 } from "@/data/ProductVideoData";
 
@@ -28,10 +32,10 @@ const ProductVideo = () => {
         <HappyClients data={productVideohappyClients} />
       </div>
       <Services data={productVideoServices} />
-      <ContentProcess data={StepsType1} />
-      <BusinessCard />
-      <MarketBuzz data={MarketBuzzProcess} />
-      <WhyChooseUs />
+      <ContentProcess data={productVideoSteps} />
+      <BusinessCard data={productVideoBusinessCardData} />
+      <MarketBuzz data={productVideoMarketBuzz} />
+      <WhyChooseUs data={productVideoWhyChooseUsData} />
     </>
   );
 };
