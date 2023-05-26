@@ -153,7 +153,7 @@ const Navbar = () => {
         {router.pathname === "/" && <Header />}
         {router.pathname === "/contact-us" && <ContactUsForm />}
         {router.pathname === "/case-study" && (
-          <InfoCard data={CaseStudyHeader} imageRight={true} />
+          <InfoCard data={CaseStudyHeader} imageRight={true} padding={isMobile ? "20px" : "40px 120px"} />
         )}
       </NavWrapper>
 

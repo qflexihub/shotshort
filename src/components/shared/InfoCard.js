@@ -13,6 +13,7 @@ const InfoCard = ({
   imageStyles,
   marginBottom,
   marginTop,
+  padding,
   isSingle = false,
 }) => {
   const isMobile = useIsMobile();
@@ -21,6 +22,7 @@ const InfoCard = ({
       imageRight={imageRight}
       marginBottom={marginBottom}
       marginTop={marginTop}
+      padding={padding}
     >
       <ImageBlock>
         {/* <Image width={827} height={451} src={data?.image} alt={data?.title} /> */}
@@ -84,12 +86,14 @@ const InfoCardContainer = styled.div`
   flex-direction: ${(props) => (props.imageRight ? "row-reverse" : "row")};
   margin-bottom: ${(props) => props.marginBottom};
   margin-top: ${(props) => props.marginTop};
+  padding: ${(props) => props.padding};
   position: inherit;
   background-color: #fff;
 
   @media (max-width: 768px) {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
+    padding: ${(props) => props.padding};
     display: block;
     text-align: center;
   }
