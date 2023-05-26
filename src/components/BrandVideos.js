@@ -59,22 +59,35 @@ const BrandVideos = ({ data }) => {
         />
         <VideoContainer>
           <Swiper
-            slidesPerView={4}
+            slidesPerView={
+              selectedVideoObj?.videos?.length < 4
+                ? selectedVideoObj?.videos?.length
+                : 4
+            }
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
             breakpoints={{
               1441: {
-                slidesPerView: 5,
+                slidesPerView:
+                  selectedVideoObj?.videos?.length < 5
+                    ? selectedVideoObj?.videos?.length
+                    : 5,
                 spaceBetween: 30,
               },
               1025: {
-                slidesPerView: 4,
+                slidesPerView:
+                  selectedVideoObj?.videos?.length < 4
+                    ? selectedVideoObj?.videos?.length
+                    : 4,
                 spaceBetween: 8,
               },
               769: {
-                slidesPerView: 3,
+                slidesPerView:
+                  selectedVideoObj?.videos?.length < 3
+                    ? selectedVideoObj?.videos?.length
+                    : 3,
                 spaceBetween: 8,
               },
               320: {
