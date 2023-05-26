@@ -16,7 +16,7 @@ export const fbBrandVideos = {
 };
 export const facebookPageServices = {
   contentHeading: {
-    heading: "Best Facebook-Ad Agency In India",
+    title: "Best Facebook-Ad Agency In India",
     subtitle: "Looking to boost your ROI with Facebook advertising? ShotShort is the only choice for you! As a leading Facebook marketing company in India, we develop attractive and effective Facebook video Ads featuring famous influencers in your niche. By incorporating video content, influencer marketing, and strategic planning, we drive the consumers to buy your products.",
     note: "Contact us today to see how we can help boost your ROI with Facebook advertising!",
   },

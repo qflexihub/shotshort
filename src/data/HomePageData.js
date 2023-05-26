@@ -80,15 +80,15 @@ export const HomeWhyChooseUsData = {
     },
   ],
 };
-
 export const homeCuriousAbout = {
   processHeading: {
-    heading: "How Do We Work?",
+    title: "How Do We Work?",
     subtitle:
       "Audience eats up our tasty and snackable content, leaving no crumbs behind, Follow this simple instruction and get ready to witness the magic of ShotShorts",
   },
   btnText: "Schedule Your Call Today",
   processTitle: "Follow these 4 Steps To Get highly engaging video ads today",
+  footerDescription: "Our video content solutions are designed to make users aware of your brand, generate leads, and increase sales. Connect with our experts and discuss your needs.",
   process: [
     {
       id: 1,
@@ -127,9 +127,7 @@ export const homeCuriousAbout = {
       url: "",
     },
   ],
-  bottomText: "",
 };
-
 export const homeMarketBuzz = {
   processHeading: {
     title: "What do the experts say about videos",

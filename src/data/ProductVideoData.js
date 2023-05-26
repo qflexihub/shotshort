@@ -39,6 +39,7 @@ export const productVideoSteps = {
   },
   btnText: "Schedule A Call With Our Expert",
   processTitle: "Let’s get snapping in these 4 steps",
+  footerDescription: "",
   process: [
     {
       id: 1,
@@ -81,7 +82,6 @@ export const productVideoSteps = {
       url: "",
     },
   ],
-  bottomText: "",
 };
 
 export const productVideoMarketBuzz = {

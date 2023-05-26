@@ -76,6 +76,8 @@ export const curiousAbout = {
   },
   btnText: "Schedule A Call With Our Expert",
   processTitle: "(Create Video In 4 Simple Steps)",
+  footerDescription:
+    "Our video content solutions are designed to make users aware of your brand, generate leads, and increase sales. Connect with our experts and discuss your needs.",
   process: [
     {
       id: 1,
@@ -118,8 +120,6 @@ export const curiousAbout = {
       url: "",
     },
   ],
-  bottomText:
-    "Our video content solutions are designed to make users aware of your brand, generate leads, and increase sales. Connect with our experts and discuss your needs.",
 };
 
 export const SocialMediaMarketBuzz = {

@@ -28,7 +28,7 @@ export const imServiceHappyClients = {
 };
 export const imPageServices = {
     contentHeading: {
-      heading: "Explore a new definition of success with us",
+      title: "Explore a new definition of success with us",
       subtitle: "",
       note: "",
     },
