@@ -62,7 +62,7 @@ const ButtonContainer = styled.button`
   font-weight: ${(props) => props.fontWeight || "700"};
   transition: transform 0.2s ease-in-out;
   line-height: ${(props) => (props.lineHeight || 18) + "px"};
-  padding: ${(props) => props.padding || "16px 25px 16px 40px"};
+  padding: ${(props) => props.padding || ""};
   /* &:hover ${BtnText} {
     font-size: 18px;
   } */

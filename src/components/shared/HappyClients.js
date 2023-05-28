@@ -6,11 +6,13 @@ import styled from "styled-components";
 import Heading from "./Heading";
 import { useIsMobile } from "@/utils/general";
 import CardBadge from "./CardBadge";
+import { useRouter } from "next/router";
 
 SwiperCore.use([Autoplay, Navigation]);
 
 const HappyClients = ({ data }) => {
   const isMobile = useIsMobile();
+  const router = useRouter();
   return (
     <HappyClientsContainer>
       <Heading
@@ -101,9 +103,11 @@ const HappyClients = ({ data }) => {
           })}
         </Swiper>
       </BrandsContainer>
-      <div style={{display: data?.cardData ? "flex" : "none", flexDirection: 'row'}}>
-        <CardBadge data={data?.cardData} />
-      </div>
+      {router.pathname == "/video-ads" && (
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <CardBadge data={data?.cardData} />
+        </div>
+      )}
     </HappyClientsContainer>
   );
 };
@@ -112,10 +116,14 @@ export default HappyClients;
 const HappyClientsContainer = styled.div`
   padding-top: 82px;
   padding-bottom: 124px;
+  padding-left: 137px;
+  padding-right: 137px;
 
   @media (max-width: 768px) {
     padding-top: 24px;
     padding-bottom: 24px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 

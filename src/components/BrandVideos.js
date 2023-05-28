@@ -24,6 +24,7 @@ const BrandVideos = ({ data }) => {
   const [selectedVideoObj, setSelectedVideoObj] = useState();
 
   useEffect(() => {
+    stopAllVideos();
     const res = categories.find((item) => item.title === selectedCategory);
     setSelectedVideoObj(res);
   }, [selectedCategory]);
@@ -51,6 +52,7 @@ const BrandVideos = ({ data }) => {
             value={data?.btnText}
             marginTop="32px"
             rightArrow
+            padding="16px 43px"
           />
         </Block1>
         <CategoryBar

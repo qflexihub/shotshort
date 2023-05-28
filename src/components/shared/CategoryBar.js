@@ -25,7 +25,7 @@ const CategoryBar = ({ selectedCategory, setSelectedCategory }) => {
             spaceBetween: 15,
           },
         }}
-        className="mySwiper"
+        className="category-swiper"
       >
         {categories?.map((item) => {
           return (
