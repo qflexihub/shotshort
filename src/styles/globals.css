@@ -101,3 +101,9 @@ video {
 .category-swiper .swiper-wrapper {
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .category-swiper .swiper-wrapper {
+    justify-content: start;
+  }
+}
